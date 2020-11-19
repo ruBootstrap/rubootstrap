@@ -136,9 +136,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/interactions/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/introduction/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/javascript/</loc>
   </url>
   <url>
@@ -266,6 +263,9 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/versions/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/introduction/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/overview/</loc>
