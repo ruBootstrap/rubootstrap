@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Bootstrap 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.">
+<meta name="description" content="Bootstrap 4 - это серьезная переработка всего проекта. Ниже приведены наиболее заметные изменения, за которыми следуют более конкретные изменения в соответствующих компонентах.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -39,13 +39,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Переход на v4">
-<meta name="twitter:description" content="Bootstrap 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.">
+<meta name="twitter:description" content="Bootstrap 4 - это серьезная переработка всего проекта. Ниже приведены наиболее заметные изменения, за которыми следуют более конкретные изменения в соответствующих компонентах.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/migration/">
 <meta property="og:title" content="Переход на v4">
-<meta property="og:description" content="Bootstrap 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.">
+<meta property="og:description" content="Bootstrap 4 - это серьезная переработка всего проекта. Ниже приведены наиболее заметные изменения, за которыми следуют более конкретные изменения в соответствующих компонентах.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -233,9 +233,9 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#stable-changes">Stable changes</a>
+    <li><a href="#стабильные-изменения">Стабильные изменения</a>
       <ul>
-        <li><a href="#printing">Printing</a></li>
+        <li><a href="#печать">Печать</a></li>
       </ul>
     </li>
     <li><a href="#beta-3-changes">Beta 3 changes</a>
@@ -299,23 +299,23 @@
         <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.5/migration.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
-            <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="/docs/4.5/migration/" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
+            <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/migration.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
             <h1 class="bd-title" id="content">Переход на v4</h1>
           </div>
-          <p class="bd-lead">Bootstrap 4 is a major rewrite of the entire project. The most notable changes are summarized below, followed by more specific changes to relevant components.</p>
+          <p class="bd-lead">Bootstrap 4 - это серьезная переработка всего проекта. Ниже приведены наиболее заметные изменения, за которыми следуют более конкретные изменения в соответствующих компонентах.</p>
           
-          <h2 id="stable-changes">Stable changes</h2>
-<p>Moving from Beta 3 to our stable v4.x release, there are no breaking changes, but there are some notable changes.</p>
-<h3 id="printing">Printing</h3>
+          <h2 id="стабильные-изменения">Стабильные изменения</h2>
+<p>При переходе от бета-версии 3 к стабильному выпуску v4.x критических изменений нет, но есть некоторые заметные изменения.</p>
+<h3 id="печать">Печать</h3>
 <ul>
 <li>
-<p>Fixed broken print utilities. Previously, using a <code>.d-print-*</code> class would unexpectedly overrule any other <code>.d-*</code> class. Now, they match our other display utilities and only apply to that media (<code>@media print</code>).</p>
+<p>Исправлены неработающие утилиты печати. Ранее использование класса <code>.d-print-*</code> неожиданно отменяло любой другой класс <code>.d-*</code>. Теперь они соответствуют другим нашим утилитам отображения и применяются только к этому носителю (<code>@media print</code>).</p>
 </li>
 <li>
-<p>Expanded available print display utilities to match other utilities. Beta 3 and older only had <code>block</code>, <code>inline-block</code>, <code>inline</code>, and <code>none</code>. Stable v4 added <code>flex</code>, <code>inline-flex</code>, <code>table</code>, <code>table-row</code>, and <code>table-cell</code>.</p>
+<p>Расширены доступные утилиты отображения печати для соответствия другим утилитам. В Beta 3 и старше были только <code>block</code>, <code>inline-block</code>, <code>inline</code> и <code>none</code>. В стабильной версии 4 добавлены <code>flex</code>, <code>inline-flex</code>, <code>table</code>, <code>table-row</code> и <code>table-cell</code>.</p>
 </li>
 <li>
-<p>Fixed print preview rendering across browsers with new print styles that specify <code>@page</code> <code>size</code>.</p>
+<p>Исправлен рендеринг предварительного просмотра печати в браузерах с новыми стилями печати, в которых указан размер <code>@page</code> <code>size</code>.</p>
 </li>
 </ul>
 <h2 id="beta-3-changes">Beta 3 changes</h2>

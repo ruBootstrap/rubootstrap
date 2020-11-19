@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/about/overview/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/accessibility/</loc>
   </url>
   <url>
@@ -32,9 +29,6 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-bottom/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/about/brand/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/breadcrumb/</loc>
@@ -154,9 +148,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/jumbotron/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/about/license/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/list-group/</loc>
   </url>
   <url>
@@ -241,9 +232,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/content/tables/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/about/team/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/text/</loc>
   </url>
   <url>
@@ -257,9 +245,6 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-static/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/about/translations/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/content/typography/</loc>
@@ -283,6 +268,21 @@
     <loc>https://v4.getbootstrap.su/docs/versions/</loc>
   </url>
   <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/about/overview/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/about/team/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/about/translations/</loc>
+  </url>
+  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/migration/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/about/brand/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/about/license/</loc>
   </url>
 </urlset>
