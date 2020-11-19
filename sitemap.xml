@@ -163,9 +163,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/components/media-object/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/migration/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/modal/</loc>
   </url>
   <url>
@@ -284,5 +281,8 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/versions/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/migration/</loc>
   </url>
 </urlset>
