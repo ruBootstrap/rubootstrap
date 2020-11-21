@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Learn how to include Bootstrap in your project using Webpack.">
+<meta name="description" content="Узнайте, как включить Bootstrap в свой проект с помощью Webpack.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -41,13 +41,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Webpack">
-<meta name="twitter:description" content="Learn how to include Bootstrap in your project using Webpack.">
+<meta name="twitter:description" content="Узнайте, как включить Bootstrap в свой проект с помощью Webpack.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/getting-started/webpack/">
 <meta property="og:title" content="Webpack">
-<meta property="og:description" content="Learn how to include Bootstrap in your project using Webpack.">
+<meta property="og:description" content="Узнайте, как включить Bootstrap в свой проект с помощью Webpack.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -264,12 +264,12 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#installing-bootstrap">Installing Bootstrap</a></li>
-    <li><a href="#importing-javascript">Importing JavaScript</a></li>
-    <li><a href="#importing-styles">Importing Styles</a>
+    <li><a href="#установка-bootstrap">Установка Bootstrap</a></li>
+    <li><a href="#импорт-javascript">Импорт JavaScript</a></li>
+    <li><a href="#импорт-стилей">Импорт стилей</a>
       <ul>
-        <li><a href="#importing-precompiled-sass">Importing Precompiled Sass</a></li>
-        <li><a href="#importing-compiled-css">Importing Compiled CSS</a></li>
+        <li><a href="#импорт-предварительно-скомпилированного-sass">Импорт предварительно скомпилированного Sass</a></li>
+        <li><a href="#импорт-скомпилированного-css">Импорт скомпилированного CSS</a></li>
       </ul>
     </li>
   </ul>
@@ -283,52 +283,52 @@
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/getting-started/webpack.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
             <h1 class="bd-title" id="content">Webpack</h1>
           </div>
-          <p class="bd-lead">Learn how to include Bootstrap in your project using Webpack.</p>
+          <p class="bd-lead">Узнайте, как включить Bootstrap в свой проект с помощью Webpack.</p>
           
-          <h2 id="installing-bootstrap">Installing Bootstrap</h2>
-<p><a href="/docs/4.5/getting-started/download/#npm">Install bootstrap</a> as a Node.js module using npm.</p>
-<h2 id="importing-javascript">Importing JavaScript</h2>
-<p>Import <a href="/docs/4.5/getting-started/javascript/">Bootstrap&rsquo;s JavaScript</a> by adding this line to your app&rsquo;s entry point (usually <code>index.js</code> or <code>app.js</code>):</p>
+          <h2 id="установка-bootstrap">Установка Bootstrap</h2>
+<p><a href="/docs/4.5/getting-started/download/#npm">Установка Bootstrap</a> как модуль Node.js с использованием npm.</p>
+<h2 id="импорт-javascript">Импорт JavaScript</h2>
+<p>Импортируйте <a href="/docs/4.5/getting-started/javascript/">Bootstrap&rsquo;s JavaScript</a>, добавив эту строку в точку входа Вашего приложения (обычно <code>index.js</code> или <code>app.js</code>):</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span>
-</code></pre></div><p>Alternatively, you may <strong>import plugins individually</strong> as needed:</p>
+</code></pre></div><p>Кроме того, вы можете <strong>импортировать плагины по отдельности</strong> по мере необходимости:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="s1">&#39;bootstrap/js/dist/util&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="s1">&#39;bootstrap/js/dist/alert&#39;</span><span class="p">;</span>
 <span class="p">...</span>
-</code></pre></div><p>Bootstrap depends on <a href="https://jquery.com/">jQuery</a> and <a href="https://popper.js.org/">Popper</a>,
-which are specified in the <code>peerDependencies</code> property; this means that you will have to make sure to add both of them
-to your <code>package.json</code> using <code>npm install --save jquery popper.js</code>.</p>
-<h2 id="importing-styles">Importing Styles</h2>
-<h3 id="importing-precompiled-sass">Importing Precompiled Sass</h3>
-<p>To enjoy the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project&rsquo;s bundling process.</p>
-<p>First, create your own <code>_custom.scss</code> and use it to override the <a href="/docs/4.5/getting-started/theming/">built-in custom variables</a>. Then, use your main Sass file to import your custom variables, followed by Bootstrap:</p>
+</code></pre></div><p>Bootstrap зависит от <a href="https://jquery.com/">jQuery</a> и <a href="https://popper.js.org/">Popper</a>,
+которые указаны в свойстве <code>peerDependencies</code>; это означает, что Вам нужно будет обязательно добавить их оба
+в Ваш <code>package.json</code>, используя <code>npm install --save jquery popper.js</code>.</p>
+<h2 id="импорт-стилей">Импорт стилей</h2>
+<h3 id="импорт-предварительно-скомпилированного-sass">Импорт предварительно скомпилированного Sass</h3>
+<p>Чтобы использовать весь потенциал Bootstrap и настроить его в соответствии с Вашими потребностями, используйте исходные файлы как часть процесса объединения Вашего проекта.</p>
+<p>Сначала создайте свой собственный <code>_custom.scss</code> и используйте его, чтобы переопределить <a href="/docs/4.5/getting-started/theming/">встроенные пользовательские переменные</a>. Затем используйте Ваш основной файл Sass для импорта Ваших пользовательских переменных, а затем Bootstrap:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;custom&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;~bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
-</code></pre></div><p>For Bootstrap to compile, make sure you install and use the required loaders: <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a>, <a href="https://github.com/webpack-contrib/postcss-loader">postcss-loader</a> with <a href="https://github.com/postcss/autoprefixer#webpack">Autoprefixer</a>. With minimal setup, your webpack config should include this rule or similar:</p>
+</code></pre></div><p>Для компиляции Bootstrap убедитесь, что Вы установили и используете необходимые загрузчики: <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a>, <a href="https://github.com/webpack-contrib/postcss-loader">postcss-loader</a> с <a href="https://github.com/postcss/autoprefixer#webpack">Autoprefixer</a>. При минимальной настройке конфигурация Вашего веб-пакета должна включать это или подобное правило:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">...</span>
 <span class="p">{</span>
   <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.(scss)$/</span><span class="p">,</span>
   <span class="nx">use</span><span class="o">:</span> <span class="p">[{</span>
-    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;style-loader&#39;</span><span class="p">,</span> <span class="c1">// inject CSS to page
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;style-loader&#39;</span><span class="p">,</span> <span class="c1">// вставить CSS на страницу
 </span><span class="c1"></span>  <span class="p">},</span> <span class="p">{</span>
-    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;css-loader&#39;</span><span class="p">,</span> <span class="c1">// translates CSS into CommonJS modules
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;css-loader&#39;</span><span class="p">,</span> <span class="c1">// переводит CSS в модули CommonJS
 </span><span class="c1"></span>  <span class="p">},</span> <span class="p">{</span>
-    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;postcss-loader&#39;</span><span class="p">,</span> <span class="c1">// Run postcss actions
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;postcss-loader&#39;</span><span class="p">,</span> <span class="c1">// Выполнить действия postcss
 </span><span class="c1"></span>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">plugins</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// postcss plugins, can be exported to postcss.config.js
+      <span class="nx">plugins</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span> <span class="c1">// плагины postcss, можно экспортировать в postcss.config.js
 </span><span class="c1"></span>        <span class="k">return</span> <span class="p">[</span>
           <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;autoprefixer&#39;</span><span class="p">)</span>
         <span class="p">];</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">},</span> <span class="p">{</span>
-    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;sass-loader&#39;</span> <span class="c1">// compiles Sass to CSS
+    <span class="nx">loader</span><span class="o">:</span> <span class="s1">&#39;sass-loader&#39;</span> <span class="c1">// компилирует Sass в CSS
 </span><span class="c1"></span>  <span class="p">}]</span>
 <span class="p">},</span>
 <span class="p">...</span>
-</code></pre></div><h3 id="importing-compiled-css">Importing Compiled CSS</h3>
-<p>Alternatively, you may use Bootstrap&rsquo;s ready-to-use CSS by simply adding this line to your project&rsquo;s entry point:</p>
+</code></pre></div><h3 id="импорт-скомпилированного-css">Импорт скомпилированного CSS</h3>
+<p>В качестве альтернативы Вы можете использовать готовый к использованию CSS Bootstrap, просто добавив эту строку в точку входа Вашего проекта:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="s1">&#39;bootstrap/dist/css/bootstrap.min.css&#39;</span><span class="p">;</span>
-</code></pre></div><p>In this case you may use your existing rule for <code>css</code> without any special modifications to webpack config, except you don&rsquo;t need <code>sass-loader</code> just <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> and <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
+</code></pre></div><p>В этом случае вы можете использовать существующее правило для <code>css</code> без каких-либо специальных изменений в конфигурации webpack, за исключением того, что вам не нужен <code>sass-loader</code> только <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> и <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">...</span>
 <span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
   <span class="nx">rules</span><span class="o">:</span> <span class="p">[</span>

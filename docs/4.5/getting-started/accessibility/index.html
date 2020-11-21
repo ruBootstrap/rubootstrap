@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="A brief overview of Bootstrap&rsquo;s features and limitations for the creation of accessible content.">
+<meta name="description" content="Краткий обзор возможностей и ограничений Bootstrap для создания доступного контента.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -12,7 +12,7 @@
 
 <meta name="yandex-verification" content="268fb73245c0ff4f" />
 
-<title>Accessibility · Bootstrap v4.5</title>
+<title>Доступность · Bootstrap v4.5</title>
 
 <link rel="canonical" href="https://v4.getbootstrap.su/docs/4.5/getting-started/accessibility/">
 
@@ -40,14 +40,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Accessibility">
-<meta name="twitter:description" content="A brief overview of Bootstrap&rsquo;s features and limitations for the creation of accessible content.">
+<meta name="twitter:title" content="Доступность">
+<meta name="twitter:description" content="Краткий обзор возможностей и ограничений Bootstrap для создания доступного контента.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/getting-started/accessibility/">
-<meta property="og:title" content="Accessibility">
-<meta property="og:description" content="A brief overview of Bootstrap&rsquo;s features and limitations for the creation of accessible content.">
+<meta property="og:title" content="Доступность">
+<meta property="og:description" content="Краткий обзор возможностей и ограничений Bootstrap для создания доступного контента.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -264,16 +264,16 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview-and-limitations">Overview and Limitations</a>
+    <li><a href="#обзор-и-ограничения">Обзор и ограничения</a>
       <ul>
-        <li><a href="#structural-markup">Structural markup</a></li>
-        <li><a href="#interactive-components">Interactive components</a></li>
-        <li><a href="#color-contrast">Color contrast</a></li>
-        <li><a href="#visually-hidden-content">Visually hidden content</a></li>
-        <li><a href="#reduced-motion">Reduced motion</a></li>
+        <li><a href="#структурная-разметка">Структурная разметка</a></li>
+        <li><a href="#интерактивные-компоненты">Интерактивные компоненты</a></li>
+        <li><a href="#цветовой-контраст">Цветовой контраст</a></li>
+        <li><a href="#визуально-скрытый-контент">Визуально скрытый контент</a></li>
+        <li><a href="#замедленное-движение">Замедленное движение</a></li>
       </ul>
     </li>
-    <li><a href="#additional-resources">Additional resources</a></li>
+    <li><a href="#дополнительные-ресурсы">Дополнительные ресурсы</a></li>
   </ul>
 </nav>
           </nav>
@@ -283,38 +283,38 @@
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.5/getting-started/accessibility.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/getting-started/accessibility.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
-            <h1 class="bd-title" id="content">Accessibility</h1>
+            <h1 class="bd-title" id="content">Доступность</h1>
           </div>
-          <p class="bd-lead">A brief overview of Bootstrap&rsquo;s features and limitations for the creation of accessible content.</p>
+          <p class="bd-lead">Краткий обзор возможностей и ограничений Bootstrap для создания доступного контента.</p>
           
-          <p>Bootstrap provides an easy-to-use framework of ready-made styles, layout tools, and interactive components, allowing developers to create websites and applications that are visually appealing, functionally rich, and accessible out of the box.</p>
-<h2 id="overview-and-limitations">Overview and Limitations</h2>
-<p>The overall accessibility of any project built with Bootstrap depends in large part on the author&rsquo;s markup, additional styling, and scripting they&rsquo;ve included. However, provided that these have been implemented correctly, it should be perfectly possible to create websites and applications with Bootstrap that fulfill <a href="https://www.w3.org/TR/WCAG20/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.0</a> (A/AA/AAA), <a href="https://www.section508.gov/">Section 508</a> and similar accessibility standards and requirements.</p>
-<h3 id="structural-markup">Structural markup</h3>
-<p>Bootstrap&rsquo;s styling and layout can be applied to a wide range of markup structures. This documentation aims to provide developers with best practice examples to demonstrate the use of Bootstrap itself and illustrate appropriate semantic markup, including ways in which potential accessibility concerns can be addressed.</p>
-<h3 id="interactive-components">Interactive components</h3>
-<p>Bootstrap&rsquo;s interactive components—such as modal dialogs, dropdown menus and custom tooltips—are designed to work for touch, mouse and keyboard users. Through the use of relevant <a href="https://www.w3.org/WAI/standards-guidelines/aria/"><abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> roles and attributes, these components should also be understandable and operable using assistive technologies (such as screen readers).</p>
-<p>Because Bootstrap&rsquo;s components are purposely designed to be fairly generic, authors may need to include further <abbr title="Accessible Rich Internet Applications">ARIA</abbr> roles and attributes, as well as JavaScript behavior, to more accurately convey the precise nature and functionality of their component. This is usually noted in the documentation.</p>
-<h3 id="color-contrast">Color contrast</h3>
-<p>Most colors that currently make up Bootstrap&rsquo;s default palette—used throughout the framework for things such as button variations, alert variations, form validation indicators—lead to <em>insufficient</em> color contrast (below the recommended <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0 color contrast ratio of 4.5:1</a>) when used against a light background. Authors will need to manually modify/extend these default colors to ensure adequate color contrast ratios.</p>
-<h3 id="visually-hidden-content">Visually hidden content</h3>
-<p>Content which should be visually hidden, but remain accessible to assistive technologies such as screen readers, can be styled using the <code>.sr-only</code> class. This can be useful in situations where additional visual information or cues (such as meaning denoted through the use of color) need to also be conveyed to non-visual users.</p>
+          <p>Bootstrap предоставляет простую в использовании структуру из готовых стилей, инструментов макета и интерактивных компонентов, позволяя разработчикам создавать веб-сайты и приложения, которые визуально привлекательны, функционально богаты и доступны прямо из коробки.</p>
+<h2 id="обзор-и-ограничения">Обзор и ограничения</h2>
+<p>Общая доступность любого проекта, созданного с помощью Bootstrap, во многом зависит от разметки автора, дополнительных стилей и сценариев, которые они включили. Однако при условии, что они были реализованы правильно, должно быть вполне возможно создавать веб-сайты и приложения с помощью Bootstrap, которые соответствуют <a href="https://www.w3.org/TR/WCAG20/"><abbr title="Рекомендации по доступности веб-содержимого">WCAG</abbr> 2.0</a> (A/AA/AAA), <a href="https://www.section508.gov/">Раздел 508</a> и аналогичные стандарты и требования доступности.</p>
+<h3 id="структурная-разметка">Структурная разметка</h3>
+<p>Стиль и макет Bootstrap можно применять к широкому спектру структур разметки. Эта документация призвана предоставить разработчикам примеры передового опыта, чтобы продемонстрировать использование самого Bootstrap и проиллюстрировать соответствующую семантическую разметку, включая способы решения потенциальных проблем доступности.</p>
+<h3 id="интерактивные-компоненты">Интерактивные компоненты</h3>
+<p>Интерактивные компоненты Bootstrap, такие как модальные диалоговые окна, раскрывающиеся меню и настраиваемые всплывающие подсказки, предназначены для работы с сенсорным экраном, мышью и клавиатурой. Благодаря использованию соответствующих <a href="https://www.w3.org/WAI/standards-guidelines/aria/"><abbr title="Инициатива веб-доступности">WAI</abbr>-<abbr title="Доступные полнофункциональные Интернет-приложения">ARIA</abbr></a> ролей и атрибутов, эти компоненты также должны быть понятными и управляемыми с использованием вспомогательных технологий (таких как программы чтения с экрана).</p>
+<p>Поскольку компоненты Bootstrap специально разработаны как достаточно общие, авторам может потребоваться включить дополнительные роли и атрибуты <abbr title="Доступные полнофункциональные интернет-приложения">ARIA</abbr>, а также поведение JavaScript, чтобы более точно передать суть и функциональность их компонентов. Обычно это отмечается в документации.</p>
+<h3 id="цветовой-контраст">Цветовой контраст</h3>
+<p>Большинство цветов, которые в настоящее время составляют палитру Bootstrap по умолчанию - используемые во всей структуре для таких вещей, как варианты кнопок, варианты предупреждений, индикаторы проверки формы - приводят к <em>недостаточному</em> цветовому контрасту (ниже рекомендуемого <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">коэффициента контрастности цвета WCAG 2.0 4.5:1</a>) при использовании на светлом фоне. Авторам потребуется вручную изменить/расширить эти цвета по умолчанию, чтобы обеспечить адекватные коэффициенты цветового контраста.</p>
+<h3 id="визуально-скрытый-контент">Визуально скрытый контент</h3>
+<p>Контент, который должен быть визуально скрыт, но оставаться доступным для вспомогательных технологий, таких как программы чтения с экрана, можно стилизовать с помощью класса <code>.sr-only</code>. Это может быть полезно в ситуациях, когда дополнительная визуальная информация или подсказки (например, значение, обозначенное с помощью цвета) также должны быть переданы невизуальным пользователям.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-danger&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span><span class="p">&gt;</span>Danger: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-  This action is not reversible
+  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only&#34;</span><span class="p">&gt;</span>Опасность: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  Это действие необратимо
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</code></pre></div><p>For visually hidden interactive controls, such as traditional &ldquo;skip&rdquo; links, <code>.sr-only</code> can be combined with the <code>.sr-only-focusable</code> class. This will ensure that the control becomes visible once focused (for sighted keyboard users).</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only sr-only-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Skip to main content<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="reduced-motion">Reduced motion</h3>
-<p>Bootstrap includes support for the <a href="https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion"><code>prefers-reduced-motion</code> media feature</a>. In browsers/environments that allow the user to specify their preference for reduced motion, most CSS transition effects in Bootstrap (for instance, when a modal dialog is opened or closed, or the sliding animation in carousels) will be disabled, and meaningful animations (such as spinners) will be slowed down.</p>
-<h2 id="additional-resources">Additional resources</h2>
+</code></pre></div><p>Для визуально скрытых интерактивных элементов управления, таких как традиционные ссылки «пропустить», <code>.sr-only</code> можно объединить с классом <code>.sr-only-focusable</code>. Это гарантирует, что элемент управления станет видимым после фокусировки (для зрячих пользователей клавиатуры).</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;sr-only sr-only-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Перейти к основному содержанию<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="замедленное-движение">Замедленное движение</h3>
+<p>Bootstrap включает поддержку <a href="https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion">мультимедийной функции <code>prefers-reduced-motion</code></a>. В браузерах/средах, которые позволяют пользователю указать свои предпочтения для замедления движения, большинство эффектов перехода CSS в Bootstrap (например, когда открывается или закрывается модальное диалоговое окно или скользящая анимация в каруселях) будут отключены, а значимые анимации ( например, блесны) будут замедляться.</p>
+<h2 id="дополнительные-ресурсы">Дополнительные ресурсы</h2>
 <ul>
-<li><a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a></li>
-<li><a href="https://www.a11yproject.com/">The A11Y Project</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">MDN accessibility documentation</a></li>
-<li><a href="https://tenon.io/">Tenon.io Accessibility Checker</a></li>
-<li><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser (CCA)</a></li>
-<li><a href="https://github.com/squizlabs/HTML_CodeSniffer">&ldquo;HTML Codesniffer&rdquo; bookmarklet for identifying accessibility issues</a></li>
+<li><a href="https://www.w3.org/TR/WCAG20/">Рекомендации по обеспечению доступности веб-контента (WCAG) 2.0</a></li>
+<li><a href="https://www.a11yproject.com/">Проект A11Y</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Документация по доступности MDN</a></li>
+<li><a href="https://tenon.io/">Проверка доступности Tenon.io</a></li>
+<li><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Анализатор цветового контраста (CCA)</a></li>
+<li><a href="https://github.com/squizlabs/HTML_CodeSniffer">Букмарклет &ldquo;HTML Codesniffer&rdquo; для выявления проблем доступности</a></li>
 </ul>
 
         </main>

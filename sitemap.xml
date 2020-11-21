@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/accessibility/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/album/</loc>
   </url>
   <url>
@@ -32,12 +29,6 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/breadcrumb/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/browsers-devices/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/build-tools/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/button-group/</loc>
@@ -73,9 +64,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/colors/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/contents/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/cover/</loc>
   </url>
   <url>
@@ -83,9 +71,6 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/display/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/download/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/dropdowns/</loc>
@@ -232,9 +217,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/text/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/theming/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/toasts/</loc>
   </url>
   <url>
@@ -262,10 +244,19 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/webpack/</loc>
   </url>
   <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/browsers-devices/</loc>
+  </url>
+  <url>
     <loc>https://v4.getbootstrap.su/docs/versions/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/introduction/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/accessibility/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/build-tools/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/overview/</loc>
@@ -281,6 +272,15 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/brand/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/download/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/contents/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/theming/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/license/</loc>

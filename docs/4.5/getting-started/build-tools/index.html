@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Learn how to use Bootstrap&rsquo;s included npm scripts to build our documentation, compile source code, run tests, and more.">
+<meta name="description" content="Узнайте, как использовать встроенные скрипты npm в Bootstrap для создания нашей документации, компиляции исходного кода, запуска тестов и многого другого.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -12,7 +12,7 @@
 
 <meta name="yandex-verification" content="268fb73245c0ff4f" />
 
-<title>Build tools · Bootstrap v4.5</title>
+<title>Инструменты сборки · Bootstrap v4.5</title>
 
 <link rel="canonical" href="https://v4.getbootstrap.su/docs/4.5/getting-started/build-tools/">
 
@@ -40,14 +40,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Build tools">
-<meta name="twitter:description" content="Learn how to use Bootstrap&rsquo;s included npm scripts to build our documentation, compile source code, run tests, and more.">
+<meta name="twitter:title" content="Инструменты сборки">
+<meta name="twitter:description" content="Узнайте, как использовать встроенные скрипты npm в Bootstrap для создания нашей документации, компиляции исходного кода, запуска тестов и многого другого.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/getting-started/build-tools/">
-<meta property="og:title" content="Build tools">
-<meta property="og:description" content="Learn how to use Bootstrap&rsquo;s included npm scripts to build our documentation, compile source code, run tests, and more.">
+<meta property="og:title" content="Инструменты сборки">
+<meta property="og:description" content="Узнайте, как использовать встроенные скрипты npm в Bootstrap для создания нашей документации, компиляции исходного кода, запуска тестов и многого другого.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -264,11 +264,11 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#tooling-setup">Tooling setup</a></li>
-    <li><a href="#using-npm-scripts">Using npm scripts</a></li>
+    <li><a href="#настройка-инструментов">Настройка инструментов</a></li>
+    <li><a href="#использование-скриптов-npm">Использование скриптов npm</a></li>
     <li><a href="#autoprefixer">Autoprefixer</a></li>
-    <li><a href="#local-documentation">Local documentation</a></li>
-    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#локальная-документация">Локальная документация</a></li>
+    <li><a href="#исправление-проблем">Исправление проблем</a></li>
   </ul>
 </nav>
           </nav>
@@ -278,57 +278,57 @@
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.5/getting-started/build-tools.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/getting-started/build-tools.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
-            <h1 class="bd-title" id="content">Build tools</h1>
+            <h1 class="bd-title" id="content">Инструменты сборки</h1>
           </div>
-          <p class="bd-lead">Learn how to use Bootstrap&rsquo;s included npm scripts to build our documentation, compile source code, run tests, and more.</p>
+          <p class="bd-lead">Узнайте, как использовать встроенные скрипты npm в Bootstrap для создания нашей документации, компиляции исходного кода, запуска тестов и многого другого.</p>
           
-          <h2 id="tooling-setup">Tooling setup</h2>
-<p>Bootstrap uses <a href="https://docs.npmjs.com/misc/scripts/">npm scripts</a> for its build system. Our <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/package.json">package.json</a> includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
-<p>To use our build system and run our documentation locally, you&rsquo;ll need a copy of Bootstrap&rsquo;s source files and Node. Follow these steps and you should be ready to rock:</p>
+          <h2 id="настройка-инструментов">Настройка инструментов</h2>
+<p>Bootstrap использует <a href="https://docs.npmjs.com/misc/scripts/">сценарии npm</a> для своей системы сборки. Наш <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/package.json">package.json</a> включает удобные методы для работы с фреймворком, включая компиляцию кода, запуск тестов и т.д.</p>
+<p>Чтобы использовать нашу систему сборки и запускать нашу документацию локально, Вам понадобится копия исходных файлов Bootstrap и Node. Выполните следующие шаги, и Вы должны быть готовы к работе:</p>
 <ol>
-<li><a href="https://nodejs.org/en/download/">Download and install Node.js</a>, which we use to manage our dependencies.</li>
-<li>Either <a href="https://github.com/twbs/bootstrap/archive/v4.5.3.zip">download Bootstrap&rsquo;s sources</a> or fork <a href="https://github.com/twbs/bootstrap">Bootstrap&rsquo;s repository</a>.</li>
-<li>Navigate to the root <code>/bootstrap</code> directory and run <code>npm install</code> to install our local dependencies listed in <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/package.json">package.json</a>.</li>
+<li><a href="https://nodejs.org/en/download/">Загрузите и установите Node.js</a>, который мы используем для управления нашими зависимостями.</li>
+<li>Либо <a href="https://github.com/twbs/bootstrap/archive/v4.5.3.zip">загрузите исходники Bootstrap</a> либо форк <a href="https://github.com/twbs/bootstrap">репозитория Bootstrap</a>.</li>
+<li>Перейдите в корневой каталог <code>/bootstrap</code> и запустите <code>npm install</code>, для установки наших локальных зависимостей, перечисленных в <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/package.json">package.json</a>.</li>
 </ol>
-<p>When completed, you&rsquo;ll be able to run the various commands provided from the command line.</p>
-<h2 id="using-npm-scripts">Using npm scripts</h2>
-<p>Our <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/package.json">package.json</a> includes the following commands and tasks:</p>
+<p>По завершении Вы сможете запускать различные команды из командной строки.</p>
+<h2 id="использование-скриптов-npm">Использование скриптов npm</h2>
+<p>Наш <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/package.json">package.json</a> включает следующие команды и задачи:</p>
 <table>
 <thead>
 <tr>
-<th>Task</th>
-<th>Description</th>
+<th>Задача</th>
+<th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>npm run dist</code></td>
-<td><code>npm run dist</code> creates the <code>/dist/</code> directory with compiled files. <strong>Uses <a href="https://sass-lang.com/">Sass</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, and <a href="https://github.com/terser/terser">terser</a>.</strong></td>
+<td><code>npm run dist</code> создает каталог <code>/dist/</code> со скомпилированными файлами. <strong>Использует <a href="https://sass-lang.com/">Sass</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> и <a href="https://github.com/terser/terser">terser</a>.</strong></td>
 </tr>
 <tr>
 <td><code>npm test</code></td>
-<td>Runs tests locally after running <code>npm run dist</code></td>
+<td>Запускает тесты локально после запуска <code>npm run dist</code></td>
 </tr>
 <tr>
 <td><code>npm run docs-serve</code></td>
-<td>Builds and runs the documentation locally.</td>
+<td>Создает и запускает документацию локально.</td>
 </tr>
 </tbody>
 </table>
-<p>Run <code>npm run</code> to see all the npm scripts.</p>
+<p>Запустите <code>npm run</code>, чтобы увидеть все сценарии npm.</p>
 <h2 id="autoprefixer">Autoprefixer</h2>
-<p>Bootstrap uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
-<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/.browserslistrc">.browserslistrc</a> for details.</p>
-<h2 id="local-documentation">Local documentation</h2>
-<p>Running our documentation locally requires the use of Hugo, which gets installed via the <a href="https://www.npmjs.com/package/hugo-bin">hugo-bin</a> npm package. Hugo is a blazingly fast and quite extensible static site generator that provides us: basic includes, Markdown-based files, templates, and more. Here&rsquo;s how to get it started:</p>
+<p>Bootstrap использует <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (включенный в наш процесс сборки) для автоматического добавления префиксов поставщиков к некоторым свойствам CSS во время сборки. Это экономит время и код, позволяя нам писать ключевые части нашего CSS за один раз, устраняя при этом необходимость в миксинах поставщиков, подобных тем, которые есть в v3.</p>
+<p>Мы храним список браузеров, поддерживаемых с помощью Autoprefixer, в отдельном файле в нашем репозитории GitHub. См. <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/.browserslistrc">.browserslistrc</a> для получения дополнительной информации.</p>
+<h2 id="локальная-документация">Локальная документация</h2>
+<p>Для локального запуска нашей документации требуется использование Hugo, который устанавливается через пакет npm <a href="https://www.npmjs.com/package/hugo-bin">hugo-bin</a>. Hugo - это невероятно быстрый и достаточно расширяемый генератор статических сайтов, который предоставляет нам: базовые включения, файлы на основе Markdown, шаблоны и многое другое. Вот как это начать:</p>
 <ol>
-<li>Run through the <a href="#tooling-setup">tooling setup</a> above to install all dependencies.</li>
-<li>From the root <code>/bootstrap</code> directory, run <code>npm run docs-serve</code> in the command line.</li>
-<li>Open <code>http://localhost:9001/</code> in your browser, and voilà.</li>
+<li>Выполните <a href="#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2">настройку инструментов</a> выше, чтобы установить все зависимости.</li>
+<li>Из корневого каталога <code>/bootstrap</code>, запустите <code>npm run docs-serve</code> в командной строке.</li>
+<li>Откройте <code>http://localhost:9001/</code> в Вашем браузере и готово.</li>
 </ol>
-<p>Learn more about using Hugo by reading its <a href="https://gohugo.io/documentation/">documentation</a>.</p>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<p>Should you encounter problems with installing dependencies, uninstall all previous dependency versions (global and local). Then, rerun <code>npm install</code>.</p>
+<p>Узнайте больше об использовании Hugo, прочитав его [документацию]](<a href="https://gohugo.io/documentation/">https://gohugo.io/documentation/</a>) или [перевод официальной документации]](<a href="https://gohugo.ru/documentation/)">https://gohugo.ru/documentation/)</a>.</p>
+<h2 id="исправление-проблем">Исправление проблем</h2>
+<p>Если у Вас возникнут проблемы с установкой зависимостей, удалите все предыдущие версии зависимостей (глобальные и локальные). Затем повторно запустите <code>npm install</code>.</p>
 
         </main>
       </div>

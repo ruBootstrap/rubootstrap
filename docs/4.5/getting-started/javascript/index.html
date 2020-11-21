@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Bring Bootstrap to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.">
+<meta name="description" content="Оживите Bootstrap с помощью наших дополнительных плагинов JavaScript, построенных на jQuery. Узнайте о каждом плагине, наших данных и параметрах программного API и многом другом.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -41,13 +41,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="JavaScript">
-<meta name="twitter:description" content="Bring Bootstrap to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.">
+<meta name="twitter:description" content="Оживите Bootstrap с помощью наших дополнительных плагинов JavaScript, построенных на jQuery. Узнайте о каждом плагине, наших данных и параметрах программного API и многом другом.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/getting-started/javascript/">
 <meta property="og:title" content="JavaScript">
-<meta property="og:description" content="Bring Bootstrap to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.">
+<meta property="og:description" content="Оживите Bootstrap с помощью наших дополнительных плагинов JavaScript, построенных на jQuery. Узнайте о каждом плагине, наших данных и параметрах программного API и многом другом.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -264,19 +264,19 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#individual-or-compiled">Individual or compiled</a></li>
-    <li><a href="#dependencies">Dependencies</a></li>
-    <li><a href="#data-attributes">Data attributes</a></li>
-    <li><a href="#events">Events</a></li>
-    <li><a href="#programmatic-api">Programmatic API</a>
+    <li><a href="#индивидуальный-или-скомпилированный">Индивидуальный или скомпилированный</a></li>
+    <li><a href="#зависимости">Зависимости</a></li>
+    <li><a href="#атрибуты-данных">Атрибуты данных</a></li>
+    <li><a href="#события">События</a></li>
+    <li><a href="#программный-api">Программный API</a>
       <ul>
-        <li><a href="#asynchronous-functions-and-transitions">Asynchronous functions and transitions</a></li>
-        <li><a href="#default-settings">Default settings</a></li>
+        <li><a href="#асинхронные-функции-и-переходы">Асинхронные функции и переходы</a></li>
+        <li><a href="#настройки-по-умолчанию">Настройки по умолчанию</a></li>
       </ul>
     </li>
-    <li><a href="#no-conflict">No conflict</a></li>
-    <li><a href="#version-numbers">Version numbers</a></li>
-    <li><a href="#no-special-fallbacks-when-javascript-is-disabled">No special fallbacks when JavaScript is disabled</a></li>
+    <li><a href="#нет-конфликта">Нет конфликта</a></li>
+    <li><a href="#номера-версий">Номера версий</a></li>
+    <li><a href="#никаких-специальных-резервных-вариантов-при-отключенном-javascript">Никаких специальных резервных вариантов при отключенном JavaScript</a></li>
     <li><a href="#util">Util</a></li>
     <li><a href="#sanitizer">Sanitizer</a></li>
   </ul>
@@ -290,82 +290,82 @@
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/getting-started/javascript.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
             <h1 class="bd-title" id="content">JavaScript</h1>
           </div>
-          <p class="bd-lead">Bring Bootstrap to life with our optional JavaScript plugins built on jQuery. Learn about each plugin, our data and programmatic API options, and more.</p>
+          <p class="bd-lead">Оживите Bootstrap с помощью наших дополнительных плагинов JavaScript, построенных на jQuery. Узнайте о каждом плагине, наших данных и параметрах программного API и многом другом.</p>
           
-          <h2 id="individual-or-compiled">Individual or compiled</h2>
-<p>Plugins can be included individually (using Bootstrap&rsquo;s individual <code>js/dist/*.js</code>), or all at once using <code>bootstrap.js</code> or the minified <code>bootstrap.min.js</code> (don&rsquo;t include both).</p>
-<p>If you use a bundler (Webpack, Rollup&hellip;), you can use <code>/js/dist/*.js</code> files which are UMD ready.</p>
-<h2 id="dependencies">Dependencies</h2>
-<p>Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs. Also note that <strong>all plugins depend on jQuery</strong> (this means jQuery must be included <strong>before</strong> the plugin files). <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/package.json">Consult our <code>package.json</code></a> to see which versions of jQuery are supported.</p>
-<p>Our dropdowns, popovers and tooltips also depend on <a href="https://popper.js.org/">Popper.js</a>.</p>
-<h2 id="data-attributes">Data attributes</h2>
-<p>Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to <strong>only use one set of data attributes on a single element</strong> (e.g., you cannot trigger a tooltip and modal from the same button.)</p>
-<p>However, in some situations it may be desirable to disable this functionality. To disable the data attribute API, unbind all events on the document namespaced with <code>data-api</code> like so:</p>
+          <h2 id="индивидуальный-или-скомпилированный">Индивидуальный или скомпилированный</h2>
+<p>Плагины могут быть включены индивидуально (с использованием отдельного файла Bootstrap <code>js/dist/*.js</code>), или все сразу, используя <code>bootstrap.js</code> или минифицированный <code>bootstrap.min.js</code> (не включайте оба).</p>
+<p>Если Вы используете бандлер (Webpack, Rollup&hellip;), Вы можете использовать файлы <code>/js/dist/*.js</code>, готовые для UMD.</p>
+<h2 id="зависимости">Зависимости</h2>
+<p>Некоторые плагины и компоненты CSS зависят от других плагинов. Если Вы включаете плагины по отдельности, обязательно проверьте наличие этих зависимостей в документации. Также обратите внимание, что <strong>все плагины зависят от jQuery</strong> (это означает, что jQuery должен быть включен <strong>перед</strong> файлами плагинов). <a href="https://github.com/twbs/bootstrap/blob/v4.5.3/package.json">Обратитесь к нашему <code>package.json</code></a>, чтобы узнать, какие версии jQuery поддерживаются.</p>
+<p>Наши раскрывающиеся списки, всплывающие окна и всплывающие подсказки также зависят от <a href="https://popper.js.org/">Popper.js</a>.</p>
+<h2 id="атрибуты-данных">Атрибуты данных</h2>
+<p>Почти все плагины Bootstrap можно включить и настроить только с помощью HTML с атрибутами данных (наш предпочтительный способ использования функциональности JavaScript). Обязательно <strong>используйте только один набор атрибутов данных для одного элемента</strong> (например, Вы не можете запускать всплывающую подсказку и модальное окно с помощью одной кнопки.)</p>
+<p>Однако в некоторых ситуациях может потребоваться отключить эту функцию. Чтобы отключить API атрибутов данных, отмените привязку всех событий к документу, имеющему пространство имен с помощью <code>data-api</code>, например:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;.data-api&#39;</span><span class="p">)</span>
-</code></pre></div><p>Alternatively, to target a specific plugin, just include the plugin&rsquo;s name as a namespace along with the data-api namespace like this:</p>
+</code></pre></div><p>В качестве альтернативы, чтобы настроить таргетинг на конкретный плагин, просто включите имя плагина в качестве пространства имен вместе с пространством имен data-api следующим образом:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">&#39;.alert.data-api&#39;</span><span class="p">)</span>
 </code></pre></div><div class="bd-callout bd-callout-warning">
-<h2 id="selectors">Selectors</h2>
-<p>Currently to query DOM elements we use the native methods <code>querySelector</code> and <code>querySelectorAll</code> for performance reasons, so you have to use <a href="https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier">valid selectors</a>.
-If you use special selectors, for example: <code>collapse:Example</code> be sure to escape them.
+<h2 id="селекторы">Селекторы</h2>
+<p>В настоящее время для запросов к элементам DOM мы используем собственные методы <code>querySelector</code> и <code>querySelectorAll</code> из соображений производительности, поэтому Вы должны использовать <a href="https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier">допустимые селекторы</a>.
+Если Вы используете специальные селекторы, например: <code>collapse:Example</code>, не забудьте их экранировать.
 </div>
 
-<h2 id="events">Events</h2>
-<p>Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is triggered on the completion of an action.</p>
-<p>All infinitive events provide <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a> functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call <code>preventDefault()</code>.</p>
+<h2 id="события">События</h2>
+<p>Bootstrap предоставляет настраиваемые события для уникальных действий большинства плагинов. Как правило, они бывают в форме причастия прошедшего времени и инфинитива, где инфинитив (например, <code>show</code>) запускается в начале события, а его форма причастия прошедшего времени (например, <code>shown</code>) запускается при завершении события действие.</p>
+<p>Все инфинитивные события обеспечивают функциональность <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a>. Это дает возможность остановить выполнение действия до его запуска. Возврат false от обработчика событий также автоматически вызывает <code>preventDefault()</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;show.bs.modal&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown
+    <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// останавливает отображение модального окна
 </span><span class="c1"></span>  <span class="p">}</span>
 <span class="p">})</span>
-</code></pre></div><h2 id="programmatic-api">Programmatic API</h2>
-<p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+</code></pre></div><h2 id="программный-api">Программный API</h2>
+<p>Мы также считаем, что у Вас должна быть возможность использовать все плагины Bootstrap исключительно через JavaScript API. Все общедоступные API-интерфейсы представляют собой единые, объединяемые в цепочки методы и возвращают коллекцию, на которую были выполнены действия.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.btn.danger&#39;</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;fat&#39;</span><span class="p">)</span>
-</code></pre></div><p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">()</span> <span class="c1">// initialized with defaults
-</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span> <span class="c1">// initialized with no keyboard
-</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span> <span class="c1">// initializes and invokes show immediately
-</span></code></pre></div><p>Each plugin also exposes its raw constructor on a <code>Constructor</code> property: <code>$.fn.popover.Constructor</code>. If you&rsquo;d like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel=&quot;popover&quot;]').data('popover')</code>.</p>
-<h3 id="asynchronous-functions-and-transitions">Asynchronous functions and transitions</h3>
-<p>All programmatic API methods are <strong>asynchronous</strong> and return to the caller once the transition is started but <strong>before it ends</strong>.</p>
-<p>In order to execute an action once the transition is complete, you can listen to the corresponding event.</p>
+</code></pre></div><p>Все методы должны принимать необязательный объект параметров, строку, нацеленную на конкретный метод, или ничего (что запускает плагин с поведением по умолчанию):</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">()</span> <span class="c1">// инициализирован по умолчанию
+</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">({</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span> <span class="c1">// инициализирован без клавиатуры
+</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span> <span class="c1">// немедленно инициализирует и вызывает show
+</span></code></pre></div><p>Каждый плагин также предоставляет свой необработанный конструктор <code>Constructor</code> в свойстве: <code>$.fn.popover.Constructor</code>. Если Вы хотите получить конкретный экземпляр плагина, получите его прямо из элемента: <code>$('[rel=&quot;popover&quot;]').data('popover')</code>.</p>
+<h3 id="асинхронные-функции-и-переходы">Асинхронные функции и переходы</h3>
+<p>Все программные методы API <strong>асинхронны</strong> и возвращаются вызывающей стороне после начала перехода, но <strong>до его завершения</strong>.</p>
+<p>Чтобы выполнить действие после завершения перехода, Вы можете прослушать соответствующее событие.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCollapse&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.collapse&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Action to execute once the collapsible area is expanded
+  <span class="c1">// Действие, выполняемое после раскрытия складной области
 </span><span class="c1"></span><span class="p">})</span>
-</code></pre></div><p>In addition a method call on a <strong>transitioning component will be ignored</strong>.</p>
+</code></pre></div><p>Кроме того, вызов метода <strong>переходного компонента будет проигнорирован</strong>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;slid.bs.carousel&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// Will slide to the slide 2 as soon as the transition to slide 1 is finished
+  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// Перейдет к слайду 2, как только переход к слайду 1 завершится
 </span><span class="c1"></span><span class="p">})</span>
 
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="c1">// Will start sliding to the slide 1 and returns to the caller
-</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// !! Will be ignored, as the transition to the slide 1 is not finished !!
-</span></code></pre></div><h3 id="default-settings">Default settings</h3>
-<p>You can change the default settings for a plugin by modifying the plugin&rsquo;s <code>Constructor.Default</code> object:</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// changes default for the modal plugin&#39;s `keyboard` option to false
+<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="c1">// Начнется переход к слайду 1 и вернется к вызывающему
+</span><span class="c1"></span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// !! Будет проигнорировано, так как переход к слайду 1 не завершен !!
+</span></code></pre></div><h3 id="настройки-по-умолчанию">Настройки по умолчанию</h3>
+<p>Вы можете изменить настройки плагина по умолчанию, изменив его объект <code>Constructor.Default</code>:</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// изменяет значение по умолчанию для опции `keyboard` модального плагина на false
 </span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span>
-</code></pre></div><h2 id="no-conflict">No conflict</h2>
-<p>Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value
-</span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span> <span class="c1">// give $().bootstrapBtn the Bootstrap functionality
-</span></code></pre></div><h2 id="version-numbers">Version numbers</h2>
-<p>The version of each of Bootstrap&rsquo;s jQuery plugins can be accessed via the <code>VERSION</code> property of the plugin&rsquo;s constructor. For example, for the tooltip plugin:</p>
+</code></pre></div><h2 id="нет-конфликта">Нет конфликта</h2>
+<p>Иногда необходимо использовать плагины Bootstrap с другими фреймворками пользовательского интерфейса. В этих обстоятельствах иногда могут возникать конфликты пространств имен. Если это произойдет, Вы можете вызвать <code>.noConflict</code> в плагине, значение которого Вы хотите вернуть.</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// вернуть $.fn.button к ранее присвоенному значению
+</span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span> <span class="c1">// дать $().bootstrapBtn функциональность Bootstrap
+</span></code></pre></div><h2 id="номера-версий">Номера версий</h2>
+<p>Доступ к версии каждого из плагинов Bootstrap jQuery можно получить через свойство VERSION конструктора плагина. Например, для плагина всплывающей подсказки:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; &#34;4.5.3&#34;
-</span></code></pre></div><h2 id="no-special-fallbacks-when-javascript-is-disabled">No special fallbacks when JavaScript is disabled</h2>
-<p>Bootstrap&rsquo;s plugins don&rsquo;t fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
+</span></code></pre></div><h2 id="никаких-специальных-резервных-вариантов-при-отключенном-javascript">Никаких специальных резервных вариантов при отключенном JavaScript</h2>
+<p>Плагины Bootstrap не особенно изящно отключаются при отключенном JavaScript. Если в этом случае Вам важен опыт пользователя, используйте <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a>, чтобы объяснить ситуацию (и как повторно включить JavaScript) для Ваших пользователей и/или добавить свои собственные резервные варианты.</p>
 <div class="bd-callout bd-callout-warning">
-<h5 id="third-party-libraries">Third-party libraries</h5>
-<p><strong>Bootstrap does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.
+<h5 id="сторонние-библиотеки">Сторонние библиотеки</h5>
+<p><strong>Bootstrap официально не поддерживает сторонние библиотеки JavaScript</strong>, такие как Prototype или jQuery UI. Несмотря на <code>.noConflict</code> и события в пространстве имен, могут возникнуть проблемы совместимости, которые Вам нужно исправить самостоятельно.
 </div>
 
 <h2 id="util">Util</h2>
-<p>All Bootstrap&rsquo;s JavaScript files depend on <code>util.js</code> and it has to be included alongside the other JavaScript files. If you&rsquo;re using the compiled (or minified) <code>bootstrap.js</code>, there is no need to include this—it&rsquo;s already there.</p>
-<p><code>util.js</code> includes utility functions and a basic helper for <code>transitionEnd</code> events as well as a CSS transition emulator. It&rsquo;s used by the other plugins to check for CSS transition support and to catch hanging transitions.</p>
+<p>Все файлы JavaScript в Bootstrap зависят от <code>util.js</code>, и он должен быть включен вместе с другими файлами JavaScript. Если Вы используете скомпилированный (или минифицированный) файл <code>bootstrap.js</code>, нет необходимости включать его - он уже есть.</p>
+<p><code>util.js</code> включает служебные функции и базовый помощник для событий <code>transitionEnd</code>, а также эмулятор перехода CSS. Он используется другими плагинами для проверки поддержки переходов CSS и для обнаружения зависших переходов.</p>
 <h2 id="sanitizer">Sanitizer</h2>
-<p>Tooltips and Popovers use our built-in sanitizer to sanitize options which accept HTML.</p>
-<p>The default <code>whiteList</code> value is the following:</p>
+<p>Всплывающие подсказки и всплывающие окна используют наше встроенное средство очистки для очистки параметров, принимающих HTML.</p>
+<p>Значение по умолчанию <code>whiteList</code> следующее:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span> <span class="o">=</span> <span class="sr">/^aria-[\w-]*$/i</span>
 <span class="kd">var</span> <span class="nx">DefaultWhitelist</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="c1">// Global attributes allowed on any supplied element below.
+  <span class="c1">// Глобальные атрибуты разрешены для любого указанного ниже элемента.
 </span><span class="c1"></span>  <span class="s1">&#39;*&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">,</span> <span class="s1">&#39;dir&#39;</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;lang&#39;</span><span class="p">,</span> <span class="s1">&#39;role&#39;</span><span class="p">,</span> <span class="nx">ARIA_ATTRIBUTE_PATTERN</span><span class="p">],</span>
   <span class="nx">a</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="s1">&#39;href&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;rel&#39;</span><span class="p">],</span>
   <span class="nx">area</span><span class="o">:</span> <span class="p">[],</span>
@@ -397,20 +397,20 @@ If you use special selectors, for example: <code>collapse:Example</code> be sure
   <span class="nx">u</span><span class="o">:</span> <span class="p">[],</span>
   <span class="nx">ul</span><span class="o">:</span> <span class="p">[]</span>
 <span class="p">}</span>
-</code></pre></div><p>If you want to add new values to this default <code>whiteList</code> you can do the following:</p>
+</code></pre></div><p>Если Вы хотите добавить новые значения в этот белый список <code>whiteList</code> по умолчанию, Вы можете сделать следующее:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myDefaultWhiteList</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">whiteList</span>
 
-<span class="c1">// To allow table elements
+<span class="c1">// Разрешить элементы таблицы
 </span><span class="c1"></span><span class="nx">myDefaultWhiteList</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="c1">// To allow td elements and data-option attributes on td elements
+<span class="c1">// Чтобы разрешить элементы td и атрибуты параметров данных в элементах td
 </span><span class="c1"></span><span class="nx">myDefaultWhiteList</span><span class="p">.</span><span class="nx">td</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data-option&#39;</span><span class="p">]</span>
 
-<span class="c1">// You can push your custom regex to validate your attributes.
-</span><span class="c1">// Be careful about your regular expressions being too lax
+<span class="c1">// Вы можете отправить собственное регулярное выражение для проверки своих атрибутов.
+</span><span class="c1">// Будьте осторожны, чтобы Ваши регулярные выражения были слишком слабыми
 </span><span class="c1"></span><span class="kd">var</span> <span class="nx">myCustomRegex</span> <span class="o">=</span> <span class="sr">/^data-my-app-[\w-]+/</span>
 <span class="nx">myDefaultWhiteList</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">myCustomRegex</span><span class="p">)</span>
-</code></pre></div><p>If you want to bypass our sanitizer because you prefer to use a dedicated library, for example <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>, you should do the following:</p>
+</code></pre></div><p>Если Вы хотите обойти наше средство очистки, потому что предпочитаете использовать специальную библиотеку, например <a href="https://www.npmjs.com/package/dompurify">DOMPurify</a>, Вам следует сделать следующее:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#yourTooltip&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span>
   <span class="nx">sanitizeFn</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">content</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nx">DOMPurify</span><span class="p">.</span><span class="nx">sanitize</span><span class="p">(</span><span class="nx">content</span><span class="p">)</span>
