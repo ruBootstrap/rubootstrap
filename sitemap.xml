@@ -55,9 +55,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/close-icon/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/content/code/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/collapse/</loc>
   </url>
   <url>
@@ -82,9 +79,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/content/figures/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-fixed/</loc>
   </url>
   <url>
@@ -107,9 +101,6 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/image-replacement/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/content/images/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/input-group/</loc>
@@ -169,9 +160,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/components/progress/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/content/reboot/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/screen-readers/</loc>
   </url>
   <url>
@@ -205,9 +193,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/stretched-link/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/content/tables/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/text/</loc>
   </url>
   <url>
@@ -218,9 +203,6 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-static/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/content/typography/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/vertical-align/</loc>
@@ -244,13 +226,22 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/introduction/</loc>
   </url>
   <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/content/figures/</loc>
+  </url>
+  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/accessibility/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/content/images/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/build-tools/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/overview/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/content/code/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/team/</loc>
@@ -260,6 +251,9 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/translations/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/content/reboot/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/migration/</loc>
@@ -277,7 +271,13 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/contents/</loc>
   </url>
   <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/content/tables/</loc>
+  </url>
+  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/theming/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/content/typography/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/layout/utilities-for-layout/</loc>
