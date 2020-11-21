@@ -100,9 +100,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/components/forms/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/layout/grid/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/grid/</loc>
   </url>
   <url>
@@ -152,9 +149,6 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/overflow/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/layout/overview/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/pagination/</loc>
@@ -229,9 +223,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/content/typography/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/layout/utilities-for-layout/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/vertical-align/</loc>
   </url>
   <url>
@@ -265,6 +256,9 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/about/team/</loc>
   </url>
   <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/layout/overview/</loc>
+  </url>
+  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/translations/</loc>
   </url>
   <url>
@@ -274,6 +268,9 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/about/brand/</loc>
   </url>
   <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/layout/grid/</loc>
+  </url>
+  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/download/</loc>
   </url>
   <url>
@@ -281,6 +278,9 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/theming/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/layout/utilities-for-layout/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/license/</loc>

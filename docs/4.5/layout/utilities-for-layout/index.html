@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.">
+<meta name="description" content="Для более быстрой и гибкой разработки, удобной для мобильных устройств, Bootstrap включает в себя десятки служебных классов для отображения, скрытия, выравнивания и размещения содержимого.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -12,7 +12,7 @@
 
 <meta name="yandex-verification" content="268fb73245c0ff4f" />
 
-<title>Utilities for layout · Bootstrap v4.5</title>
+<title>Утилиты для верстки · Bootstrap v4.5</title>
 
 <link rel="canonical" href="https://v4.getbootstrap.su/docs/4.5/layout/utilities-for-layout/">
 
@@ -40,14 +40,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Utilities for layout">
-<meta name="twitter:description" content="For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.">
+<meta name="twitter:title" content="Утилиты для верстки">
+<meta name="twitter:description" content="Для более быстрой и гибкой разработки, удобной для мобильных устройств, Bootstrap включает в себя десятки служебных классов для отображения, скрытия, выравнивания и размещения содержимого.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/layout/utilities-for-layout/">
-<meta property="og:title" content="Utilities for layout">
-<meta property="og:description" content="For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.">
+<meta property="og:title" content="Утилиты для верстки">
+<meta property="og:description" content="Для более быстрой и гибкой разработки, удобной для мобильных устройств, Bootstrap включает в себя десятки служебных классов для отображения, скрытия, выравнивания и размещения содержимого.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -204,7 +204,7 @@
 
       <div class="bd-toc-item">
         <a class="bd-toc-link" href="/docs/4.5/content/reboot/">
-          Content
+          Контент
         </a>
       </div>
 
@@ -246,10 +246,10 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#changing-display">Changing <code>display</code></a></li>
-    <li><a href="#flexbox-options">Flexbox options</a></li>
-    <li><a href="#margin-and-padding">Margin and padding</a></li>
-    <li><a href="#toggle-visibility">Toggle <code>visibility</code></a></li>
+    <li><a href="#изменение-display">Изменение <code>display</code></a></li>
+    <li><a href="#параметры-flexbox">Параметры Flexbox</a></li>
+    <li><a href="#поля-и-отступы">Поля и отступы</a></li>
+    <li><a href="#переключение-visibility">Переключение <code>visibility</code></a></li>
   </ul>
 </nav>
           </nav>
@@ -259,19 +259,19 @@
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.5/layout/utilities-for-layout.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/layout/utilities-for-layout.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
-            <h1 class="bd-title" id="content">Utilities for layout</h1>
+            <h1 class="bd-title" id="content">Утилиты для верстки</h1>
           </div>
-          <p class="bd-lead">For faster mobile-friendly and responsive development, Bootstrap includes dozens of utility classes for showing, hiding, aligning, and spacing content.</p>
+          <p class="bd-lead">Для более быстрой и гибкой разработки, удобной для мобильных устройств, Bootstrap включает в себя десятки служебных классов для отображения, скрытия, выравнивания и размещения содержимого.</p>
           
-          <h2 id="changing-display">Changing <code>display</code></h2>
-<p>Use our <a href="/docs/4.5/utilities/display/">display utilities</a> for responsively toggling common values of the <code>display</code> property. Mix it with our grid system, content, or components to show or hide them across specific viewports.</p>
-<h2 id="flexbox-options">Flexbox options</h2>
-<p>Bootstrap 4 is built with flexbox, but not every element&rsquo;s <code>display</code> has been changed to <code>display: flex</code> as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of <a href="/docs/4.5/components/alerts/">our components</a> are built with flexbox enabled.</p>
-<p>Should you need to add <code>display: flex</code> to an element, do so with <code>.d-flex</code> or one of the responsive variants (e.g., <code>.d-sm-flex</code>). You&rsquo;ll need this class or <code>display</code> value to allow the use of our extra <a href="/docs/4.5/utilities/flex/">flexbox utilities</a> for sizing, alignment, spacing, and more.</p>
-<h2 id="margin-and-padding">Margin and padding</h2>
-<p>Use the <code>margin</code> and <code>padding</code> <a href="/docs/4.5/utilities/spacing/">spacing utilities</a> to control how elements and components are spaced and sized. Bootstrap 4 includes a five-level scale for spacing utilities, based on a <code>1rem</code> value default <code>$spacer</code> variable. Choose values for all viewports (e.g., <code>.mr-3</code> for <code>margin-right: 1rem</code>), or pick responsive variants to target specific viewports (e.g., <code>.mr-md-3</code> for <code>margin-right: 1rem</code> starting at the <code>md</code> breakpoint).</p>
-<h2 id="toggle-visibility">Toggle <code>visibility</code></h2>
-<p>When toggling <code>display</code> isn&rsquo;t needed, you can toggle the <code>visibility</code> of an element with our <a href="/docs/4.5/utilities/visibility/">visibility utilities</a>. Invisible elements will still affect the layout of the page, but are visually hidden from visitors.</p>
+          <h2 id="изменение-display">Изменение <code>display</code></h2>
+<p>Используйте наши <a href="/docs/4.5/utilities/display/">утилиты отображения</a> для быстрого переключения общих значений свойства <code>display</code>. Смешайте его с нашей сеткой, контентом или компонентами, чтобы показать или скрыть их в определенных окнах просмотра.</p>
+<h2 id="параметры-flexbox">Параметры Flexbox</h2>
+<p>Bootstrap 4 построен с использованием flexbox, но не каждый элемент <code>display</code> был изменен на <code>display: flex</code>, так как это добавило бы много ненужных переопределений и неожиданно изменило бы поведение основных браузеров. Большинство <a href="/docs/4.5/components/alerts/">наших компонентов</a> построены с включенным flexbox.</p>
+<p>Если Вам нужно добавить к элементу <code>display: flex</code>, сделайте это с помощью <code>.d-flex</code> или одного из адаптивных вариантов (например, <code>.d-sm-flex</code>). Вам понадобится этот класс или значение <code>display</code>, чтобы разрешить использование наших дополнительных <a href="/docs/4.5/utilities/flex/">утилит флексбокс</a> для определения размеров, выравнивания, интервалов и т.д.</p>
+<h2 id="поля-и-отступы">Поля и отступы</h2>
+<p>Используйте <code>margin</code> и <code>padding</code> <a href="/docs/4.5/utilities/spacing/">утилиты интервалов</a>, чтобы управлять расположением и размером элементов и компонентов. Bootstrap 4 включает пятиуровневую шкалу для интервалов между утилитами, основанную на переменной <code>$spacer</code> по умолчанию со значением <code>1rem</code>. Выберите значения для всех окон просмотра (например, <code>.mr-3</code> для <code>margin-right: 1rem</code>), или выберите адаптивные варианты для нацеливания на определенные области просмотра (например, <code>.mr-md-3</code> для <code>margin-right: 1rem</code> начиная с контрольной точки <code>md</code>).</p>
+<h2 id="переключение-visibility">Переключение <code>visibility</code></h2>
+<p>Когда переключение <code>display</code> не требуется, Вы можете переключать <code>visibility</code> элемента с помощью наших <a href="/docs/4.5/utilities/visibility/">утилит видимости</a>. Невидимые элементы по-прежнему будут влиять на макет страницы, но визуально скрыты от посетителей.</p>
 
         </main>
       </div>
