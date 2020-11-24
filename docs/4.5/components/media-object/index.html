@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Documentation and examples for Bootstrap&rsquo;s media object to construct highly repetitive components like blog comments, tweets, and the like.">
+<meta name="description" content="Документация и примеры для медиа-объекта Bootstrap для создания часто повторяющихся компонентов, таких как комментарии в блогах, твиты и тому подобное.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -12,7 +12,7 @@
 
 <meta name="yandex-verification" content="268fb73245c0ff4f" />
 
-<title>Media object · Bootstrap v4.5</title>
+<title>Медиа объект · Bootstrap v4.5</title>
 
 <link rel="canonical" href="https://v4.getbootstrap.su/docs/4.5/components/media-object/">
 
@@ -40,14 +40,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Media object">
-<meta name="twitter:description" content="Documentation and examples for Bootstrap&rsquo;s media object to construct highly repetitive components like blog comments, tweets, and the like.">
+<meta name="twitter:title" content="Медиа объект">
+<meta name="twitter:description" content="Документация и примеры для медиа-объекта Bootstrap для создания часто повторяющихся компонентов, таких как комментарии в блогах, твиты и тому подобное.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/components/media-object/">
-<meta property="og:title" content="Media object">
-<meta property="og:description" content="Documentation and examples for Bootstrap&rsquo;s media object to construct highly repetitive components like blog comments, tweets, and the like.">
+<meta property="og:title" content="Медиа объект">
+<meta property="og:description" content="Документация и примеры для медиа-объекта Bootstrap для создания часто повторяющихся компонентов, таких как комментарии в блогах, твиты и тому подобное.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -309,11 +309,11 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#example">Example</a></li>
-    <li><a href="#nesting">Nesting</a></li>
-    <li><a href="#alignment">Alignment</a></li>
-    <li><a href="#order">Order</a></li>
-    <li><a href="#media-list">Media list</a></li>
+    <li><a href="#пример">Пример</a></li>
+    <li><a href="#вложенность">Вложенность</a></li>
+    <li><a href="#выравнивание">Выравнивание</a></li>
+    <li><a href="#порядок">Порядок</a></li>
+    <li><a href="#медиа-список">Медиа-список</a></li>
   </ul>
 </nav>
           </nav>
@@ -323,44 +323,44 @@
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.5/components/media-object.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/components/media-object.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
-            <h1 class="bd-title" id="content">Media object</h1>
+            <h1 class="bd-title" id="content">Медиа объект</h1>
           </div>
-          <p class="bd-lead">Documentation and examples for Bootstrap&rsquo;s media object to construct highly repetitive components like blog comments, tweets, and the like.</p>
+          <p class="bd-lead">Документация и примеры для медиа-объекта Bootstrap для создания часто повторяющихся компонентов, таких как комментарии в блогах, твиты и тому подобное.</p>
           
-          <h2 id="example">Example</h2>
-<p>The <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">media object</a> helps build complex and repetitive components where some media is positioned alongside content that doesn&rsquo;t wrap around said media. Plus, it does this with only two required classes thanks to flexbox.</p>
-<p>Below is an example of a single media object. Only two classes are required—the wrapping <code>.media</code> and the <code>.media-body</code> around your content. Optional padding and margin can be controlled through <a href="/docs/4.5/utilities/spacing/">spacing utilities</a>.</p>
+          <h2 id="пример">Пример</h2>
+<p><a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Медиа-объект</a> помогает создавать сложные и повторяющиеся компоненты, в которых некоторые медиа позиционируются рядом с контентом, который не охватывает упомянутые медиа. Кроме того, благодаря flexbox он делает это только с двумя обязательными классами.</p>
+<p>Ниже приведен пример одного медиа-объекта. Требуются только два класса - обертка <code>.media</code> и <code>.media-body</code> вокруг Вашего контента. Необязательные отступы и поля можно контролировать с помощью <a href="/docs/4.5/utilities/spacing/">утилит интервалов</a>.</p>
 <div class="bd-example">
 <div class="media">
   <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
 
   <div class="media-body">
-    <h5 class="mt-0">Media heading</h5>
+    <h5 class="mt-0">Медиа заголовок</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   </div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Media heading<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа заголовок<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div class="bd-callout bd-callout-warning">
-<h5 id="flexbug-12-inline-elements-arent-treated-as-flex-items">Flexbug #12: Inline elements aren&rsquo;t treated as flex items</h5>
-<p>Internet Explorer 10-11 do not render inline elements like links or images (or <code>::before</code> and <code>::after</code> pseudo-elements) as flex items. The only workaround is to set a non-inline <code>display</code> value (e.g., <code>block</code>, <code>inline-block</code>, or <code>flex</code>). We suggest using <code>.d-flex</code>, one of our <a href="/docs/4.5/utilities/display/">display utilities</a>, as an easy fix.</p>
-<p><strong>Source:</strong> <a href="https://github.com/philipwalton/flexbugs#flexbug-12">Flexbugs on GitHub</a></p>
+<h5 id="flexbug-12-строковые-элементы-не-рассматриваются-как-гибкие">Flexbug #12: Строковые элементы не рассматриваются как гибкие</h5>
+<p>Internet Explorer 10-11 не отображает встроенные элементы, такие как ссылки или изображения (или псевдоэлементы <code>::before</code> и <code>::after</code>) как гибкие элементы. Единственный обходной путь - установить не встроенное значение <code>display</code> (например, <code>block</code>, <code>inline-block</code> или <code>flex</code>). Мы предлагаем использовать <code>.d-flex</code>, одну из наших <a href="/docs/4.5/utilities/display/">утилит отображения</a>, как простое решение.</p>
+<p><strong>Источник:</strong> <a href="https://github.com/philipwalton/flexbugs#flexbug-12">Flexbugs на GitHub</a></p>
 
 </div>
 
-<h2 id="nesting">Nesting</h2>
-<p>Media objects can be infinitely nested, though we suggest you stop at some point. Place nested <code>.media</code> within the <code>.media-body</code> of a parent media object.</p>
+<h2 id="вложенность">Вложенность</h2>
+<p>Медиа-объекты могут быть бесконечно вложенными, хотя мы рекомендуем Вам остановиться на каком-то этапе. Поместите вложенный файл <code>.media</code> в <code>.media-body</code> родительского медиа-объекта.</p>
 <div class="bd-example">
 <div class="media">
   <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
 
   <div class="media-body">
-    <h5 class="mt-0">Media heading</h5>
+    <h5 class="mt-0">Медиа заголовок</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 
     <div class="media mt-3">
@@ -369,7 +369,7 @@
 
       </a>
       <div class="media-body">
-        <h5 class="mt-0">Media heading</h5>
+        <h5 class="mt-0">Медиа заголовок</h5>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
       </div>
     </div>
@@ -378,7 +378,7 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Media heading<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа заголовок<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
 
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media mt-3&#34;</span><span class="p">&gt;</span>
@@ -386,20 +386,20 @@
         <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
       <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Media heading<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа заголовок<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
       <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="alignment">Alignment</h2>
-<p>Media in a media object can be aligned with flexbox utilities to the top (default), middle, or end of your <code>.media-body</code> content.</p>
+<h2 id="выравнивание">Выравнивание</h2>
+<p>Мультимедиа в медиа-объекте можно выровнять с помощью утилит flexbox по верхнему (по умолчанию), среднему или концу Вашего содержимого <code>.media-body</code>.</p>
 <div class="bd-example">
 <div class="media">
   <svg class="bd-placeholder-img align-self-start mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
 
   <div class="media-body">
-    <h5 class="mt-0">Top-aligned media</h5>
+    <h5 class="mt-0">Медиа по верхнему краю</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
     <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
@@ -407,7 +407,7 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-start mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Top-aligned media<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа по верхнему краю<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -417,7 +417,7 @@
   <svg class="bd-placeholder-img align-self-center mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
 
   <div class="media-body">
-    <h5 class="mt-0">Center-aligned media</h5>
+    <h5 class="mt-0">Медиа по центру</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
@@ -425,7 +425,7 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-center mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Center-aligned media<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа по центру<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;</span>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -435,7 +435,7 @@
   <svg class="bd-placeholder-img align-self-end mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
 
   <div class="media-body">
-    <h5 class="mt-0">Bottom-aligned media</h5>
+    <h5 class="mt-0">Медиа по нижнему краю</h5>
     <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
     <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </div>
@@ -443,17 +443,17 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-end mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Bottom-aligned media<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа по нижнему краю<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;</span>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="order">Order</h2>
-<p>Change the order of content in media objects by modifying the HTML itself, or by adding some custom flexbox CSS to set the <code>order</code> property (to an integer of your choosing).</p>
+<h2 id="порядок">Порядок</h2>
+<p>Измените порядок содержимого в медиа-объектах, изменив сам HTML или добавив некоторый настраиваемый CSS Flexbox, чтобы установить свойство <code>order</code> (целое число по Вашему выбору).</p>
 <div class="bd-example">
 <div class="media">
   <div class="media-body">
-    <h5 class="mt-0 mb-1">Media object</h5>
+    <h5 class="mt-0 mb-1">Медиа-объект</h5>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   </div>
   <svg class="bd-placeholder-img ml-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
@@ -461,20 +461,20 @@
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Media object<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Медиа-объект<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ml-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="media-list">Media list</h2>
-<p>Because the media object has so few structural requirements, you can also use these classes on list HTML elements. On your <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>, add the <code>.list-unstyled</code> to remove any browser default list styles, and then apply <code>.media</code> to your <code>&lt;li&gt;</code>s. As always, use spacing utilities wherever needed to fine tune.</p>
+<h2 id="медиа-список">Медиа-список</h2>
+<p>Поскольку у медиа-объекта очень мало структурных требований, Вы также можете использовать эти классы в элементах HTML списка. На Ваш <code>&lt;ul&gt;</code> или <code>&lt;ol&gt;</code>, добавьте <code>.list-unstyled</code>, чтобы удалить все стили списка браузера по умолчанию, а затем примените <code>.media</code> к Вашим <code>&lt;li&gt;</code>. Как всегда, для точной настройки используйте утилиты интервалов.</p>
 <div class="bd-example">
 <ul class="list-unstyled">
   <li class="media">
     <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
 
     <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
+      <h5 class="mt-0 mb-1">Медиа-объект на основе списка</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
@@ -482,7 +482,7 @@
     <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
 
     <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
+      <h5 class="mt-0 mb-1">Медиа-объект на основе списка</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
@@ -490,7 +490,7 @@
     <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
 
     <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
+      <h5 class="mt-0 mb-1">Медиа-объект на основе списка</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
@@ -499,21 +499,21 @@
   <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>List-based media object<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Медиа-объект на основе списка<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media my-4&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>List-based media object<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Медиа-объект на основе списка<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>List-based media object<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Медиа-объект на основе списка<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>

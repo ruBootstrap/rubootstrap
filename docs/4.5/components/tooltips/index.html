@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.">
+<meta name="description" content="Документация и примеры для добавления настраиваемых всплывающих подсказок Bootstrap с помощью CSS и JavaScript с использованием CSS3 для анимации и атрибутов данных для локального хранения заголовков.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -12,7 +12,7 @@
 
 <meta name="yandex-verification" content="268fb73245c0ff4f" />
 
-<title>Tooltips · Bootstrap v4.5</title>
+<title>Всплывающие подсказки · Bootstrap v4.5</title>
 
 <link rel="canonical" href="https://v4.getbootstrap.su/docs/4.5/components/tooltips/">
 
@@ -40,14 +40,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Tooltips">
-<meta name="twitter:description" content="Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.">
+<meta name="twitter:title" content="Всплывающие подсказки">
+<meta name="twitter:description" content="Документация и примеры для добавления настраиваемых всплывающих подсказок Bootstrap с помощью CSS и JavaScript с использованием CSS3 для анимации и атрибутов данных для локального хранения заголовков.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/components/tooltips/">
-<meta property="og:title" content="Tooltips">
-<meta property="og:description" content="Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.">
+<meta property="og:title" content="Всплывающие подсказки">
+<meta property="og:description" content="Документация и примеры для добавления настраиваемых всплывающих подсказок Bootstrap с помощью CSS и JavaScript с использованием CSS3 для анимации и атрибутов данных для локального хранения заголовков.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -309,15 +309,15 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#example-enable-tooltips-everywhere">Example: Enable tooltips everywhere</a></li>
-    <li><a href="#examples">Examples</a></li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#обзор">Обзор</a></li>
+    <li><a href="#пример-включить-всплывающие-подсказки-везде">Пример: Включить всплывающие подсказки везде</a></li>
+    <li><a href="#примеры">Примеры</a></li>
+    <li><a href="#применение">Применение</a>
       <ul>
-        <li><a href="#markup">Markup</a></li>
-        <li><a href="#disabled-elements">Disabled elements</a></li>
-        <li><a href="#options">Options</a></li>
-        <li><a href="#methods">Methods</a>
+        <li><a href="#разметка">Разметка</a></li>
+        <li><a href="#отключенные-элементы">Отключенные элементы</a></li>
+        <li><a href="#параметры">Параметры</a></li>
+        <li><a href="#методы">Методы</a>
           <ul>
             <li><a href="#tooltipoptions"><code>$().tooltip(options)</code></a></li>
             <li><a href="#tooltipshow"><code>.tooltip('show')</code></a></li>
@@ -330,7 +330,7 @@
             <li><a href="#tooltipupdate"><code>.tooltip('update')</code></a></li>
           </ul>
         </li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="#события">События</a></li>
       </ul>
     </li>
   </ul>
@@ -342,118 +342,118 @@
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.5/components/tooltips.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/components/tooltips.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
-            <h1 class="bd-title" id="content">Tooltips</h1>
+            <h1 class="bd-title" id="content">Всплывающие подсказки</h1>
           </div>
-          <p class="bd-lead">Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-attributes for local title storage.</p>
+          <p class="bd-lead">Документация и примеры для добавления настраиваемых всплывающих подсказок Bootstrap с помощью CSS и JavaScript с использованием CSS3 для анимации и атрибутов данных для локального хранения заголовков.</p>
           
-          <h2 id="overview">Overview</h2>
-<p>Things to know when using the tooltip plugin:</p>
+          <h2 id="обзор">Обзор</h2>
+<p>Что нужно знать при использовании плагина всплывающей подсказки:</p>
 <ul>
-<li>Tooltips rely on the 3rd party library <a href="https://popper.js.org/">Popper.js</a> for positioning. You must include <a href="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">popper.min.js</a> before bootstrap.js or use <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> which contains Popper.js in order for tooltips to work!</li>
-<li>If you&rsquo;re building our JavaScript from source, it <a href="/docs/4.5/getting-started/javascript/#util">requires <code>util.js</code></a>.</li>
-<li>Tooltips are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.</li>
-<li>Tooltips with zero-length titles are never displayed.</li>
-<li>Specify <code>container: 'body'</code> to avoid rendering problems in more complex components (like our input groups, button groups, etc).</li>
-<li>Triggering tooltips on hidden elements will not work.</li>
-<li>Tooltips for <code>.disabled</code> or <code>disabled</code> elements must be triggered on a wrapper element.</li>
-<li>When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use <code>white-space: nowrap;</code> on your <code>&lt;a&gt;</code>s to avoid this behavior.</li>
-<li>Tooltips must be hidden before their corresponding elements have been removed from the DOM.</li>
-<li>Tooltips can be triggered thanks to an element inside a shadow DOM.</li>
+<li>Подсказки полагаются на стороннюю библиотеку <a href="https://popper.js.org/">Popper.js</a> для позиционирования. Вы должны включить <a href="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">popper.min.js</a> перед <code>bootstrap.js</code> или использовать <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code>, который содержит Popper.js, чтобы всплывающие подсказки работали!</li>
+<li>Если Вы создаете наш JavaScript из исходного кода, он <a href="/docs/4.5/getting-started/javascript/#util">требуется <code>util.js</code></a>.</li>
+<li>Всплывающие подсказки используются по соображениям производительности, поэтому <strong>Вы должны инициализировать их самостоятельно</strong>.</li>
+<li>Всплывающие подсказки с заголовками нулевой длины никогда не отображаются.</li>
+<li>Укажите <code>container: 'body'</code>, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).</li>
+<li>Всплывающие подсказки для скрытых элементов не работают.</li>
+<li>Всплывающие подсказки для элементов <code>.disabled</code> или <code>disabled</code> должны запускаться для элемента-оболочки.</li>
+<li>При запуске от гиперссылок, охватывающих несколько строк, всплывающие подсказки будут центрированы. Используйте <code>white-space: nowrap;</code> на Ваших <code>&lt;a&gt;</code>, чтобы избежать такого поведения.</li>
+<li>Всплывающие подсказки должны быть скрыты до того, как соответствующие им элементы будут удалены из DOM.</li>
+<li>Всплывающие подсказки могут запускаться благодаря элементу внутри теневой модели DOM.</li>
 </ul>
 <div class="bd-callout bd-callout-info">
 Эффект анимации этого компонента зависит от медиазапроса <code>prefers-reduced-motion</code>. См. <a href="/docs/4.5/getting-started/accessibility/#%D0%B7%D0%B0%D0%BC%D0%B5%D0%B4%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5">Раздел с уменьшенным движением в нашей документации по специальным возможностям</a>.
 </div>
 
-<p>Got all that? Great, let&rsquo;s see how they work with some examples.</p>
-<h2 id="example-enable-tooltips-everywhere">Example: Enable tooltips everywhere</h2>
-<p>One way to initialize all tooltips on a page would be to select them by their <code>data-toggle</code> attribute:</p>
+<p>Получил все это? Отлично, посмотрим, как они работают, на некоторых примерах.</p>
+<h2 id="пример-включить-всплывающие-подсказки-везде">Пример: Включить всплывающие подсказки везде</h2>
+<p>Один из способов инициализировать все всплывающие подсказки на странице - это выбрать их по их атрибуту <code>data-toggle</code>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[data-toggle=&#34;tooltip&#34;]&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">()</span>
 <span class="p">})</span>
-</code></pre></div><h2 id="examples">Examples</h2>
-<p>Hover over the links below to see tooltips:</p>
+</code></pre></div><h2 id="примеры">Примеры</h2>
+<p>Наведите курсор на ссылки ниже, чтобы увидеть всплывающие подсказки:</p>
 <div class="bd-example tooltip-demo">
   <p class="muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
   </p>
 </div>
-<p>Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left.</p>
+<p>Наведите указатель мыши на кнопки ниже, чтобы увидеть четыре направления подсказок: вверх, вправо, внизу и влево.</p>
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">Tooltip with HTML</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Подсказка вверху">Подсказка вверху</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Подсказка справа">Подсказка справа</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Подсказка снизу">Подсказка снизу</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Подсказка слева">Подсказка слева</button>
+    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="<em>Всплывающая подсказка</em> <u>с</u> <b>HTML</b>">Всплывающая подсказка с HTML</button>
   </div>
 </div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip on top&#34;</span><span class="p">&gt;</span>
-  Tooltip on top
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Подсказка вверху&#34;</span><span class="p">&gt;</span>
+  Подсказка вверху
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;right&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip on right&#34;</span><span class="p">&gt;</span>
-  Tooltip on right
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;right&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Подсказка справа&#34;</span><span class="p">&gt;</span>
+  Подсказка справа
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip on bottom&#34;</span><span class="p">&gt;</span>
-  Tooltip on bottom
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Подсказка снизу&#34;</span><span class="p">&gt;</span>
+  Подсказка снизу
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;left&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Tooltip on left&#34;</span><span class="p">&gt;</span>
-  Tooltip on left
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;left&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Подсказка слева&#34;</span><span class="p">&gt;</span>
+  Подсказка слева
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre></div><p>And with custom HTML added:</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-html</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;&lt;em&gt;Tooltip&lt;/em&gt; &lt;u&gt;with&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;&#34;</span><span class="p">&gt;</span>
-  Tooltip with HTML
+</code></pre></div><p>И с добавленным пользовательским HTML:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">data-html</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;&lt;em&gt;Всплывающая подсказка&lt;/em&gt; &lt;u&gt;с&lt;/u&gt; &lt;b&gt;HTML&lt;/b&gt;&#34;</span><span class="p">&gt;</span>
+  Всплывающая подсказка с HTML
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="usage">Usage</h2>
-<p>The tooltip plugin generates content and markup on demand, and by default places tooltips after their trigger element.</p>
-<p>Trigger the tooltip via JavaScript:</p>
+</code></pre></div><h2 id="применение">Применение</h2>
+<p>Плагин всплывающих подсказок генерирует контент и разметку по запросу и по умолчанию помещает всплывающие подсказки после их триггерного элемента.</p>
+<p>Запуск всплывающей подсказки через JavaScript:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
 </code></pre></div><div class="bd-callout bd-callout-warning">
-<h5 id="overflow-auto-and-scroll">Overflow <code>auto</code> and <code>scroll</code></h5>
-<p>Tooltip position attempts to automatically change when a parent container has <code>overflow: auto</code> or <code>overflow: scroll</code> like our <code>.table-responsive</code>, but still keeps the original placement&rsquo;s positioning. To resolve, set the <code>boundary</code> option to anything other than default value, <code>'scrollParent'</code>, such as <code>'window'</code>:</p>
+<h5 id="переполнение-auto-и-scroll">Переполнение <code>auto</code> и <code>scroll</code></h5>
+<p>Положение всплывающей подсказки пытается автоматически измениться, когда родительский контейнер имеет <code>overflow: auto</code> или<code> overflow: scroll</code>, как наш <code>.table-responsive</code>, но по-прежнему сохраняет исходное положение размещения. Чтобы решить эту проблему, установите для параметра <code>boundary</code> значение, отличное от значения по умолчанию, <code>'scrollParent'</code>, например, <code>'window'</code>:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">({</span> <span class="nx">boundary</span><span class="o">:</span> <span class="s1">&#39;window&#39;</span> <span class="p">})</span>
 </code></pre></div>
 </div>
 
-<h3 id="markup">Markup</h3>
-<p>The required markup for a tooltip is only a <code>data</code> attribute and <code>title</code> on the HTML element you wish to have a tooltip. The generated markup of a tooltip is rather simple, though it does require a position (by default, set to <code>top</code> by the plugin).</p>
+<h3 id="разметка">Разметка</h3>
+<p>Требуемая разметка для всплывающей подсказки - это только атрибут <code>data</code> и заголовок <code>title</code> HTML-элемента, для которого Вы хотите иметь всплывающую подсказку. Сгенерированная разметка всплывающей подсказки довольно проста, хотя для нее требуется позиция (по умолчанию плагином установлено значение <code>top</code>).</p>
 <div class="bd-callout bd-callout-warning">
-<h5 id="making-tooltips-work-for-keyboard-and-assistive-technology-users">Making tooltips work for keyboard and assistive technology users</h5>
-<p>You should only add tooltips to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). Although arbitrary HTML elements (such as <code>&lt;span&gt;</code>s) can be made focusable by adding the <code>tabindex=&quot;0&quot;</code> attribute, this will add potentially annoying and confusing tab stops on non-interactive elements for keyboard users, and most assistive technologies currently do not announce the tooltip in this situation. Additionally, do not rely solely on <code>hover</code> as the trigger for your tooltip, as this will make your tooltips impossible to trigger for keyboard users.
+<h5 id="работа-с-всплывающими-подсказками-для-пользователей-клавиатуры-и-вспомогательных-технологий">Работа с всплывающими подсказками для пользователей клавиатуры и вспомогательных технологий</h5>
+<p>Вы должны добавлять всплывающие подсказки только к HTML-элементам, которые традиционно ориентированы на клавиатуру и являются интерактивными (например, ссылки или элементы управления формы). Хотя произвольные элементы HTML (такие как <code>&lt;span&gt;</code>) можно сделать доступными для фокусировки, добавив атрибут <code>tabindex =&quot; 0 &quot;</code>, это добавит потенциально раздражающие и сбивающие с толку позиции табуляции на неинтерактивных элементах для пользователей клавиатуры, и большинство Вспомогательные технологии в настоящее время не объявляют всплывающую подсказку в этой ситуации. Кроме того, не полагайтесь исключительно на <code>hover</code> в качестве триггера для Вашей всплывающей подсказки, так как это сделает невозможным запуск Ваших всплывающих подсказок для пользователей клавиатуры.
 </div>
 
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- HTML to write --&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Some tooltip text!&#34;</span><span class="p">&gt;</span>Hover over me<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- HTML для записи --&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Текст всплывающей подсказки!&#34;</span><span class="p">&gt;</span>Наведите на меня<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 
-<span class="c">&lt;!-- Generated markup by the plugin --&gt;</span>
+<span class="c">&lt;!-- Разметка, созданная плагином --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tooltip bs-tooltip-top&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;arrow&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tooltip-inner&#34;</span><span class="p">&gt;</span>
-    Some tooltip text!
+    Текст всплывающей подсказки!
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="disabled-elements">Disabled elements</h3>
-<p>Elements with the <code>disabled</code> attribute aren&rsquo;t interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you&rsquo;ll want to trigger the tooltip from a wrapper <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, ideally made keyboard-focusable using <code>tabindex=&quot;0&quot;</code>, and override the <code>pointer-events</code> on the disabled element.</p>
+</code></pre></div><h3 id="отключенные-элементы">Отключенные элементы</h3>
+<p>Элементы с атрибутом <code>disabled</code> не являются интерактивными, то есть пользователи не могут сфокусироваться, навести на них курсор или щелкнуть их, чтобы вызвать всплывающую подсказку (или всплывающее окно). В качестве обходного пути Вы захотите вызвать всплывающую подсказку из оболочки <code>&lt;div&gt;</code> или <code>&lt;span&gt;</code>, в идеале сделанной с фокусировкой на клавиатуре, используя <code>tabindex=&quot;0&quot;</code>, и переопределить <code>pointer-events</code> на отключенный элемент.</p>
 <div class="tooltip-demo">
 <div class="bd-example">
-<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Disabled tooltip">
-  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+<span class="d-inline-block" tabindex="0" data-toggle="tooltip" title="Отключенная подсказка">
+  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Отключенная кнопка</button>
 </span>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-block&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Disabled tooltip&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;pointer-events: none;&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled button<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-block&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;tooltip&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Отключенная подсказка&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;pointer-events: none;&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Отключенная кнопка<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
 </div>
-<h3 id="options">Options</h3>
-<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-animation=&quot;&quot;</code>.</p>
+<h3 id="параметры">Параметры</h3>
+<p>Параметры могут передаваться через атрибуты данных или JavaScript. Для атрибутов данных добавьте имя параметра к <code>data-</code>, как в <code>data-animation=&quot;&quot;</code>.</p>
 <div class="bd-callout bd-callout-warning">
-Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code> and <code>whiteList</code> options cannot be supplied using data attributes.
+Обратите внимание, что по соображениям безопасности параметры <code>sanitize</code>, <code>sanitizeFn</code> и <code>whiteList</code> не могут быть предоставлены с использованием атрибутов данных.
 </div>
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 100px;">Name</th>
-      <th style="width: 100px;">Type</th>
-      <th style="width: 50px;">Default</th>
-      <th>Description</th>
+      <th style="width: 100px;">Название</th>
+      <th style="width: 100px;">Тип</th>
+      <th style="width: 50px;">По умолчанию</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
@@ -461,14 +461,14 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
       <td>animation</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Apply a CSS fade transition to the tooltip</td>
+      <td>Применить переход CSS fade к всплывающей подсказке</td>
     </tr>
     <tr>
       <td>container</td>
       <td>string | element | false</td>
       <td>false</td>
       <td>
-        <p>Appends the tooltip to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the tooltip in the flow of the document near the triggering element - which will prevent the tooltip from floating away from the triggering element during a window resize.</p>
+        <p>Добавляет всплывающую подсказку к определенному элементу. Пример: <code>container: 'body'</code>. Этот параметр особенно полезен тем, что позволяет размещать всплывающую подсказку в потоке документа рядом с запускающим элементом, что предотвратит отрыв всплывающей подсказки от запускающего элемента во время изменения размера окна.</p>
       </td>
     </tr>
     <tr>
@@ -476,9 +476,9 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
       <td>number | object</td>
       <td>0</td>
       <td>
-        <p>Delay showing and hiding the tooltip (ms) - does not apply to manual trigger type</p>
-        <p>If a number is supplied, delay is applied to both hide/show</p>
-        <p>Object structure is: <code>delay: { "show": 500, "hide": 100 }</code></p>
+        <p>Задержка отображения и скрытия всплывающей подсказки (мс) - не относится к ручному типу триггера</p>
+        <p>Если указан номер, задержка применяется как к скрытию, так и к отображению</p>
+        <p>Структура объекта: <code>delay: { "show": 500, "hide": 100 }</code></p>
       </td>
     </tr>
     <tr>
@@ -486,9 +486,9 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
       <td>boolean</td>
       <td>false</td>
       <td>
-        <p>Allow HTML in the tooltip.</p>
-        <p>If true, HTML tags in the tooltip's <code>title</code> will be rendered in the tooltip. If false, jQuery's <code>text</code> method will be used to insert content into the DOM.</p>
-        <p>Use text if you're worried about XSS attacks.</p>
+        <p>Разрешить HTML во всплывающей подсказке.</p>
+        <p>Если задано значение true, HTML-теги в <code>title</code> всплывающей подсказки будут отображаться во всплывающей подсказке. Если false, метод jQuery <code>text</code> будет использоваться для вставки содержимого в DOM.</p>
+        <p>Используйте текст, если вас беспокоят XSS-атаки.</p>
       </td>
     </tr>
     <tr>
@@ -496,25 +496,25 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
       <td>string | function</td>
       <td>'top'</td>
       <td>
-        <p>How to position the tooltip - auto | top | bottom | left | right.<br>When <code>auto</code> is specified, it will dynamically reorient the tooltip.</p>
-        <p>When a function is used to determine the placement, it is called with the tooltip DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the tooltip instance.</p>
+        <p>Как разместить всплывающую подсказку - auto | top | bottom | left | right.<br>Если задано <code>auto</code> всплывающая подсказка будет динамически переориентирована.</p>
+        <p>Когда функция используется для определения размещения, она вызывается с помощью узла DOM всплывающей подсказки в качестве первого аргумента и узла DOM элемента запуска в качестве второго. Контекст <code>this</code> установлен на экземпляр всплывающей подсказки.</p>
       </td>
     </tr>
     <tr>
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used to also apply tooltips to dynamically added DOM elements (<code>jQuery.on</code> support). See <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> and <a href="https://codepen.io/Johann-S/pen/djJYPb">an informative example</a>.</td>
+      <td>сли предусмотрен селектор, объекты всплывающей подсказки будут делегированы указанным целям. На практике это также используется для применения всплывающих подсказок к динамически добавляемым элементам DOM (поддержка (<code>jQuery.on</code>). См <a href="https://github.com/twbs/bootstrap/issues/4215">это</a> и <a href="https://codepen.io/Johann-S/pen/djJYPb">информативный пример</a>.</td>
     </tr>
     <tr>
       <td>template</td>
       <td>string</td>
       <td><code>'&lt;div class="tooltip" role="tooltip"&gt;&lt;div class="arrow"&gt;&lt;/div&gt;&lt;div class="tooltip-inner"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
       <td>
-        <p>Base HTML to use when creating the tooltip.</p>
-        <p>The tooltip's <code>title</code> will be injected into the <code>.tooltip-inner</code>.</p>
-        <p><code>.arrow</code> will become the tooltip's arrow.</p>
-        <p>The outermost wrapper element should have the <code>.tooltip</code> class and <code>role="tooltip"</code>.</p>
+        <p>Базовый HTML-код для использования при создании всплывающей подсказки.</p>
+        <p>Заголовок всплывающей подсказки <code>title</code> будет вставлен в <code>.tooltip-inner</code>.</p>
+        <p><code>.arrow</code> станет стрелкой всплывающей подсказки.</p>
+        <p>Самый внешний элемент оболочки должен иметь класс <code>.tooltip</code> и <code>role="tooltip"</code>.</p>
       </td>
     </tr>
     <tr>
@@ -522,8 +522,8 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
       <td>string | element | function</td>
       <td>''</td>
       <td>
-        <p>Default title value if <code>title</code> attribute isn't present.</p>
-        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the tooltip is attached to.</p>
+        <p>Значение заголовка по умолчанию, если атрибут <code>title</code> отсутствует.</p>
+        <p>Если задана функция, она будет вызываться со ссылкой <code>this</code>, установленной на элемент, к которому прикреплена всплывающая подсказка.</p>
       </td>
     </tr>
     <tr>
@@ -531,9 +531,9 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
       <td>string</td>
       <td>'hover focus'</td>
       <td>
-        <p>How tooltip is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</p>
-        <p><code>'manual'</code> indicates that the tooltip will be triggered programmatically via the <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> and <code>.tooltip('toggle')</code> methods; this value cannot be combined with any other trigger.</p>
-        <p><code>'hover'</code> on its own will result in tooltips that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present.</p>
+        <p>Как вызывается всплывающая подсказка - click | hover | focus | manual. Вы можете передать несколько триггеров; разделите их пробелом.</p>
+        <p><code>'manual'</code> указывает, что всплывающая подсказка будет запускаться программно через <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> и методы <code>.tooltip('toggle')</code>; это значение нельзя комбинировать с другими триггерами.</p>
+        <p>Само по себе <code>'hover'</code> приведет к появлению всплывающих подсказок, которые нельзя запускать с клавиатуры, и их следует использовать только при наличии альтернативных методов передачи той же информации пользователям клавиатуры.</p>
       </td>
     </tr>
     <tr>
@@ -541,122 +541,121 @@ Note that for security reasons the <code>sanitize</code>, <code>sanitizeFn</code
       <td>number | string | function</td>
       <td>0</td>
       <td>
-        <p>Offset of the tooltip relative to its target.</p>
-        <p>When a function is used to determine the offset, it is called with an object containing the offset data as its first argument. The function must return an object with the same structure. The triggering element DOM node is passed as the second argument.</p>
-        <p>For more information refer to Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">offset docs</a>.</p>
+        <p>Смещение подсказки относительно цели.</p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента..</p>
+        <p>Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию по смещению</a> Popper.js.</p>
       </td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Allow to specify which position Popper will use on fallback. For more information refer to
-      Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">behavior docs</a></td>
+      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.js.</td>
     </tr>
     <tr>
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Overflow constraint boundary of the tooltip. Accepts the values of <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code>, or an HTMLElement reference (JavaScript only). For more information refer to Popper.js's <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">preventOverflow docs</a>.</td>
+      <td>Граница ограничения переполнения всплывающей подсказки. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации preventOverflow</a> Popper.js.</td>
     </tr>
     <tr>
       <td>sanitize</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Enable or disable the sanitization. If activated <code>'template'</code> and <code>'title'</code> options will be sanitized.</td>
+      <td>Включите или отключите очистку. Если активированы параметры <code>'template'</code> и <code>'title'</code>, будут очищены.</td>
     </tr>
     <tr>
       <td>whiteList</td>
       <td>object</td>
-      <td><a href="/docs/4.5/getting-started/javascript/#sanitizer">Default value</a></td>
-      <td>Object which contains allowed attributes and tags</td>
+      <td><a href="/docs/4.5/getting-started/javascript/#sanitizer">Значение по умолчанию</a></td>
+      <td>Объект, содержащий разрешенные атрибуты и теги</td>
     </tr>
     <tr>
       <td>sanitizeFn</td>
       <td>null | function</td>
       <td>null</td>
-      <td>Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization.</td>
+      <td>Здесь Вы можете предоставить свою собственную функцию офистки. Это может быть полезно, если Вы предпочитаете использовать специальную библиотеку для выполнения очистки.</td>
     </tr>
     <tr>
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>To change Bootstrap's default Popper.js config, see <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Popper.js's configuration</a></td>
+      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper.js</a></td>
     </tr>
   </tbody>
 </table>
 <div class="bd-callout bd-callout-info">
-<h4 id="data-attributes-for-individual-tooltips">Data attributes for individual tooltips</h4>
-<p>Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above.
+<h4 id="атрибуты-данных-для-отдельных-всплывающих-подсказок">Атрибуты данных для отдельных всплывающих подсказок</h4>
+<p>В качестве альтернативы параметры для отдельных всплывающих подсказок можно указать с помощью атрибутов данных, как описано выше.
 </div>
 
-<h3 id="methods">Methods</h3>
+<h3 id="методы">Методы</h3>
 <div class="bd-callout bd-callout-danger">
 <h4 id="асинхронные-методы-и-переходы">Асинхронные методы и переходы</h4>
 <p>Все методы API <strong>асинхронны</strong> и запускают <strong>переход</strong>. Они возвращаются к вызывающей стороне, как только переход начинается, но <strong>до его завершения</strong>. Кроме того, вызов метода <strong>переходного компонента будет проигнорирован</strong>.</p>
-<p><a href="/docs/4.5/getting-started/javascript/#%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8-%D0%B8-%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4%D1%8B">Дополнительную информацию см. d нашей документации по JavaScript</a>.</p>
+<p><a href="/docs/4.5/getting-started/javascript/#%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8-%D0%B8-%D0%BF%D0%B5%D1%80%D0%B5%D1%85%D0%BE%D0%B4%D1%8B">Дополнительную информацию см. в нашей документации по JavaScript</a>.</p>
 
 </div>
 
 <h4 id="tooltipoptions"><code>$().tooltip(options)</code></h4>
-<p>Attaches a tooltip handler to an element collection.</p>
+<p>Присоединяет обработчик всплывающей подсказки к коллекции элементов.</p>
 <h4 id="tooltipshow"><code>.tooltip('show')</code></h4>
-<p>Reveals an element&rsquo;s tooltip. <strong>Returns to the caller before the tooltip has actually been shown</strong> (i.e. before the <code>shown.bs.tooltip</code> event occurs). This is considered a &ldquo;manual&rdquo; triggering of the tooltip. Tooltips with zero-length titles are never displayed.</p>
+<p>Показывает всплывающую подсказку элемента. <strong>Возврат к вызывающей стороне до того, как всплывающая подсказка была фактически показана</strong> (то есть до того, как произойдет событие <code>shown.bs.tooltip</code>). Это считается &ldquo;ручным&rdquo; запуском всплывающей подсказки. Всплывающие подсказки с заголовками нулевой длины никогда не отображаются.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>
 </code></pre></div><h4 id="tooltiphide"><code>.tooltip('hide')</code></h4>
-<p>Hides an element&rsquo;s tooltip. <strong>Returns to the caller before the tooltip has actually been hidden</strong> (i.e. before the <code>hidden.bs.tooltip</code> event occurs). This is considered a &ldquo;manual&rdquo; triggering of the tooltip.</p>
+<p>Скрывает всплывающую подсказку элемента. <strong>Возврат к вызывающей стороне до того, как всплывающая подсказка была фактически скрыта</strong> (т.е. до того, как произойдет событие <code>hidden.bs.tooltip</code>). Это считается &ldquo;ручным&rdquo; запуском всплывающей подсказки.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;hide&#39;</span><span class="p">)</span>
 </code></pre></div><h4 id="tooltiptoggle"><code>.tooltip('toggle')</code></h4>
-<p>Toggles an element&rsquo;s tooltip. <strong>Returns to the caller before the tooltip has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.tooltip</code> or <code>hidden.bs.tooltip</code> event occurs). This is considered a &ldquo;manual&rdquo; triggering of the tooltip.</p>
+<p>Переключает всплывающую подсказку элемента. <strong>Возврат к вызывающей стороне до того, как всплывающая подсказка была фактически показана или скрыта</strong> (то есть до того, как произойдет событие <code>shown.bs.tooltip</code> или <code>hidden.bs.tooltip</code>). Это считается &ldquo;ручным&rdquo; запуском всплывающей подсказки.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;toggle&#39;</span><span class="p">)</span>
 </code></pre></div><h4 id="tooltipdispose"><code>.tooltip('dispose')</code></h4>
-<p>Hides and destroys an element&rsquo;s tooltip. Tooltips that use delegation (which are created using <a href="#options">the <code>selector</code> option</a>) cannot be individually destroyed on descendant trigger elements.</p>
+<p>Скрывает и уничтожает всплывающую подсказку элемента. Всплывающие подсказки, использующие делегирование (которые создаются с использованием [параметр <code>selector</code>] (#параметры)), не могут быть уничтожены индивидуально для дочерних элементов триггера.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;dispose&#39;</span><span class="p">)</span>
 </code></pre></div><h4 id="tooltipenable"><code>.tooltip('enable')</code></h4>
-<p>Gives an element&rsquo;s tooltip the ability to be shown. <strong>Tooltips are enabled by default.</strong></p>
+<p>Дает возможность отображения всплывающей подсказки элемента. <strong>Подсказки включены по умолчанию.</strong></p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;enable&#39;</span><span class="p">)</span>
 </code></pre></div><h4 id="tooltipdisable"><code>.tooltip('disable')</code></h4>
-<p>Removes the ability for an element&rsquo;s tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled.</p>
+<p>Удаляет возможность отображения всплывающей подсказки элемента. Всплывающая подсказка будет отображаться, только если она будет повторно включена.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;disable&#39;</span><span class="p">)</span>
 </code></pre></div><h4 id="tooltiptoggleenabled"><code>.tooltip('toggleEnabled')</code></h4>
-<p>Toggles the ability for an element&rsquo;s tooltip to be shown or hidden.</p>
+<p>Переключает возможность отображения или скрытия всплывающей подсказки элемента.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;toggleEnabled&#39;</span><span class="p">)</span>
 </code></pre></div><h4 id="tooltipupdate"><code>.tooltip('update')</code></h4>
-<p>Updates the position of an element&rsquo;s tooltip.</p>
+<p>Обновляет положение всплывающей подсказки элемента.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#element&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">)</span>
-</code></pre></div><h3 id="events">Events</h3>
+</code></pre></div><h3 id="события">События</h3>
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th style="width: 150px;">Event Type</th>
-      <th>Description</th>
+      <th style="width: 150px;">Тип события</th>
+      <th>Описание</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>show.bs.tooltip</td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>Это событие запускается немедленно при вызове метода экземпляра <code>show</code>.</td>
     </tr>
     <tr>
       <td>shown.bs.tooltip</td>
-      <td>This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete).</td>
+      <td>Это событие запускается, когда всплывающая подсказка становится видимой для пользователя (ожидает завершения переходов CSS).</td>
     </tr>
     <tr>
       <td>hide.bs.tooltip</td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>Это событие запускается сразу после вызова метода экземпляра <code>hide</code>.</td>
     </tr>
     <tr>
       <td>hidden.bs.tooltip</td>
-      <td>This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+      <td>Это событие запускается, когда всплывающая подсказка перестала быть скрытой от пользователя (будет ждать завершения переходов CSS).</td>
     </tr>
     <tr>
       <td>inserted.bs.tooltip</td>
-      <td>This event is fired after the <code>show.bs.tooltip</code> event when the tooltip template has been added to the DOM.</td>
+      <td>Это событие запускается после события <code>show.bs.tooltip</code>, когда шаблон всплывающей подсказки был добавлен в DOM.</td>
     </tr>
   </tbody>
 </table>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTooltip&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;hidden.bs.tooltip&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// do something...
+  <span class="c1">// сделайте что-нибудь...
 </span><span class="c1"></span><span class="p">})</span>
 </code></pre></div>
         </main>
