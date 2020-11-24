@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.">
+<meta name="description" content="Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -41,13 +41,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Flex">
-<meta name="twitter:description" content="Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.">
+<meta name="twitter:description" content="Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/utilities/flex/">
 <meta property="og:title" content="Flex">
-<meta property="og:description" content="Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.">
+<meta property="og:description" content="Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -297,16 +297,16 @@
           <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#enable-flex-behaviors">Enable flex behaviors</a></li>
+    <li><a href="#включить-гибкое-поведение">Включить гибкое поведение</a></li>
     <li><a href="#direction">Direction</a></li>
     <li><a href="#justify-content">Justify content</a></li>
     <li><a href="#align-items">Align items</a></li>
     <li><a href="#align-self">Align self</a></li>
     <li><a href="#fill">Fill</a></li>
-    <li><a href="#grow-and-shrink">Grow and shrink</a></li>
-    <li><a href="#auto-margins">Auto margins</a>
+    <li><a href="#grow-и-shrink">Grow и shrink</a></li>
+    <li><a href="#автоматические-поля">Автоматические поля</a>
       <ul>
-        <li><a href="#with-align-items">With align-items</a></li>
+        <li><a href="#с-align-items">С align-items</a></li>
       </ul>
     </li>
     <li><a href="#wrap">Wrap</a></li>
@@ -323,17 +323,17 @@
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/utilities/flex.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
             <h1 class="bd-title" id="content">Flex</h1>
           </div>
-          <p class="bd-lead">Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.</p>
+          <p class="bd-lead">Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.</p>
           
-          <h2 id="enable-flex-behaviors">Enable flex behaviors</h2>
-<p>Apply <code>display</code> utilities to create a flexbox container and transform <strong>direct children elements</strong> into flex items. Flex containers and items are able to be modified further with additional flex properties.</p>
+          <h2 id="включить-гибкое-поведение">Включить гибкое поведение</h2>
+<p>Примените утилиты <code>display</code> для создания контейнера flexbox и преобразования <strong>прямых дочерних элементов</strong> в элементы flex. Гибкие контейнеры и элементы можно дополнительно модифицировать с помощью дополнительных свойств гибкости.</p>
 <div class="bd-example">
-<div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>I&#39;m a flexbox container!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="d-flex p-2 bd-highlight">Я контейнер Flexbox!</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Я контейнер Flexbox!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div class="bd-example">
-<div class="d-inline-flex p-2 bd-highlight">I'm an inline flexbox container!</div>
-</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>I&#39;m an inline flexbox container!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Responsive variations also exist for <code>.d-flex</code> and <code>.d-inline-flex</code>.</p>
+<div class="d-inline-flex p-2 bd-highlight">Я встроенный контейнер Flexbox!</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Я встроенный контейнер Flexbox!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Адаптивные варианты также существуют для <code>.d-flex</code> и <code>.d-inline-flex</code>.</p>
 <ul>
 <li><code>.d-flex</code></li>
 <li><code>.d-inline-flex</code></li>
@@ -348,52 +348,52 @@
 </ul>
 
 <h2 id="direction">Direction</h2>
-<p>Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is <code>row</code>. However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).</p>
-<p>Use <code>.flex-row</code> to set a horizontal direction (the browser default), or <code>.flex-row-reverse</code> to start the horizontal direction from the opposite side.</p>
+<p>Задайте направление гибких элементов в гибком контейнере с помощью утилит направления. В большинстве случаев Вы можете опустить здесь горизонтальный класс, поскольку браузер по умолчанию <code>row</code>. Однако Вы можете столкнуться с ситуациями, когда Вам нужно явно установить это значение (например, адаптивные макеты).</p>
+<p>Используйте <code>.flex-row</code>, чтобы установить горизонтальное направление (по умолчанию браузер), или <code>.flex-row-reverse</code>, чтобы начать горизонтальное направление с противоположной стороны.</p>
 <div class="bd-example">
 <div class="d-flex flex-row bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
 </div>
 <div class="d-flex flex-row-reverse bd-highlight">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-row bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-row-reverse bd-highlight&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Use <code>.flex-column</code> to set a vertical direction, or <code>.flex-column-reverse</code>  to start the vertical direction from the opposite side.</p>
+<p>Используйте <code>.flex-column</code>, чтобы задать вертикальное направление, или <code>.flex-column-reverse</code>, чтобы начать вертикальное направление с противоположной стороны.</p>
 <div class="bd-example">
 <div class="d-flex flex-column bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
 </div>
 <div class="d-flex flex-column-reverse bd-highlight">
-  <div class="p-2 bd-highlight">Flex item 1</div>
-  <div class="p-2 bd-highlight">Flex item 2</div>
-  <div class="p-2 bd-highlight">Flex item 3</div>
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-column bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-column-reverse bd-highlight&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Responsive variations also exist for <code>flex-direction</code>.</p>
+<p>Адаптивные вариации также существуют для <code>flex-direction</code>.</p>
 <ul>
 <li><code>.flex-row</code></li>
 <li><code>.flex-row-reverse</code></li>
@@ -418,32 +418,32 @@
 </ul>
 
 <h2 id="justify-content">Justify content</h2>
-<p>Use <code>justify-content</code> utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if <code>flex-direction: column</code>). Choose from <code>start</code> (browser default), <code>end</code>, <code>center</code>, <code>between</code>, or <code>around</code>.</p>
+<p>Используйте утилиты <code>justify-content</code> в контейнерах flexbox для изменения выравнивания гибких элементов по главной оси (ось x для начала, ось y, если <code>flex-direction: column</code>). Выберите из: <code>start</code> (по умолчанию в браузере), <code>end</code>, <code>center</code>, <code>between</code> или <code>around</code>.</p>
 <div class="bd-example">
   <div class="d-flex justify-content-start bd-highlight mb-3">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex justify-content-end bd-highlight mb-3">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex justify-content-center bd-highlight mb-3">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex justify-content-between bd-highlight mb-3">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex justify-content-around bd-highlight">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-start&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -451,7 +451,7 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-between&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-around&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>Responsive variations also exist for <code>justify-content</code>.</p>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>justify-content</code>.</p>
 <ul>
 <li><code>.justify-content-start</code></li>
 <li><code>.justify-content-end</code></li>
@@ -481,32 +481,32 @@
 </ul>
 
 <h2 id="align-items">Align items</h2>
-<p>Use <code>align-items</code> utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if <code>flex-direction: column</code>). Choose from <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, or <code>stretch</code> (browser default).</p>
+<p>Используйте утилиты <code>align-items</code> в контейнерах flexbox, чтобы изменить выравнивание гибких элементов по поперечной оси (ось Y для начала, ось X, если <code>flex-direction: column</code>). Выберите из: <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code> или <code>stretch</code> (по умолчанию в браузере).</p>
 <div class="bd-example">
   <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex align-items-end bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex align-items-center bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex align-items-baseline bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex align-items-stretch bd-highlight" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-start&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -514,7 +514,7 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-baseline&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-stretch&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>Responsive variations also exist for <code>align-items</code>.</p>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>align-items</code>.</p>
 <ul>
 <li><code>.align-items-start</code></li>
 <li><code>.align-items-end</code></li>
@@ -544,40 +544,40 @@
 </ul>
 
 <h2 id="align-self">Align self</h2>
-<p>Use <code>align-self</code> utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if <code>flex-direction: column</code>). Choose from the same options as <code>align-items</code>: <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code>, or <code>stretch</code> (browser default).</p>
+<p>Используйте утилиты <code>align-self</code> для элементов flexbox, чтобы индивидуально изменить их выравнивание по поперечной оси (ось Y для начала, ось X, если <code>flex-direction: column</code>). Выберите один из тех же параметров, что и <code>align-items</code>: <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code> или <code>stretch</code> (по умолчанию в браузере).</p>
 <div class="bd-example">
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-start p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-start p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-end p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-end p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-center p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-center p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-baseline p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-baseline p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
   <div class="d-flex bd-highlight" style="height: 100px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="align-self-stretch p-2 bd-highlight">Aligned flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-stretch p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-start&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-end&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-center&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-baseline&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-stretch&#34;</span><span class="p">&gt;</span>Aligned flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>Responsive variations also exist for <code>align-self</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-start&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-end&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-center&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-baseline&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-stretch&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>align-self</code>.</p>
 <ul>
 <li><code>.align-self-start</code></li>
 <li><code>.align-self-end</code></li>
@@ -607,19 +607,19 @@
 </ul>
 
 <h2 id="fill">Fill</h2>
-<p>Use the <code>.flex-fill</code> class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.</p>
+<p>Используйте класс <code>.flex-fill</code> для серии родственных элементов, чтобы заставить их ширину равную их содержимому (или равную ширину, если их содержимое не превышает их границы), занимая все доступное горизонтальное пространство.</p>
 <div class="bd-example">
 <div class="d-flex bd-highlight">
-  <div class="p-2 flex-fill bd-highlight">Flex item with a lot of content</div>
-  <div class="p-2 flex-fill bd-highlight">Flex item</div>
-  <div class="p-2 flex-fill bd-highlight">Flex item</div>
+  <div class="p-2 flex-fill bd-highlight">Flex элемент с большим количеством контента</div>
+  <div class="p-2 flex-fill bd-highlight">Flex элемент</div>
+  <div class="p-2 flex-fill bd-highlight">Flex элемент</div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex item with a lot of content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент с большим количеством контента<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Responsive variations also exist for <code>flex-fill</code>.</p>
+<p>Адаптивные варианты также существуют для <code>flex-fill</code>.</p>
 <ul>
 <li><code>.flex-fill</code></li>
 <li><code>.flex-sm-fill</code></li>
@@ -628,30 +628,30 @@
 <li><code>.flex-xl-fill</code></li>
 </ul>
 
-<h2 id="grow-and-shrink">Grow and shrink</h2>
-<p>Use <code>.flex-grow-*</code> utilities to toggle a flex item&rsquo;s ability to grow to fill available space. In the example below, the <code>.flex-grow-1</code> elements uses all available space it can, while allowing the remaining two flex items their necessary space.</p>
+<h2 id="grow-и-shrink">Grow и shrink</h2>
+<p>Используйте утилиты <code>.flex-grow-*</code> для переключения способности гибкого элемента увеличиваться, чтобы заполнить доступное пространство. В приведенном ниже примере элементы <code>.flex-grow-1</code> используют все доступное пространство, в то время как оставшимся двум гибким элементам предоставляется необходимое пространство.</p>
 <div class="bd-example">
 <div class="d-flex bd-highlight">
-  <div class="p-2 flex-grow-1 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Third flex item</div>
+  <div class="p-2 flex-grow-1 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Третий flex элемент</div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-grow-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Third flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-grow-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Третий flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Use <code>.flex-shrink-*</code> utilities to toggle a flex item&rsquo;s ability to shrink if necessary. In the example below, the second flex item with <code>.flex-shrink-1</code> is forced to wrap its contents to a new line, &ldquo;shrinking&rdquo; to allow more space for the previous flex item with <code>.w-100</code>.</p>
+<p>Используйте утилиты <code>.flex-shrink-*</code> для переключения возможности гибкого элемента сжиматься при необходимости. В приведенном ниже примере второй гибкий элемент с <code>.flex-shrink-1</code> принудительно переносит свое содержимое в новую строку, «сжимаясь», чтобы освободить больше места для предыдущего гибкого элемента с <code>.w-100</code>.</p>
 <div class="bd-example">
 <div class="d-flex bd-highlight">
-  <div class="p-2 w-100 bd-highlight">Flex item</div>
-  <div class="p-2 flex-shrink-1 bd-highlight">Flex item</div>
+  <div class="p-2 w-100 bd-highlight">Flex элемент</div>
+  <div class="p-2 flex-shrink-1 bd-highlight">Flex элемент</div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-shrink-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-shrink-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Responsive variations also exist for <code>flex-grow</code> and <code>flex-shrink</code>.</p>
+<p>Адаптивные варианты также существуют для <code>flex-grow</code> и <code>flex-shrink</code>.</p>
 <ul>
 <li><code>.flex-{grow|shrink}-0</code></li>
 <li><code>.flex-{grow|shrink}-1</code></li>
@@ -665,78 +665,78 @@
 <li><code>.flex-xl-{grow|shrink}-1</code></li>
 </ul>
 
-<h2 id="auto-margins">Auto margins</h2>
-<p>Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (<code>.mr-auto</code>), and pushing two items to the left (<code>.ml-auto</code>).</p>
-<p><strong>Unfortunately, IE10 and IE11 do not properly support auto margins on flex items whose parent has a non-default <code>justify-content</code> value.</strong> <a href="https://stackoverflow.com/a/37535548">See this StackOverflow answer</a> for more details.</p>
+<h2 id="автоматические-поля">Автоматические поля</h2>
+<p>Flexbox может делать несколько замечательных вещей, когда Вы смешиваете выравнивание гибкости с автоматическими полями. Ниже показаны три примера управления гибкими элементами через автоматические поля: по умолчанию (без автоматического поля), перемещение двух элементов вправо (<code>.mr-auto</code>) и перемещение двух элементов влево (<code>.ml-auto</code>).</p>
+<p><strong>К сожалению, IE10 и IE11 не поддерживают должным образом автоматические поля для гибких элементов, родительский элемент которых имеет значение <code>justify-content</code> не по умолчанию.</strong> <a href="https://stackoverflow.com/a/37535548">Смотрите этот ответ на StackOverflow</a> для получения большей информации.</p>
 <div class="bd-example">
 <div class="d-flex bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
 </div>
 
 <div class="d-flex bd-highlight mb-3">
-  <div class="mr-auto p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="mr-auto p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
 </div>
 
 <div class="d-flex bd-highlight mb-3">
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="ml-auto p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="ml-auto p-2 bd-highlight">Flex элемент</div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ml-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ml-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="with-align-items">With align-items</h3>
-<p>Vertically move one flex item to the top or bottom of a container by mixing <code>align-items</code>, <code>flex-direction: column</code>, and <code>margin-top: auto</code> or <code>margin-bottom: auto</code>.</p>
+<h3 id="с-align-items">С align-items</h3>
+<p>Вертикально переместите один гибкий элемент в верхнюю или нижнюю часть контейнера, смешав <code>align-items</code>, <code>flex-direction: column</code> и <code>margin-top: auto</code> или <code>margin-bottom: auto</code>.</p>
 <div class="bd-example">
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
-  <div class="mb-auto p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
+  <div class="mb-auto p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
 </div>
 
 <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="p-2 bd-highlight">Flex item</div>
-  <div class="mt-auto p-2 bd-highlight">Flex item</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="mt-auto p-2 bd-highlight">Flex элемент</div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-start flex-column bd-highlight mb-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 200px;&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-end flex-column bd-highlight mb-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 200px;&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="wrap">Wrap</h2>
-<p>Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with <code>.flex-nowrap</code>, wrapping with <code>.flex-wrap</code>, or reverse wrapping with <code>.flex-wrap-reverse</code>.</p>
+<p>Измените способ переноса гибких элементов в гибкий контейнер. Выберите полное отсутствие переноса (по умолчанию в браузере) с помощью <code>.flex-nowrap</code>, обертывание с помощью <code>.flex-wrap</code> или обратное обертывание с помощью <code>.flex-wrap-reverse</code>.</p>
 <div class="bd-example">
   <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-nowrap&#34;</span><span class="p">&gt;</span>
@@ -744,21 +744,21 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><div class="bd-example">
   <div class="d-flex flex-wrap bd-highlight">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap&#34;</span><span class="p">&gt;</span>
@@ -766,27 +766,27 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><div class="bd-example">
   <div class="d-flex flex-wrap-reverse bd-highlight">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap-reverse&#34;</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>Responsive variations also exist for <code>flex-wrap</code>.</p>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>flex-wrap</code>.</p>
 <ul>
 <li><code>.flex-nowrap</code></li>
 <li><code>.flex-wrap</code></li>
@@ -806,19 +806,19 @@
 </ul>
 
 <h2 id="order">Order</h2>
-<p>Change the <em>visual</em> order of specific flex items with a handful of <code>order</code> utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As <code>order</code> takes any integer value (e.g., <code>5</code>), add custom CSS for any additional values needed.</p>
+<p>Измените <em>визуальный</em> порядок определенных гибких элементов с помощью нескольких утилит <code>order</code>. Мы предоставляем только варианты для того, чтобы сделать элемент первым или последним, а также выполнить сброс для использования порядка DOM. Поскольку <code>order</code> принимает любое целочисленное значение (например, <code>5</code>), добавьте собственный CSS для любых дополнительных значений.</p>
 <div class="bd-example">
 <div class="d-flex flex-nowrap bd-highlight">
-  <div class="order-3 p-2 bd-highlight">First flex item</div>
-  <div class="order-2 p-2 bd-highlight">Second flex item</div>
-  <div class="order-1 p-2 bd-highlight">Third flex item</div>
+  <div class="order-3 p-2 bd-highlight">Первый flex элемент</div>
+  <div class="order-2 p-2 bd-highlight">Второй flex элемент</div>
+  <div class="order-1 p-2 bd-highlight">Третий flex элемент</div>
 </div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-nowrap bd-highlight&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-3 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>First flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-2 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Second flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-1 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Third flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-3 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Первый flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-2 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Второй flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-1 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Третий flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Responsive variations also exist for <code>order</code>.</p>
+<p>Адаптивные варианты также существуют для <code>order</code>.</p>
 <ul>
 <li><code>.order-0</code></li>
 <li><code>.order-1</code></li>
@@ -888,25 +888,25 @@
 </ul>
 
 <h2 id="align-content">Align content</h2>
-<p>Use <code>align-content</code> utilities on flexbox containers to align flex items <em>together</em> on the cross axis. Choose from <code>start</code> (browser default), <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code>, or <code>stretch</code>. To demonstrate these utilities, we&rsquo;ve enforced <code>flex-wrap: wrap</code> and increased the number of flex items.</p>
-<p><strong>Heads up!</strong> This property has no effect on single rows of flex items.</p>
+<p>Используйте утилиты <code>align-content</code> в контейнерах flexbox для выравнивания гибких элементов <em>вместе</em> по поперечной оси. Выберите <code>start</code> (по умолчанию в браузере), <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code> или <code>stretch</code>. Чтобы продемонстрировать эти утилиты, мы ввели в действие <code>flex-wrap: wrap</code> и увеличили количество гибких элементов.</p>
+<p><strong>Внимание!</strong> Это свойство не влияет на отдельные строки гибких элементов.</p>
 <div class="bd-example">
   <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-start flex-wrap&#34;</span><span class="p">&gt;</span>
@@ -914,105 +914,105 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><div class="bd-example">
   <div class="d-flex align-content-end flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-end flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><div class="bd-example">
   <div class="d-flex align-content-center flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-center flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><div class="bd-example">
   <div class="d-flex align-content-between flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-between flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><div class="bd-example">
   <div class="d-flex align-content-around flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-around flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><div class="bd-example">
   <div class="d-flex align-content-stretch flex-wrap bd-highlight mb-3" style="height: 200px">
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
-    <div class="p-2 bd-highlight">Flex item</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
   </div>
 </div>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-stretch flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>Responsive variations also exist for <code>align-content</code>.</p>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>align-content</code>.</p>
 <ul>
 <li><code>.align-content-start</code></li>
 <li><code>.align-content-end</code></li>

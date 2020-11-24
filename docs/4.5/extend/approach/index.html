@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Learn about the guiding principles, strategies, and techniques used to build and maintain Bootstrap so you can more easily customize and extend it yourself.">
+<meta name="description" content="Узнайте о руководящих принципах, стратегиях и методах, используемых для создания и поддержки Bootstrap, чтобы Вам было проще настраивать и расширять его самостоятельно.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -12,7 +12,7 @@
 
 <meta name="yandex-verification" content="268fb73245c0ff4f" />
 
-<title>Approach · Bootstrap v4.5</title>
+<title>Подход · Bootstrap v4.5</title>
 
 <link rel="canonical" href="https://v4.getbootstrap.su/docs/4.5/extend/approach/">
 
@@ -40,14 +40,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Approach">
-<meta name="twitter:description" content="Learn about the guiding principles, strategies, and techniques used to build and maintain Bootstrap so you can more easily customize and extend it yourself.">
+<meta name="twitter:title" content="Подход">
+<meta name="twitter:description" content="Узнайте о руководящих принципах, стратегиях и методах, используемых для создания и поддержки Bootstrap, чтобы Вам было проще настраивать и расширять его самостоятельно.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/extend/approach/">
-<meta property="og:title" content="Approach">
-<meta property="og:description" content="Learn about the guiding principles, strategies, and techniques used to build and maintain Bootstrap so you can more easily customize and extend it yourself.">
+<meta property="og:title" content="Подход">
+<meta property="og:description" content="Узнайте о руководящих принципах, стратегиях и методах, используемых для создания и поддержки Bootstrap, чтобы Вам было проще настраивать и расширять его самостоятельно.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -245,53 +245,53 @@
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.5/extend/approach.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/extend/approach.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
-            <h1 class="bd-title" id="content">Approach</h1>
+            <h1 class="bd-title" id="content">Подход</h1>
           </div>
-          <p class="bd-lead">Learn about the guiding principles, strategies, and techniques used to build and maintain Bootstrap so you can more easily customize and extend it yourself.</p>
+          <p class="bd-lead">Узнайте о руководящих принципах, стратегиях и методах, используемых для создания и поддержки Bootstrap, чтобы Вам было проще настраивать и расширять его самостоятельно.</p>
           
-          <p>While the getting started pages provide an introductory tour of the project and what it offers, this document focuses on <em>why</em> we do the things we do in Bootstrap. It explains our philosophy to building on the web so that others can learn from us, contribute with us, and help us improve.</p>
-<p>See something that doesn&rsquo;t sound right, or perhaps could be done better? <a href="https://github.com/twbs/bootstrap/issues/new">Open an issue</a>—we&rsquo;d love to discuss it with you.</p>
-<h2 id="summary">Summary</h2>
-<p>We&rsquo;ll dive into each of these more throughout, but at a high level, here&rsquo;s what guides our approach.</p>
+          <p>Хотя на начальных страницах представлен вводный тур по проекту и его предложениям, в этом документе основное внимание уделяется тому, <em>почему</em> мы делаем то, что делаем в Bootstrap. В нем объясняется наша философия построения Интернета, чтобы другие могли учиться у нас, вносить свой вклад и помогать нам совершенствоваться.</p>
+<p>Видите что-то, что звучит не так, или, возможно, можно было бы сделать лучше? <a href="https://github.com/twbs/bootstrap/issues/new">Открыть проблему</a> - мы будем рады обсудить это с Вами.</p>
+<h2 id="резюме">Резюме</h2>
+<p>Мы подробно рассмотрим каждый из них, но на высоком уровне вот что определяет наш подход.</p>
 <ul>
-<li>Components should be responsive and mobile-first</li>
-<li>Components should be built with a base class and extended via modifier classes</li>
-<li>Component states should obey a common z-index scale</li>
-<li>Whenever possible, prefer a HTML and CSS implementation over JavaScript</li>
-<li>Whenever possible, use utilities over custom styles</li>
-<li>Whenever possible, avoid enforcing strict HTML requirements (children selectors)</li>
+<li>Компоненты должны быть адаптивными и ориентированными на мобильные устройства.</li>
+<li>Компоненты должны быть построены с использованием базового класса и расширены с помощью классов-модификаторов.</li>
+<li>Состояния компонентов должны подчиняться общей шкале z-индекса</li>
+<li>По возможности предпочитайте реализацию HTML и CSS над JavaScript.</li>
+<li>По возможности используйте утилиты поверх пользовательских стилей.</li>
+<li>По возможности избегайте строгих требований HTML (дочерние селекторы).</li>
 </ul>
-<h2 id="responsive">Responsive</h2>
-<p>Bootstrap&rsquo;s responsive styles are built to be responsive, an approach that&rsquo;s often referred to as <em>mobile-first</em>. We use this term in our docs and largely agree with it, but at times it can be too broad. While not every component <em>must</em> be entirely responsive in Bootstrap, this responsive approach is about reducing CSS overrides by pushing you to add styles as the viewport becomes larger.</p>
-<p>Across Bootstrap, you&rsquo;ll see this most clearly in our media queries. In most cases, we use <code>min-width</code> queries that begin to apply at a specific breakpoint and carry up through the higher breakpoints. For example, a <code>.d-none</code> applies from <code>min-width: 0</code> to infinity. On the other hand, a <code>.d-md-none</code> applies from the medium breakpoint and up.</p>
-<p>At times we&rsquo;ll use <code>max-width</code> when a component&rsquo;s inherent complexity requires it. At times, these overrides are functionally and mentally clearer to implement and support than rewriting core functionality from our components. We strive to limit this approach, but will use it from time to time.</p>
-<h2 id="classes">Classes</h2>
-<p>Aside from our Reboot, a cross-browser normalization stylesheet, all our styles aim to use classes as selectors. This means steering clear of type selectors (e.g., <code>input[type=&quot;text&quot;]</code>) and extraneous parent classes (e.g., <code>.parent .child</code>) that make styles too specific to easily override.</p>
-<p>As such, components should be built with a base class that houses common, not-to-be overridden property-value pairs. For example, <code>.btn</code> and <code>.btn-primary</code>. We use <code>.btn</code> for all the common styles like <code>display</code>, <code>padding</code>, and <code>border-width</code>. We then use modifiers like <code>.btn-primary</code> to add the color, background-color, border-color, etc.</p>
-<p>Modifier classes should only be used when there are multiple properties or values to be changed across multiple variants. Modifiers are not always necessary, so be sure you&rsquo;re actually saving lines of code and preventing unnecessary overrides when creating them. Good examples of modifiers are our theme color classes and size variants.</p>
-<h2 id="z-index-scales">z-index scales</h2>
-<p>There are two <code>z-index</code> scales in Bootstrap—elements within a component and overlay components.</p>
-<h3 id="component-elements">Component elements</h3>
+<h2 id="адаптивность">Адаптивность</h2>
+<p>Адаптивные стили Bootstrap созданы так, чтобы быть отзывчивыми, и этот подход часто называют <em>mobile-first</em>. Мы используем этот термин в наших документах и в целом с ним согласны, но иногда он может быть слишком широким. Хотя не каждый компонент <em>должен</em> быть полностью отзывчивым в Bootstrap, этот адаптивный подход заключается в сокращении переопределений CSS, заставляя Вас добавлять стили по мере увеличения области просмотра.</p>
+<p>В Bootstrap Вы наиболее четко увидите это в наших медиа-запросах. В большинстве случаев мы используем запросы <code>min-width</code>, которые начинают применяться с определенной контрольной точки и проходят через более высокие контрольные точки. Например, <code>.d-none</code> применяется от <code>min-width: 0</code> до бесконечности. С другой стороны, <code>.d-md-none</code> применяется от средней контрольной точки и выше.</p>
+<p>Иногда мы будем использовать <code>max-width</code>, когда этого требует присущая компоненту сложность. Иногда эти переопределения функционально и мысленно легче реализовать и поддерживать, чем переписывание основных функций из наших компонентов. Мы стремимся ограничить этот подход, но будем использовать его время от времени.</p>
+<h2 id="классы">Классы</h2>
+<p>Помимо нашей перезагрузки, кроссбраузерной таблицы стилей нормализации, все наши стили нацелены на использование классов в качестве селекторов. Это означает отказ от селекторов типов (например, <code>input[type=&quot;text&quot;]</code>) и посторонних родительских классов (например, <code>.parent .child</code>), которые делают стили слишком специфичными, чтобы их можно было легко переопределить.</p>
+<p>Таким образом, компоненты должны быть построены с использованием базового класса, в котором хранятся общие, не подлежащие переопределению пары свойство-значение. Например, <code>.btn</code> и <code>.btn-primary</code>. Мы используем <code>.btn</code> для всех общих стилей, таких как <code>display</code>, <code>padding</code> и <code>border-width</code>. Затем мы используем модификаторы, такие как <code>.btn-primary</code>, чтобы добавить цвет, цвет фона, цвет границы и т.д.</p>
+<p>Классы-модификаторы следует использовать только в том случае, если есть несколько свойств или значений, которые необходимо изменить в нескольких вариантах. Модификаторы не всегда необходимы, поэтому убедитесь, что Вы действительно сохраняете строки кода и предотвращаете ненужные переопределения при их создании. Хорошими примерами модификаторов являются классы цветов и варианты размеров нашей темы.</p>
+<h2 id="шкалы-z-индекса">Шкалы z-индекса</h2>
+<p>В Bootstrap есть две шкалы <code>z-index</code> - элементы внутри компонента и компоненты наложения.</p>
+<h3 id="составные-элементы">Составные элементы</h3>
 <ul>
-<li>Some components in Bootstrap are built with overlapping elements to prevent double borders without modifying the <code>border</code> property. For example, button groups, input groups, and pagination.</li>
-<li>These components share a standard <code>z-index</code> scale of <code>0</code> through <code>3</code>.</li>
-<li><code>0</code> is default (initial), <code>1</code> is <code>:hover</code>, <code>2</code> is <code>:active</code>/<code>.active</code>, and <code>3</code> is <code>:focus</code>.</li>
-<li>This approach matches our expectations of highest user priority. If an element is focused, it&rsquo;s in view and at the user&rsquo;s attention. Active elements are second highest because they indicate state. Hover is third highest because it indicates user intent, but nearly <em>anything</em> can be hovered.</li>
+<li>Некоторые компоненты в Bootstrap построены с перекрывающимися элементами для предотвращения двойных границ без изменения свойства <code>border</code>. Например, группы кнопок, группы ввода и разбиение на страницы.</li>
+<li>Эти компоненты имеют стандартную шкалу <code>z-index</code> от <code>0</code> до <code>3</code>.</li>
+<li><code>0</code> по умолчанию (начальный), <code>1</code> - <code>:hover</code>, <code>2</code> - <code>:active</code>/<code>.active</code> и <code>3</code> - <code>:focus</code>.</li>
+<li>Такой подход соответствует нашим ожиданиям в отношении наивысшего приоритета пользователей. Если элемент сфокусирован, он находится в поле зрения и находится в поле зрения пользователя. Активные элементы занимают второе место, потому что они указывают состояние. Наведение занимает третье место, потому что указывает на намерение пользователя, но почти все может быть зависло.</li>
 </ul>
-<h3 id="overlay-components">Overlay components</h3>
-<p>Bootstrap includes several components that function as an overlay of some kind. This includes, in order of highest <code>z-index</code>, dropdowns, fixed and sticky navbars, modals, tooltips, and popovers. These components have their own <code>z-index</code> scale that begins at <code>1000</code>. This starting number was chosen arbitrarily and serves as a small buffer between our styles and your project&rsquo;s custom styles.</p>
-<p>Each overlay component increases its <code>z-index</code> value slightly in such a way that common UI principles allow user focused or hovered elements to remain in view at all times. For example, a modal is document blocking (e.g., you cannot take any other action save for the modal&rsquo;s action), so we put that above our navbars.</p>
-<p>Learn more about this in our <a href="/docs/4.5/layout/overview/#z-index"><code>z-index</code> layout page</a>.</p>
-<h2 id="html-and-css-over-js">HTML and CSS over JS</h2>
-<p>Whenever possible, we prefer to write HTML and CSS over JavaScript. In general, HTML and CSS are more prolific and accessible to more people of all different experience levels. HTML and CSS are also faster in your browser than JavaScript, and your browser generally provides a great deal of functionality for you.</p>
-<p>This principle is our first-class JavaScript API using <code>data</code> attributes. You don&rsquo;t need to write nearly any JavaScript to use our JavaScript plugins; instead, write HTML. Read more about this in <a href="/docs/4.5/getting-started/javascript/#data-attributes">our JavaScript overview page</a>.</p>
-<p>Lastly, our styles build on the fundamental behaviors of common web elements. Whenever possible, we prefer to use what the browser provides. For example, you can put a <code>.btn</code> class on nearly any element, but most elements don&rsquo;t provide any semantic value or browser functionality. So instead, we use <code>&lt;button&gt;</code>s and <code>&lt;a&gt;</code>s.</p>
-<p>The same goes for more complex components. While we <em>could</em> write our own form validation plugin to add classes to a parent element based on an input&rsquo;s state, thereby allowing us to style the text say red, we prefer using the <code>:valid</code>/<code>:invalid</code> pseudo-elements every browser provides us.</p>
-<h2 id="utilities">Utilities</h2>
-<p>Utility classes—formerly helpers in Bootstrap 3—are a powerful ally in combatting CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., <code>.d-block</code> represents <code>display: block;</code>). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.</p>
-<p>Specifically regarding custom CSS, utilities can help combat increasing file size by reducing your most commonly repeated property-value pairs into single classes. This can have a dramatic effect at scale in your projects.</p>
-<h2 id="flexible-html">Flexible HTML</h2>
-<p>While not always possible, we strive to avoid being overly dogmatic in our HTML requirements for components. Thus, we focus on single classes in our CSS selectors and try to avoid immediate children selectors (<code>&gt;</code>). This gives you more flexibility in your implementation and helps keep our CSS simpler and less specific.</p>
+<h3 id="компоненты-наложения">Компоненты наложения</h3>
+<p>Bootstrap включает в себя несколько компонентов, которые функционируют как своего рода наложение. Это включает в себя в порядке наивысшего <code>z-index</code>, выпадающие списки, фиксированные и закрепленные панели навигации, модальные окна, всплывающие подсказки и всплывающие окна. Эти компоненты имеют собственную шкалу <code>z-index</code>, которая начинается с <code>1000</code>. Этот начальный номер был выбран произвольно и служит небольшим буфером между нашими стилями и пользовательскими стилями вашего проекта.</p>
+<p>Каждый компонент наложения немного увеличивает свое значение <code>z-index</code> таким образом, чтобы общие принципы пользовательского интерфейса позволяли элементам, ориентированным на пользователя или наведенным курсором, оставаться в поле зрения все время. Например, модальное окно - это блокировка документа (например, Вы не можете предпринимать никаких других действий, кроме действия модального окна), поэтому мы помещаем его над нашими панелями навигации.</p>
+<p>Узнайте больше об этом на нашей <a href="/docs/4.5/layout/overview/#z-index">странице макета <code>z-index</code></a>.</p>
+<h2 id="html-и-css-поверх-js">HTML и CSS поверх JS</h2>
+<p>По возможности мы предпочитаем писать HTML и CSS вместо JavaScript. В целом, HTML и CSS более эффективны и доступны большему количеству людей с разным уровнем опыта. HTML и CSS также работают быстрее в Вашем браузере, чем JavaScript, и Ваш браузер обычно предоставляет Вам множество функций.</p>
+<p>Это наш первоклассный JavaScript API, использующий атрибуты data. Вам не нужно писать почти какой-либо JavaScript, чтобы использовать наши плагины JavaScript; вместо этого напишите HTML. Дополнительные сведения об этом можно найти на <a href="/docs/4.5/getting-started/javascript/#атрибуты-данных">нашей странице обзора JavaScript</a>.</p>
+<p>Наконец, наши стили основаны на основных принципах поведения обычных веб-элементов. По возможности мы предпочитаем использовать то, что предоставляет браузер. Например, Вы можете поместить класс <code>.btn</code> практически на любой элемент, но большинство элементов не предоставляют никакого семантического значения или функциональности браузера. Поэтому вместо этого мы используем <code>&lt;button&gt;</code> и <code>&lt;a&gt;</code>.</p>
+<p>То же самое и с более сложными компонентами. Хотя мы <em>могли</em> написать собственный плагин проверки формы для добавления классов к родительскому элементу на основе состояния ввода, тем самым позволяя стилизовать текст, скажем, красный, мы предпочитаем использовать псевдоэлементы <code>:valid</code>/<code>:invalid</code> каждый браузер предоставляет нам.</p>
+<h2 id="утилиты">Утилиты</h2>
+<p>Служебные классы - бывшие помощники в Bootstrap 3 - являются мощным союзником в борьбе с раздуванием CSS и низкой производительностью страницы. Служебный класс обычно представляет собой одну неизменяемую пару свойств и значений, выраженную в виде класса (например, <code>.d-block</code> представляет <code>display: block;</code>). Их главная привлекательность - скорость использования при написании HTML и ограничение количества настраиваемых CSS, которые Вам нужно написать.</p>
+<p>В частности, что касается настраиваемого CSS, утилиты могут помочь бороться с увеличением размера файла за счет сокращения наиболее часто повторяемых пар свойство-значение в отдельные классы. Это может иметь драматический эффект в Ваших проектах.</p>
+<h2 id="гибкий-html">Гибкий HTML</h2>
+<p>Хотя это не всегда возможно, мы стараемся избегать излишней догматики в наших требованиях HTML к компонентам. Таким образом, мы фокусируемся на отдельных классах в наших селекторах CSS и стараемся избегать непосредственных дочерних селекторов (<code>&gt;</code>). Это дает Вам больше гибкости в реализации и помогает сделать наш CSS более простым и менее конкретным.</p>
 
         </main>
       </div>

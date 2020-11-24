@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Control the visibility, without modifying the display, of elements with visibility utilities.">
+<meta name="description" content="Управляйте видимостью без изменения отображения элементов с помощью утилит видимости.">
 <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
 <meta name="generator" content="Hugo 0.77.0-DEV">
 
@@ -12,7 +12,7 @@
 
 <meta name="yandex-verification" content="268fb73245c0ff4f" />
 
-<title>Visibility · Bootstrap v4.5</title>
+<title>Видимость · Bootstrap v4.5</title>
 
 <link rel="canonical" href="https://v4.getbootstrap.su/docs/4.5/utilities/visibility/">
 
@@ -40,14 +40,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Visibility">
-<meta name="twitter:description" content="Control the visibility, without modifying the display, of elements with visibility utilities.">
+<meta name="twitter:title" content="Видимость">
+<meta name="twitter:description" content="Управляйте видимостью без изменения отображения элементов с помощью утилит видимости.">
 <meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social-logo.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://v4.getbootstrap.su/docs/4.5/utilities/visibility/">
-<meta property="og:title" content="Visibility">
-<meta property="og:description" content="Control the visibility, without modifying the display, of elements with visibility utilities.">
+<meta property="og:title" content="Видимость">
+<meta property="og:description" content="Управляйте видимостью без изменения отображения элементов с помощью утилит видимости.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://v4.getbootstrap.su/docs/4.5/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -299,15 +299,15 @@
           <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
             <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.5/utilities/visibility.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
             <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.5/utilities/visibility.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
-            <h1 class="bd-title" id="content">Visibility</h1>
+            <h1 class="bd-title" id="content">Видимость</h1>
           </div>
-          <p class="bd-lead">Control the visibility, without modifying the display, of elements with visibility utilities.</p>
+          <p class="bd-lead">Управляйте видимостью без изменения отображения элементов с помощью утилит видимости.</p>
           
-          <p>Set the <code>visibility</code> of elements with our visibility utilities. These utility classes do not modify the <code>display</code> value at all and do not affect layout – <code>.invisible</code> elements still take up space in the page. Content will be hidden both visually and for assistive technology/screen reader users.</p>
-<p>Apply <code>.visible</code> or <code>.invisible</code> as needed.</p>
+          <p>Установите <code>visibility</code> элементов с помощью наших утилит видимости. Эти служебные классы вообще не изменяют значение <code>display</code> и не влияют на макет - элементы <code>.invisible</code> по-прежнему занимают место на странице. Контент будет скрыт как визуально, так и для пользователей вспомогательных технологий / программ чтения с экрана.</p>
+<p>При необходимости используйте <code>.visible</code> или <code>.invisible</code>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visible&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;invisible&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Class
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Класс
 </span><span class="c1"></span><span class="nc">.visible</span> <span class="p">{</span>
   <span class="nt">visibility</span><span class="nd">:</span> <span class="nt">visible</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
 <span class="p">}</span>
@@ -315,8 +315,8 @@
   <span class="nt">visibility</span><span class="nd">:</span> <span class="nt">hidden</span> <span class="o">!</span><span class="nt">important</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// Usage as a mixin
-</span><span class="c1">// Warning: The `invisible()` mixin has been deprecated as of v4.3.0. It will be removed entirely in v5.
+<span class="c1">// Использование в качестве миксина
+</span><span class="c1">// Предупреждение: Миксин `invisible()` устарел с версии 4.3.0. Он будет полностью удален в v5.
 </span><span class="c1"></span><span class="nc">.element</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> invisible</span><span class="p">(</span><span class="no">visible</span><span class="p">);</span>
 <span class="p">}</span>
