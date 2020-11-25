@@ -31,9 +31,6 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/dashboard/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-fixed/</loc>
   </url>
   <url>
@@ -224,6 +221,9 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/position/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/screen-readers/</loc>
