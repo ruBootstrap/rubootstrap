@@ -723,8 +723,8 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="через-javascript">Через JavaScript</h3>
 <p>Включить элемент списка с вкладками через JavaScript (каждый элемент списка нужно активировать индивидуально):</p>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myList a&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myList a&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
   <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">&#39;show&#39;</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div><p>Вы можете активировать отдельный элемент списка несколькими способами:</p>
@@ -800,9 +800,9 @@
     </tr>
   </tbody>
 </table>
-<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;a[data-toggle=&#34;list&#34;]&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">e</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// недавно активированная вкладка
-</span><span class="c1"></span>  <span class="nx">e</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// предыдущая активная вкладка
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;a[data-toggle=&#34;list&#34;]&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">target</span> <span class="c1">// недавно активированная вкладка
+</span><span class="c1"></span>  <span class="nx">event</span><span class="p">.</span><span class="nx">relatedTarget</span> <span class="c1">// предыдущая активная вкладка
 </span><span class="c1"></span><span class="p">})</span>
 </code></pre></div>
         </main>

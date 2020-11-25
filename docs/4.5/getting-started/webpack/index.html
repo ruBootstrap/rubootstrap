@@ -290,7 +290,7 @@
 <h2 id="импорт-javascript">Импорт JavaScript</h2>
 <p>Импортируйте <a href="/docs/4.5/getting-started/javascript/">Bootstrap&rsquo;s JavaScript</a>, добавив эту строку в точку входа Вашего приложения (обычно <code>index.js</code> или <code>app.js</code>):</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span>
-</code></pre></div><p>Кроме того, вы можете <strong>импортировать плагины по отдельности</strong> по мере необходимости:</p>
+</code></pre></div><p>Кроме того, Вы можете <strong>импортировать плагины по отдельности</strong> по мере необходимости:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="s1">&#39;bootstrap/js/dist/util&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="s1">&#39;bootstrap/js/dist/alert&#39;</span><span class="p">;</span>
 <span class="p">...</span>
@@ -328,7 +328,7 @@
 </code></pre></div><h3 id="импорт-скомпилированного-css">Импорт скомпилированного CSS</h3>
 <p>В качестве альтернативы Вы можете использовать готовый к использованию CSS Bootstrap, просто добавив эту строку в точку входа Вашего проекта:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="s1">&#39;bootstrap/dist/css/bootstrap.min.css&#39;</span><span class="p">;</span>
-</code></pre></div><p>В этом случае вы можете использовать существующее правило для <code>css</code> без каких-либо специальных изменений в конфигурации webpack, за исключением того, что вам не нужен <code>sass-loader</code> только <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> и <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
+</code></pre></div><p>В этом случае Вы можете использовать существующее правило для <code>css</code> без каких-либо специальных изменений в конфигурации webpack, за исключением того, что Вам не нужен <code>sass-loader</code> только <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> и <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="p">...</span>
 <span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
   <span class="nx">rules</span><span class="o">:</span> <span class="p">[</span>

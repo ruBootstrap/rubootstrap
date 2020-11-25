@@ -354,15 +354,15 @@
           <h2 id="обзор">Обзор</h2>
 <p>Что нужно знать при использовании плагина popover:</p>
 <ul>
-<li>Всплывающие окна полагаются на стороннюю библиотеку <a href="https://popper.js.org/">Popper.js</a> для позиционирования. Вы должны включить <a href="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">popper.min.js</a> перед <code>bootstrap.js</code> или использовать <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code>, который содержит Popper.js, чтобы всплывающие окна работали!</li>
+<li>Popovers полагаются на стороннюю библиотеку <a href="https://popper.js.org/">Popper</a> для позиционирования. Вы должны включить <a href="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">popper.min.js</a> перед bootstrap.js или использовать <code>bootstrap.bundle.min.js</code> / `bootstrap.bundle.js, который содержит Popper чтобы поповеры работали!</li>
 <li>Для всплывающих окон требуется <a href="/docs/4.5/components/tooltips/">плагин всплывающей подсказки</a> в качестве зависимости.</li>
 <li>Если Вы создаете наш JavaScript из исходного кода, он <a href="/docs/4.5/getting-started/javascript/#util">требуется <code>util.js</code></a>.</li>
-<li>Всплывающие окна включены по соображениям производительности, поэтому <strong>вы должны инициализировать их самостоятельно</strong>.</li>
+<li>Всплывающие окна включены по соображениям производительности, поэтому <strong>Вы должны инициализировать их самостоятельно</strong>.</li>
 <li>Значения <code>title</code> и <code>content</code> нулевой длины никогда не будут показывать всплывающее окно.</li>
 <li>Укажите <code>container: 'body'</code>, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).</li>
-<li>Запуск всплывающих окон для скрытых элементов не будет работать.</li>
+<li>Запуск всплывающих окон для скрытых элементов не работает.</li>
 <li>Всплывающие окна для элементов <code>.disabled</code> или <code>disabled</code> должны запускаться в элементе оболочки.</li>
-<li>При запуске от якорей, которые переносятся по нескольким строкам, всплывающие окна будут центрированы между общей шириной якорей. Используйте <code>.text-nowrap</code> на Ваших <code>&lt;a&gt;</code>, чтобы избежать такого поведения.</li>
+<li>При запуске от якорей, которые переносятся по нескольким строкам, всплывающие окна будут центрированы между общей шириной якорей. Используйте <code>.text-nowrap</code> на Ваших <code>&lt;a&gt;</code> чтобы избежать такого поведения.</li>
 <li>Всплывающие окна должны быть скрыты до того, как соответствующие им элементы будут удалены из DOM.</li>
 <li>Всплывающие окна могут запускаться благодаря элементу внутри теневого DOM.</li>
 </ul>
@@ -424,7 +424,7 @@
 <p>Используйте триггер <code>focus</code>, чтобы закрыть всплывающие окна при следующем щелчке пользователем элемента, отличного от элемента переключения.</p>
 <div class="bd-callout bd-callout-danger">
 <h4 id="специальная-разметка-необходимая-для-закрытия-при-следующем-щелчке">Специальная разметка, необходимая для закрытия при следующем щелчке</h4>
-<p>Для правильного кроссбраузерного и кросс-платформенного поведения вы должны использовать тег <code>&lt;a&gt;</code>, <em>не</em> тег <code>&lt;button&gt;</code>, а также вы должны включить атрибут <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><code>tabindex</code></a>.
+<p>Для правильного кроссбраузерного и кросс-платформенного поведения Вы должны использовать тег <code>&lt;a&gt;</code>, <em>не</em> тег <code>&lt;button&gt;</code>, а также Вы должны включить атрибут <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><code>tabindex</code></a>.
 </div>
 
 <div class="bd-example">
@@ -434,7 +434,7 @@
   <span class="nx">trigger</span><span class="o">:</span> <span class="s1">&#39;focus&#39;</span>
 <span class="p">})</span>
 </code></pre></div><h3 id="отключенные-элементы">Отключенные элементы</h3>
-<p>Элементы с атрибутом <code>disabled</code> не являются интерактивными, то есть пользователи не могут навести на них курсор или щелкнуть по ним, чтобы вызвать всплывающее окно (или всплывающую подсказку). В качестве обходного пути вы захотите вызвать всплывающее окно из оболочки <code>&lt;div&gt;</code> или <code>&lt;span&gt;</code> и переопределить <code>pointer-events</code> на отключенном элементе.</p>
+<p>Элементы с атрибутом <code>disabled</code> не являются интерактивными, то есть пользователи не могут навести на них курсор или щелкнуть по ним, чтобы вызвать всплывающее окно (или всплывающую подсказку). В качестве обходного пути Вы захотите вызвать всплывающее окно из оболочки <code>&lt;div&gt;</code> или <code>&lt;span&gt;</code> и переопределить <code>pointer-events</code> на отключенном элементе.</p>
 <p>Для отключенных триггеров всплывающего окна Вы также можете предпочесть <code>data-trigger=&quot;hover&quot;</code>, чтобы всплывающее окно отображалось как немедленная визуальная обратная связь для Ваших пользователей, поскольку они могут не ожидать <em>нажатия</em> на отключенный элемент.</p>
 <div class="bd-example">
 <span class="d-inline-block" data-toggle="popover" data-content="Отключенное всплывающее окно">
@@ -530,7 +530,7 @@
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. См. <a href="https://github.com/twbs/bootstrap/issues/4215">это</a> и <a href="https://codepen.io/Johann-S/pen/djJYPb">информативный пример</a>.</td>
+      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. Смотрите <a href="https://github.com/twbs/bootstrap/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/qBNGbYK">информативный пример</a>.</td>
     </tr>
     <tr>
       <td>template</td>
@@ -563,19 +563,28 @@
       <td>offset</td>
       <td>number | string</td>
       <td>0</td>
-      <td>Смещение всплывающего окна относительно его цели. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документацию смещения</a> Popper.js.</td>
+      <td>Смещение всплывающего окна относительно его цели. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации по смещению</a> Popper.</td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.js.</td>
+      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.</td>
+    </tr>
+    <tr>
+      <td>customClass</td>
+      <td>string | function</td>
+      <td>''</td>
+      <td>
+        <p>Добавляйте классы в всплывающее окно, когда оно отображается. Обратите внимание, что эти классы будут добавлены в дополнение к любым классам, указанным в шаблоне. Чтобы добавить несколько классов, разделите их пробелами: <code>'a b'</code>.</p>
+        <p>Вы также можете передать функцию, которая должна возвращать одну строку, содержащую дополнительные имена классов.</p>
+      </td>
     </tr>
     <tr>
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документации preventOverflow</a> Popper.js.</td>
+      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию preventOverflow</a> Popper.</td>
     </tr>
     <tr>
       <td>sanitize</td>
@@ -599,7 +608,7 @@
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>Чтобы изменить конфигурацию Popper.js по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper.js</a></td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a></td>
     </tr>
   </tbody>
 </table>

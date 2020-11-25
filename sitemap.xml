@@ -1,37 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/album/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/best-practices/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/blog/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-bottom/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/carousel/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/checkout/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/clearfix/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/cover/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/dashboard/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-fixed/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/flex/</loc>
@@ -40,49 +16,13 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/float/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/floating-labels/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/grid/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/getting-started/javascript/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/jumbotron/</loc>
   </url>
   <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/jumbotron/</loc>
-  </url>
-  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/components/modal/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbars/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/offcanvas/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/pricing/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/product/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/sign-in/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/starter-template/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/sticky-footer-navbar/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/sticky-footer/</loc>
-  </url>
-  <url>
-    <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-static/</loc>
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/browser-bugs/</loc>
@@ -223,6 +163,30 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/utilities/position/</loc>
   </url>
   <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/album/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-static/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-bottom/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/checkout/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/floating-labels/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/pricing/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/product/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbar-fixed/</loc>
+  </url>
+  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/examples/</loc>
   </url>
   <url>
@@ -256,6 +220,9 @@
     <loc>https://v4.getbootstrap.su/docs/4.5/components/spinners/</loc>
   </url>
   <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/starter-template/</loc>
+  </url>
+  <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/content/tables/</loc>
   </url>
   <url>
@@ -284,5 +251,38 @@
   </url>
   <url>
     <loc>https://v4.getbootstrap.su/docs/4.5/about/license/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/jumbotron/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/blog/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/offcanvas/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/carousel/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/navbars/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/cover/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/dashboard/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/sticky-footer-navbar/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/sticky-footer/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/grid/</loc>
+  </url>
+  <url>
+    <loc>https://v4.getbootstrap.su/docs/4.5/examples/sign-in/</loc>
   </url>
 </urlset>
