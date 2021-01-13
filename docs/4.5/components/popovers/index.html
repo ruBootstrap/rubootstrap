@@ -174,7 +174,12 @@
     <div class="container-fluid">
       <div class="row flex-xl-nowrap">
         <div class="col-md-3 col-xl-2 bd-sidebar">
-          
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Поиск..." aria-label="Поиск для..." autocomplete="off" data-docs-version="4.5">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Переключатель навигации по документации">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
 
 <div class="collapse d-md-block row" id="bd-docs-nav">
   <nav class="bd-links" aria-label="Главная навигация">
@@ -354,13 +359,13 @@
           <h2 id="обзор">Обзор</h2>
 <p>Что нужно знать при использовании плагина popover:</p>
 <ul>
-<li>Popovers полагаются на стороннюю библиотеку <a href="https://popper.js.org/">Popper</a> для позиционирования. Вы должны включить <a href="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">popper.min.js</a> перед bootstrap.js или использовать <code>bootstrap.bundle.min.js</code> / `bootstrap.bundle.js, который содержит Popper чтобы поповеры работали!</li>
+<li>Popovers полагаются на стороннюю библиотеку <a href="https://popper.js.org/">Popper</a> для позиционирования. Вы должны включить <a href="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">popper.min.js</a> перед bootstrap.js или использовать <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code>, который содержит Popper чтобы поповеры работали!</li>
 <li>Для всплывающих окон требуется <a href="/docs/4.5/components/tooltips/">плагин всплывающей подсказки</a> в качестве зависимости.</li>
-<li>Если Вы создаете наш JavaScript из исходного кода, он <a href="/docs/4.5/getting-started/javascript/#util">требуется <code>util.js</code></a>.</li>
+<li>Если Вы создаете наш JavaScript из исходного кода, для него <a href="/docs/4.5/getting-started/javascript/#util">требуется <code>util.js</code></a>.</li>
 <li>Всплывающие окна включены по соображениям производительности, поэтому <strong>Вы должны инициализировать их самостоятельно</strong>.</li>
 <li>Значения <code>title</code> и <code>content</code> нулевой длины никогда не будут показывать всплывающее окно.</li>
 <li>Укажите <code>container: 'body'</code>, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).</li>
-<li>Запуск всплывающих окон для скрытых элементов не работает.</li>
+<li>Запуск всплывающих окон для скрытых элементов не будет работать.</li>
 <li>Всплывающие окна для элементов <code>.disabled</code> или <code>disabled</code> должны запускаться в элементе оболочки.</li>
 <li>При запуске от якорей, которые переносятся по нескольким строкам, всплывающие окна будут центрированы между общей шириной якорей. Используйте <code>.text-nowrap</code> на Ваших <code>&lt;a&gt;</code> чтобы избежать такого поведения.</li>
 <li>Всплывающие окна должны быть скрыты до того, как соответствующие им элементы будут удалены из DOM.</li>
@@ -389,38 +394,32 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-lg btn-danger&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Заголовок всплывающего окна&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;А вот и потрясающий контент. Это очень интересно. Верно?&#34;</span><span class="p">&gt;</span>Нажмите, чтобы переключить всплывающее окно<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="четыре-направления">Четыре направления</h3>
 <p>Доступны четыре варианта: по верхнему, правому, нижнему и левому краям.</p>
-<div class="bd-example popover-demo">
-  <div class="bd-example-popovers">
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее окно вверху
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее окно справа
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее окно внизу
-    </button>
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-      Всплывающее окно слева
-    </button>
-  </div>
-</div>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&#34;</span><span class="p">&gt;</span>
+<div class="bd-example">
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Top popover">
+  Всплывающее окно вверху
+</button>
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Right popover">
+  Всплывающее окно справа
+</button>
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Bottom popover">
+  Всплывающее окно снизу
+</button>
+<button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Left popover">
+  Всплывающее окно слева
+</button>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;top&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;Top popover&#34;</span><span class="p">&gt;</span>
   Всплывающее окно вверху
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;right&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;right&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;Right popover&#34;</span><span class="p">&gt;</span>
   Всплывающее окно справа
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&#34;</span><span class="p">&gt;</span>
-  Всплывающее окно внизу
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;bottom&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;Bottom popover&#34;</span><span class="p">&gt;</span>
+  Всплывающее окно снизу
 <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;left&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-secondary&#34;</span> <span class="na">data-container</span><span class="o">=</span><span class="s">&#34;body&#34;</span> <span class="na">data-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">data-placement</span><span class="o">=</span><span class="s">&#34;left&#34;</span> <span class="na">data-content</span><span class="o">=</span><span class="s">&#34;Left popover&#34;</span><span class="p">&gt;</span>
   Всплывающее окно слева
-<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="отклонить-при-следующем-нажатии">Отклонить при следующем нажатии</h3>
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="отклонить-при-следующем-нажатии">Отклонить при следующем нажатии</h3>
 <p>Используйте триггер <code>focus</code>, чтобы закрыть всплывающие окна при следующем щелчке пользователем элемента, отличного от элемента переключения.</p>
 <div class="bd-callout bd-callout-danger">
 <h4 id="специальная-разметка-необходимая-для-закрытия-при-следующем-щелчке">Специальная разметка, необходимая для закрытия при следующем щелчке</h4>
@@ -530,7 +529,7 @@
       <td>selector</td>
       <td>string | false</td>
       <td>false</td>
-      <td>Если указан селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. Смотрите <a href="https://github.com/twbs/bootstrap/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/qBNGbYK">информативный пример</a>.</td>
+      <td>Если предусмотрен селектор, объекты всплывающих окон будут делегированы указанным целям. На практике это используется для включения всплывающих окон в динамический HTML-контент. Смотрите <a href="https://github.com/twbs/bootstrap/issues/4215">это</a> и <a href="https://codepen.io/team/bootstrap/pen/qBNGbYK">информативный пример</a>.</td>
     </tr>
     <tr>
       <td>template</td>
@@ -563,13 +562,13 @@
       <td>offset</td>
       <td>number | string</td>
       <td>0</td>
-      <td>Смещение всплывающего окна относительно его цели. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации по смещению</a> Popper.</td>
+      <td>Смещение всплывающего окна относительно его цели. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации Popper по смещению</a>.</td>
     </tr>
     <tr>
       <td>fallbackPlacement</td>
       <td>string | array</td>
       <td>'flip'</td>
-      <td>Разрешить указать, какую позицию Popper будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию о поведении</a> Popper.</td>
+      <td>Разрешить указать, какую позицию Поппер будет использовать при откате. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">документацию Popper о поведении</a></td>
     </tr>
     <tr>
       <td>customClass</td>
@@ -584,7 +583,7 @@
       <td>boundary</td>
       <td>string | element</td>
       <td>'scrollParent'</td>
-      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию preventOverflow</a> Popper.</td>
+      <td>Граница ограничения переполнения всплывающего окна. Принимает значения <code>'viewport'</code>, <code>'window'</code>, <code>'scrollParent'</code> или ссылку HTMLElement (только JavaScript). Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..preventOverflow.boundariesElement">документацию Popper по preventOverflow</a>.</td>
     </tr>
     <tr>
       <td>sanitize</td>
@@ -608,7 +607,7 @@
       <td>popperConfig</td>
       <td>null | object</td>
       <td>null</td>
-      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a></td>
+      <td>Чтобы изменить конфигурацию Popper по умолчанию для Bootstrap, смотрите <a href="https://popper.js.org/docs/v1/#Popper.Defaults">конфигурацию Popper</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -696,7 +695,7 @@
 <script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 
 <script src="/docs/4.5/assets/js/docs.min.js"></script>
 

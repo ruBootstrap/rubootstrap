@@ -174,7 +174,12 @@
     <div class="container-fluid">
       <div class="row flex-xl-nowrap">
         <div class="col-md-3 col-xl-2 bd-sidebar">
-          
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Поиск..." aria-label="Поиск для..." autocomplete="off" data-docs-version="4.5">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Переключатель навигации по документации">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
 
 <div class="collapse d-md-block row" id="bd-docs-nav">
   <nav class="bd-links" aria-label="Главная навигация">
@@ -350,7 +355,7 @@
 <p>Что нужно знать при использовании плагина всплывающей подсказки:</p>
 <ul>
 <li>Подсказки полагаются на стороннюю библиотеку <a href="https://popper.js.org/">Popper</a> для позиционирования. Вы должны включить <a href="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js">popper.min.js</a> перед bootstrap.js или использовать <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code>, который содержит Popper чтобы всплывающие подсказки работали!</li>
-<li>Если Вы создаете наш JavaScript из исходного кода, он <a href="/docs/4.5/getting-started/javascript/#util">требует <code>util.js</code></a>.</li>
+<li>Если Вы создаете наш JavaScript из исходного кода, для него <a href="/docs/4.5/getting-started/javascript/#util">требуется <code>util.js</code></a>.</li>
 <li>Всплывающие подсказки используются по соображениям производительности, поэтому <strong>Вы должны инициализировать их самостоятельно</strong>.</li>
 <li>Всплывающие подсказки с заголовками нулевой длины никогда не отображаются.</li>
 <li>Укажите <code>container: 'body'</code>, чтобы избежать проблем с рендерингом в более сложных компонентах (например, в наших группах ввода, группах кнопок и т.д.).</li>
@@ -373,7 +378,7 @@
 </code></pre></div><h2 id="примеры">Примеры</h2>
 <p>Наведите курсор на ссылки ниже, чтобы увидеть всплывающие подсказки:</p>
 <div class="bd-example tooltip-demo">
-  <p class="muted">Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+  <p class="muted">Placeholder text to demonstrate some <a href="#" data-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-toggle="tooltip" title="The last tip!">your own</a> site or project.
   </p>
 </div>
 <p>Наведите указатель мыши на кнопки ниже, чтобы увидеть четыре направления подсказок: вверх, вправо, внизу и влево.</p>
@@ -543,7 +548,7 @@
       <td>
         <p>Смещение всплывающей подсказки относительно цели.</p>
         <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
-        <p>Дополнительную информацию смотрите Popper <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации по смещению</a>.</p>
+        <p>Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации Popper по смещению</a>.</p>
       </td>
     </tr>
     <tr>
@@ -677,7 +682,7 @@
 <script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 
 <script src="/docs/4.5/assets/js/docs.min.js"></script>
 

@@ -174,7 +174,12 @@
     <div class="container-fluid">
       <div class="row flex-xl-nowrap">
         <div class="col-md-3 col-xl-2 bd-sidebar">
-          
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Поиск..." aria-label="Поиск для..." autocomplete="off" data-docs-version="4.5">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Переключатель навигации по документации">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
 
 <div class="collapse d-md-block row" id="bd-docs-nav">
   <nav class="bd-links" aria-label="Главная навигация">
@@ -923,7 +928,7 @@
 <h2 id="выравнивание-меню">Выравнивание меню</h2>
 <p>По умолчанию раскрывающееся меню автоматически располагается на 100% сверху и слева от своего родителя. Добавьте <code>.dropdown-menu-right</code> в <code>.dropdown-menu</code>, чтобы выровнять раскрывающееся меню по правому краю.</p>
 <div class="bd-callout bd-callout-info">
-<strong>Внимание!</strong> Выпадающие списки располагаются благодаря Popper (кроме случаев, когда они содержатся в навигационной панели).
+<strong>Внимание!</strong> Выпадающие списки располагаются благодаря Popper (кроме случаев, когда они содержатся в панели навигации).
 </div>
 
 <div class="bd-example">
@@ -1188,7 +1193,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="применение">Применение</h2>
-<p>С помощью атрибутов данных или JavaScript плагин раскрывающегося списка переключает скрытый контент (раскрывающиеся меню), переключая класс <code>.dropdown-menu</code>. Атрибут <code>data-toggle=&quot;dropdown&quot;</code> используется для закрытия раскрывающихся меню на уровне приложения, поэтому рекомендуется всегда использовать его.</p>
+<p>С помощью атрибутов данных или JavaScript плагин раскрывающегося списка переключает скрытый контент (раскрывающиеся меню), переключая класс <code>.show</code> в родительском <code>.dropdown-menu</code>. Атрибут <code>data-toggle=&quot;dropdown&quot;</code> используется для закрытия раскрывающихся меню на уровне приложения, поэтому рекомендуется всегда использовать его.</p>
 <div class="bd-callout bd-callout-info">
 На устройствах с сенсорным экраном открытие раскрывающегося списка добавляет пустые (<code>$.noop</code>) обработчики <code>mouseover</code> к непосредственным дочерним элементам элемента <code>&lt;body&gt;</code>. Этот, по общему признанию, уродливый взлом необходим, чтобы обойти <a href="https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html">причуду в делегировании событий iOS</a>, которая в противном случае предотвратила бы нажатие где-нибудь за пределами раскрывающегося списка от запуска кода, закрывающего раскрывающийся список. После закрытия раскрывающегося списка эти дополнительные пустые обработчики <code>mouseover</code> указателя мыши удаляются.
 </div>
@@ -1229,7 +1234,7 @@
       <td>0</td>
       <td>
         <p>Смещение раскрывающегося списка относительно его цели.</p>
-        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается в качестве второго аргумента.</p>
+        <p>Когда функция используется для определения смещения, она вызывается с объектом, содержащим данные смещения в качестве первого аргумента. Функция должна возвращать объект с такой же структурой. Узел DOM запускающего элемента передается как второй аргумент.</p>
         <p>Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..offset.offset">документации Popper по смещению</a>.</p>
       </td>
     </tr>
@@ -1237,7 +1242,7 @@
       <td>flip</td>
       <td>boolean</td>
       <td>true</td>
-      <td>Разрешить раскрывающийся список переворачиваться в случае перекрытия ссылочного элемента. Дополнительную информацию смотрите в <a href="https://popper.js.org/docs/v1/#modifiers..flip.enabled">документации переворотов</a> Popper.</td>
+      <td>Разрешить раскрывающемуся списку переворачиваться в случае перекрытия ссылочного элемента. Для получения дополнительной информации смотрите <a href="https://popper.js.org/docs/v1/#modifiers..flip.enabled">документации переворотов</a> Popper.</td>
     </tr>
     <tr>
       <td>boundary</td>
@@ -1249,7 +1254,7 @@
       <td>reference</td>
       <td>string | element</td>
       <td>'toggle'</td>
-      <td>Справочный элемент раскрывающегося меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code> или ссылка HTMLElement. Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#referenceObject">referenceObject docs</a>.</td>
+      <td>Справочный элемент раскрывающегося меню. Принимает значения <code>'toggle'</code>, <code>'parent'</code> или ссылка HTMLElement. Дополнительную информацию смотрите <a href="https://popper.js.org/docs/v1/#referenceObject">документацию referenceObject</a> Popper.</td>
     </tr>
     <tr>
       <td>display</td>
@@ -1340,7 +1345,7 @@
 <script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 
 <script src="/docs/4.5/assets/js/docs.min.js"></script>
 

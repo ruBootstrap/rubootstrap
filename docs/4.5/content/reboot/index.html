@@ -174,7 +174,12 @@
     <div class="container-fluid">
       <div class="row flex-xl-nowrap">
         <div class="col-md-3 col-xl-2 bd-sidebar">
-          
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Поиск..." aria-label="Поиск для..." autocomplete="off" data-docs-version="4.5">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Переключатель навигации по документации">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
 
 <div class="collapse d-md-block row" id="bd-docs-nav">
   <nav class="bd-links" aria-label="Главная навигация">
@@ -380,31 +385,21 @@
 <p>Во всех списках <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> и <code>&lt;dl&gt;</code> удалены их <code>margin-top</code> и <code>margin-bottom: 1rem</code>. Вложенные списки не имеют <code>margin-bottom</code>.</p>
 <div class="bd-example">
 <ul>
-<li>Lorem ipsum dolor sit amet</li>
-<li>Consectetur adipiscing elit</li>
-<li>Integer molestie lorem at massa</li>
-<li>Facilisis in pretium nisl aliquet</li>
-<li>Nulla volutpat aliquam velit
+<li>All lists have their top margin removed</li>
+<li>And their bottom margin normalized</li>
+<li>Nested lists have no bottom margin
 <ul>
-<li>Phasellus iaculis neque</li>
-<li>Purus sodales ultricies</li>
-<li>Vestibulum laoreet porttitor sem</li>
-<li>Ac tristique libero volutpat at</li>
+<li>This way they have a more even appearance</li>
+<li>Particularly when followed by more list items</li>
 </ul>
 </li>
-<li>Faucibus porta lacus fringilla vel</li>
-<li>Aenean sit amet erat nunc</li>
-<li>Eget porttitor lorem</li>
+<li>The left padding has also been reset</li>
 </ul>
 <ol>
-<li>Lorem ipsum dolor sit amet</li>
-<li>Consectetur adipiscing elit</li>
-<li>Integer molestie lorem at massa</li>
-<li>Facilisis in pretium nisl aliquet</li>
-<li>Nulla volutpat aliquam velit</li>
-<li>Faucibus porta lacus fringilla vel</li>
-<li>Aenean sit amet erat nunc</li>
-<li>Eget porttitor lorem</li>
+<li>Here&rsquo;s an ordered list</li>
+<li>With a few list items</li>
+<li>It has the same overall look</li>
+<li>As the previous unordered list</li>
 </ol>
 
 </div>
@@ -413,11 +408,11 @@
   <dl>
     <dt>Списки описаний</dt>
     <dd>Список описаний идеально подходит для определения терминов.</dd>
-    <dt>Euismod</dt>
-    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem.</dd>
-    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
-    <dt>Malesuada porta</dt>
-    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+    <dt>Срок</dt>
+    <dd>Определение термина.</dd>
+    <dd>Второе определение того же термина.</dd>
+    <dt>Другой термин</dt>
+    <dd>Определение этого другого термина.</dd>
   </dl>
 </div>
 <h2 id="предварительно-отформатированный-текст">Предварительно отформатированный текст</h2>
@@ -574,7 +569,7 @@
 <p>По умолчанию <code>margin</code> для цитат составляет <code>1em 40px</code>, поэтому мы сбрасываем ее на <code>0 0 1rem</code> для большей согласованности с другими элементами.</p>
 <div class="bd-example">
   <blockquote class="blockquote">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    <p>A well-known quote, contained in a blockquote element.</p>
     <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
   </blockquote>
 </div>
@@ -615,7 +610,7 @@
 <script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 
 <script src="/docs/4.5/assets/js/docs.min.js"></script>
 
