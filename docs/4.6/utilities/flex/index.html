@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.">
+<meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
+<meta name="generator" content="Hugo 0.80.0">
+
+<meta name="docsearch:language" content="ru">
+<meta name="docsearch:version" content="4.6">
+
+<meta name="yandex-verification" content="268fb73245c0ff4f" />
+
+<title>Flex · Bootstrap v4.6</title>
+
+<link rel="canonical" href="https://v4.getbootstrap.su/docs/4.6/utilities/flex/">
+
+
+
+<!-- Bootstrap core CSS -->
+<link href="/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+<!-- Documentation extras -->
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/scss/docs.scss" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Flex">
+<meta name="twitter:description" content="Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.">
+<meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.6/assets/brand/bootstrap-social-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://v4.getbootstrap.su/docs/4.6/utilities/flex/">
+<meta property="og:title" content="Flex">
+<meta property="og:description" content="Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://v4.getbootstrap.su/docs/4.6/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HY7MKJLPW4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-HY7MKJLPW4');
+</script>
+
+
+<script type="text/javascript">
+  (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+    m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+  })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(69581065, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true
+  });
+</script>
+<noscript>
+  <div><img src="https://mc.yandex.ru/watch/69581065" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+
+
+
+  </head>
+  <body>
+    <div class="skippy overflow-hidden">
+  <div class="container-xl">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Перейти к основному содержанию</a>
+    <a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="d-block" viewBox="0 0 612 612" role="img" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/4.6/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Документация</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/docs/4.6/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Примеры</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://icons.getbootstrap.su/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">Иконки</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Темы</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://expo.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" target="_blank" rel="noopener">Экспо</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Блог</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav ml-md-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        v4.6
+      </a>
+      <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item active" href="/docs/4.6/">Последняя (4.6.x)</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://getbootstrap.su/docs/5.0/">v5.x</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/docs/versions/">Все версии</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2" href="https://t.me/getbootstrap_ru" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg"  class="navbar-nav-svg" viewBox="0 0 24 24" role="img"><title>Telegram</title><path fill="currentColor" fill-rule="evenodd" d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2" href="https://github.com/ruBootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" class="navbar-nav-svg" viewBox="0 0 512 499.36" role="img" focusable="false"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" class="navbar-nav-svg" viewBox="0 0 512 416.32" role="img" focusable="false"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"/></svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener" aria-label="Slack">
+        <svg xmlns="http://www.w3.org/2000/svg" class="navbar-nav-svg" viewBox="0 0 512 512" role="img" focusable="false"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"/></svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2" href="https://opencollective.com/bootstrap/" target="_blank" rel="noopener" aria-label="Open Collective">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" focusable="false"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"/><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"/></svg>
+      </a>
+    </li>
+  </ul>
+
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/4.6/getting-started/download/">Скачать</a>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Поиск..." aria-label="Поиск для..." autocomplete="off" data-docs-version="4.6">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Переключатель навигации по документации">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
+
+<div class="collapse d-md-block row" id="bd-docs-nav">
+  <nav class="bd-links" aria-label="Главная навигация">
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/getting-started/introduction/">
+          Начало работы
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/layout/overview/">
+          Макет
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/content/reboot/">
+          Контент
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/components/alerts/">
+          Компоненты
+        </a>
+      </div>
+
+      <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.6/utilities/borders/">
+          Утилиты
+        </a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.6/utilities/borders/"  title="Границы" >Borders</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/clearfix/"  title="Сброс флоатов" >Clearfix</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/close-icon/"  title="Кнопка закрытия" >Close icon</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/colors/"  title="Цвета" >Colors</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/display/"  title="Отображение" >Display</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/embed/"  title="Встраивание" >Embed</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.6/utilities/flex/"  title="Флекс" >Flex</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/float/"  title="Флоат" >Float</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/image-replacement/"  title="Замена изображения" >Image replacement</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/interactions/"  title="Взаимодействия" >Interactions</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/overflow/"  title="Переполнение" >Overflow</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/position/"  title="Положение" >Position</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/screen-readers/"  title="Программы чтения с экрана" >Screen readers</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/shadows/"  title="Тени" >Shadows</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/sizing/"  title="Размеры" >Sizing</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/spacing/"  title="Интервал" >Spacing</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/stretched-link/"  title="Растянутая ссылка" >Stretched link</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/text/"  title="Текст" >Text</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/vertical-align/"  title="Вертикальное выравнивание" >Vertical align</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/utilities/visibility/"  title="Видимость" >Visibility</a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/extend/approach/">
+          Дополнительно
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/migration/">
+          Миграция
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/about/overview/">
+          Инфо
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#включить-гибкое-поведение">Включить гибкое поведение</a></li>
+    <li><a href="#direction">Direction</a></li>
+    <li><a href="#justify-content">Justify content</a></li>
+    <li><a href="#align-items">Align items</a></li>
+    <li><a href="#align-self">Align self</a></li>
+    <li><a href="#fill">Fill</a></li>
+    <li><a href="#grow-и-shrink">Grow и shrink</a></li>
+    <li><a href="#автоматические-поля">Автоматические поля</a>
+      <ul>
+        <li><a href="#с-align-items">С align-items</a></li>
+      </ul>
+    </li>
+    <li><a href="#wrap">Wrap</a></li>
+    <li><a href="#order">Order</a></li>
+    <li><a href="#align-content">Align content</a></li>
+  </ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.6/utilities/flex.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
+            <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.6/utilities/flex.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
+            <h1 class="bd-title" id="content">Flex</h1>
+          </div>
+          <p class="bd-lead">Быстро управляйте макетом, выравниванием и размером столбцов сетки, навигацией, компонентами и т.д. С помощью полного набора гибких утилит флексбокс. Для более сложных реализаций может потребоваться собственный CSS.</p>
+          
+          <h2 id="включить-гибкое-поведение">Включить гибкое поведение</h2>
+<p>Примените утилиты <code>display</code> для создания контейнера flexbox и преобразования <strong>прямых дочерних элементов</strong> в элементы flex. Гибкие контейнеры и элементы можно дополнительно модифицировать с помощью дополнительных свойств гибкости.</p>
+<div class="bd-example">
+<div class="d-flex p-2 bd-highlight">Я контейнер Flexbox!</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Я контейнер Flexbox!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-example">
+<div class="d-inline-flex p-2 bd-highlight">Я встроенный контейнер Flexbox!</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Я встроенный контейнер Flexbox!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Адаптивные варианты также существуют для <code>.d-flex</code> и <code>.d-inline-flex</code>.</p>
+<ul>
+<li><code>.d-flex</code></li>
+<li><code>.d-inline-flex</code></li>
+<li><code>.d-sm-flex</code></li>
+<li><code>.d-sm-inline-flex</code></li>
+<li><code>.d-md-flex</code></li>
+<li><code>.d-md-inline-flex</code></li>
+<li><code>.d-lg-flex</code></li>
+<li><code>.d-lg-inline-flex</code></li>
+<li><code>.d-xl-flex</code></li>
+<li><code>.d-xl-inline-flex</code></li>
+</ul>
+
+<h2 id="direction">Direction</h2>
+<p>Задайте направление гибких элементов в гибком контейнере с помощью утилит направления. В большинстве случаев Вы можете опустить здесь горизонтальный класс, поскольку браузер по умолчанию <code>row</code>. Однако Вы можете столкнуться с ситуациями, когда Вам нужно явно установить это значение (например, адаптивные макеты).</p>
+<p>Используйте <code>.flex-row</code>, чтобы установить горизонтальное направление (по умолчанию браузер), или <code>.flex-row-reverse</code>, чтобы начать горизонтальное направление с противоположной стороны.</p>
+<div class="bd-example">
+<div class="d-flex flex-row bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
+</div>
+<div class="d-flex flex-row-reverse bd-highlight">
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-row bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-row-reverse bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Используйте <code>.flex-column</code>, чтобы задать вертикальное направление, или <code>.flex-column-reverse</code>, чтобы начать вертикальное направление с противоположной стороны.</p>
+<div class="bd-example">
+<div class="d-flex flex-column bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
+</div>
+<div class="d-flex flex-column-reverse bd-highlight">
+  <div class="p-2 bd-highlight">Flex элемент 1</div>
+  <div class="p-2 bd-highlight">Flex элемент 2</div>
+  <div class="p-2 bd-highlight">Flex элемент 3</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-column bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-column-reverse bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Адаптивные вариации также существуют для <code>flex-direction</code>.</p>
+<ul>
+<li><code>.flex-row</code></li>
+<li><code>.flex-row-reverse</code></li>
+<li><code>.flex-column</code></li>
+<li><code>.flex-column-reverse</code></li>
+<li><code>.flex-sm-row</code></li>
+<li><code>.flex-sm-row-reverse</code></li>
+<li><code>.flex-sm-column</code></li>
+<li><code>.flex-sm-column-reverse</code></li>
+<li><code>.flex-md-row</code></li>
+<li><code>.flex-md-row-reverse</code></li>
+<li><code>.flex-md-column</code></li>
+<li><code>.flex-md-column-reverse</code></li>
+<li><code>.flex-lg-row</code></li>
+<li><code>.flex-lg-row-reverse</code></li>
+<li><code>.flex-lg-column</code></li>
+<li><code>.flex-lg-column-reverse</code></li>
+<li><code>.flex-xl-row</code></li>
+<li><code>.flex-xl-row-reverse</code></li>
+<li><code>.flex-xl-column</code></li>
+<li><code>.flex-xl-column-reverse</code></li>
+</ul>
+
+<h2 id="justify-content">Justify content</h2>
+<p>Используйте утилиты <code>justify-content</code> в контейнерах flexbox для изменения выравнивания гибких элементов по главной оси (ось x для начала, ось y, если <code>flex-direction: column</code>). Выберите из: <code>start</code> (по умолчанию в браузере), <code>end</code>, <code>center</code>, <code>between</code> или <code>around</code>.</p>
+<div class="bd-example">
+  <div class="d-flex justify-content-start bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex justify-content-end bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex justify-content-center bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex justify-content-between bd-highlight mb-3">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex justify-content-around bd-highlight">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-start&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-end&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-center&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-between&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex justify-content-around&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>justify-content</code>.</p>
+<ul>
+<li><code>.justify-content-start</code></li>
+<li><code>.justify-content-end</code></li>
+<li><code>.justify-content-center</code></li>
+<li><code>.justify-content-between</code></li>
+<li><code>.justify-content-around</code></li>
+<li><code>.justify-content-sm-start</code></li>
+<li><code>.justify-content-sm-end</code></li>
+<li><code>.justify-content-sm-center</code></li>
+<li><code>.justify-content-sm-between</code></li>
+<li><code>.justify-content-sm-around</code></li>
+<li><code>.justify-content-md-start</code></li>
+<li><code>.justify-content-md-end</code></li>
+<li><code>.justify-content-md-center</code></li>
+<li><code>.justify-content-md-between</code></li>
+<li><code>.justify-content-md-around</code></li>
+<li><code>.justify-content-lg-start</code></li>
+<li><code>.justify-content-lg-end</code></li>
+<li><code>.justify-content-lg-center</code></li>
+<li><code>.justify-content-lg-between</code></li>
+<li><code>.justify-content-lg-around</code></li>
+<li><code>.justify-content-xl-start</code></li>
+<li><code>.justify-content-xl-end</code></li>
+<li><code>.justify-content-xl-center</code></li>
+<li><code>.justify-content-xl-between</code></li>
+<li><code>.justify-content-xl-around</code></li>
+</ul>
+
+<h2 id="align-items">Align items</h2>
+<p>Используйте утилиты <code>align-items</code> в контейнерах flexbox, чтобы изменить выравнивание гибких элементов по поперечной оси (ось Y для начала, ось X, если <code>flex-direction: column</code>). Выберите из: <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code> или <code>stretch</code> (по умолчанию в браузере).</p>
+<div class="bd-example">
+  <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex align-items-end bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex align-items-center bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex align-items-baseline bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex align-items-stretch bd-highlight" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-start&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-end&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-center&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-baseline&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-stretch&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>align-items</code>.</p>
+<ul>
+<li><code>.align-items-start</code></li>
+<li><code>.align-items-end</code></li>
+<li><code>.align-items-center</code></li>
+<li><code>.align-items-baseline</code></li>
+<li><code>.align-items-stretch</code></li>
+<li><code>.align-items-sm-start</code></li>
+<li><code>.align-items-sm-end</code></li>
+<li><code>.align-items-sm-center</code></li>
+<li><code>.align-items-sm-baseline</code></li>
+<li><code>.align-items-sm-stretch</code></li>
+<li><code>.align-items-md-start</code></li>
+<li><code>.align-items-md-end</code></li>
+<li><code>.align-items-md-center</code></li>
+<li><code>.align-items-md-baseline</code></li>
+<li><code>.align-items-md-stretch</code></li>
+<li><code>.align-items-lg-start</code></li>
+<li><code>.align-items-lg-end</code></li>
+<li><code>.align-items-lg-center</code></li>
+<li><code>.align-items-lg-baseline</code></li>
+<li><code>.align-items-lg-stretch</code></li>
+<li><code>.align-items-xl-start</code></li>
+<li><code>.align-items-xl-end</code></li>
+<li><code>.align-items-xl-center</code></li>
+<li><code>.align-items-xl-baseline</code></li>
+<li><code>.align-items-xl-stretch</code></li>
+</ul>
+
+<h2 id="align-self">Align self</h2>
+<p>Используйте утилиты <code>align-self</code> для элементов flexbox, чтобы индивидуально изменить их выравнивание по поперечной оси (ось Y для начала, ось X, если <code>flex-direction: column</code>). Выберите один из тех же параметров, что и <code>align-items</code>: <code>start</code>, <code>end</code>, <code>center</code>, <code>baseline</code> или <code>stretch</code> (по умолчанию в браузере).</p>
+<div class="bd-example">
+  <div class="d-flex bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-start p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-end p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-center p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex bd-highlight mb-3" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-baseline p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+  <div class="d-flex bd-highlight" style="height: 100px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="align-self-stretch p-2 bd-highlight">Выровненный flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-start&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-end&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-center&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-baseline&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-stretch&#34;</span><span class="p">&gt;</span>Выровненный flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>align-self</code>.</p>
+<ul>
+<li><code>.align-self-start</code></li>
+<li><code>.align-self-end</code></li>
+<li><code>.align-self-center</code></li>
+<li><code>.align-self-baseline</code></li>
+<li><code>.align-self-stretch</code></li>
+<li><code>.align-self-sm-start</code></li>
+<li><code>.align-self-sm-end</code></li>
+<li><code>.align-self-sm-center</code></li>
+<li><code>.align-self-sm-baseline</code></li>
+<li><code>.align-self-sm-stretch</code></li>
+<li><code>.align-self-md-start</code></li>
+<li><code>.align-self-md-end</code></li>
+<li><code>.align-self-md-center</code></li>
+<li><code>.align-self-md-baseline</code></li>
+<li><code>.align-self-md-stretch</code></li>
+<li><code>.align-self-lg-start</code></li>
+<li><code>.align-self-lg-end</code></li>
+<li><code>.align-self-lg-center</code></li>
+<li><code>.align-self-lg-baseline</code></li>
+<li><code>.align-self-lg-stretch</code></li>
+<li><code>.align-self-xl-start</code></li>
+<li><code>.align-self-xl-end</code></li>
+<li><code>.align-self-xl-center</code></li>
+<li><code>.align-self-xl-baseline</code></li>
+<li><code>.align-self-xl-stretch</code></li>
+</ul>
+
+<h2 id="fill">Fill</h2>
+<p>Используйте класс <code>.flex-fill</code> для серии родственных элементов, чтобы заставить их ширину равную их содержимому (или равную ширину, если их содержимое не превышает их границы), занимая все доступное горизонтальное пространство.</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight">
+  <div class="p-2 flex-fill bd-highlight">Flex элемент с большим количеством контента</div>
+  <div class="p-2 flex-fill bd-highlight">Flex элемент</div>
+  <div class="p-2 flex-fill bd-highlight">Flex элемент</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент с большим количеством контента<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-fill bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Адаптивные варианты также существуют для <code>flex-fill</code>.</p>
+<ul>
+<li><code>.flex-fill</code></li>
+<li><code>.flex-sm-fill</code></li>
+<li><code>.flex-md-fill</code></li>
+<li><code>.flex-lg-fill</code></li>
+<li><code>.flex-xl-fill</code></li>
+</ul>
+
+<h2 id="grow-и-shrink">Grow и shrink</h2>
+<p>Используйте утилиты <code>.flex-grow-*</code> для переключения способности гибкого элемента увеличиваться, чтобы заполнить доступное пространство. В приведенном ниже примере элементы <code>.flex-grow-1</code> используют все доступное пространство, в то время как оставшимся двум гибким элементам предоставляется необходимое пространство.</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight">
+  <div class="p-2 flex-grow-1 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Третий flex элемент</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-grow-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Третий flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Используйте утилиты <code>.flex-shrink-*</code> для переключения возможности гибкого элемента сжиматься при необходимости. В приведенном ниже примере второй гибкий элемент с <code>.flex-shrink-1</code> принудительно переносит свое содержимое в новую строку, «сжимаясь», чтобы освободить больше места для предыдущего гибкого элемента с <code>.w-100</code>.</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight">
+  <div class="p-2 w-100 bd-highlight">Flex элемент</div>
+  <div class="p-2 flex-shrink-1 bd-highlight">Flex элемент</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-shrink-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Адаптивные варианты также существуют для <code>flex-grow</code> и <code>flex-shrink</code>.</p>
+<ul>
+<li><code>.flex-{grow|shrink}-0</code></li>
+<li><code>.flex-{grow|shrink}-1</code></li>
+<li><code>.flex-sm-{grow|shrink}-0</code></li>
+<li><code>.flex-sm-{grow|shrink}-1</code></li>
+<li><code>.flex-md-{grow|shrink}-0</code></li>
+<li><code>.flex-md-{grow|shrink}-1</code></li>
+<li><code>.flex-lg-{grow|shrink}-0</code></li>
+<li><code>.flex-lg-{grow|shrink}-1</code></li>
+<li><code>.flex-xl-{grow|shrink}-0</code></li>
+<li><code>.flex-xl-{grow|shrink}-1</code></li>
+</ul>
+
+<h2 id="автоматические-поля">Автоматические поля</h2>
+<p>Flexbox может делать несколько замечательных вещей, когда Вы смешиваете выравнивание гибкости с автоматическими полями. Ниже показаны три примера управления гибкими элементами через автоматические поля: по умолчанию (без автоматического поля), перемещение двух элементов вправо (<code>.mr-auto</code>) и перемещение двух элементов влево (<code>.ml-auto</code>).</p>
+<p><strong>К сожалению, IE10 и IE11 не поддерживают должным образом автоматические поля для гибких элементов, родительский элемент которых имеет значение <code>justify-content</code> не по умолчанию.</strong> <a href="https://stackoverflow.com/a/37535548">Смотрите этот ответ на StackOverflow</a> для получения большей информации.</p>
+<div class="bd-example">
+<div class="d-flex bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+</div>
+
+<div class="d-flex bd-highlight mb-3">
+  <div class="mr-auto p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+</div>
+
+<div class="d-flex bd-highlight mb-3">
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="ml-auto p-2 bd-highlight">Flex элемент</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex bd-highlight mb-3&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ml-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h3 id="с-align-items">С align-items</h3>
+<p>Вертикально переместите один гибкий элемент в верхнюю или нижнюю часть контейнера, смешав <code>align-items</code>, <code>flex-direction: column</code> и <code>margin-top: auto</code> или <code>margin-bottom: auto</code>.</p>
+<div class="bd-example">
+<div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
+  <div class="mb-auto p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+</div>
+
+<div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="p-2 bd-highlight">Flex элемент</div>
+  <div class="mt-auto p-2 bd-highlight">Flex элемент</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-start flex-column bd-highlight mb-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 200px;&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-items-end flex-column bd-highlight mb-3&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;height: 200px;&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="wrap">Wrap</h2>
+<p>Измените способ переноса гибких элементов в гибкий контейнер. Выберите полное отсутствие переноса (по умолчанию в браузере) с помощью <code>.flex-nowrap</code>, обертывание с помощью <code>.flex-wrap</code> или обратное обертывание с помощью <code>.flex-wrap-reverse</code>.</p>
+<div class="bd-example">
+  <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-nowrap&#34;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex flex-wrap bd-highlight">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap&#34;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex flex-wrap-reverse bd-highlight">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-wrap-reverse&#34;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>flex-wrap</code>.</p>
+<ul>
+<li><code>.flex-nowrap</code></li>
+<li><code>.flex-wrap</code></li>
+<li><code>.flex-wrap-reverse</code></li>
+<li><code>.flex-sm-nowrap</code></li>
+<li><code>.flex-sm-wrap</code></li>
+<li><code>.flex-sm-wrap-reverse</code></li>
+<li><code>.flex-md-nowrap</code></li>
+<li><code>.flex-md-wrap</code></li>
+<li><code>.flex-md-wrap-reverse</code></li>
+<li><code>.flex-lg-nowrap</code></li>
+<li><code>.flex-lg-wrap</code></li>
+<li><code>.flex-lg-wrap-reverse</code></li>
+<li><code>.flex-xl-nowrap</code></li>
+<li><code>.flex-xl-wrap</code></li>
+<li><code>.flex-xl-wrap-reverse</code></li>
+</ul>
+
+<h2 id="order">Order</h2>
+<p>Измените <em>визуальный</em> порядок определенных гибких элементов с помощью нескольких утилит <code>order</code>. Мы предоставляем только варианты для того, чтобы сделать элемент первым или последним, а также выполнить сброс для использования порядка DOM. Поскольку <code>order</code> принимает любое целочисленное значение (например, <code>5</code>), добавьте собственный CSS для любых дополнительных значений.</p>
+<div class="bd-example">
+<div class="d-flex flex-nowrap bd-highlight">
+  <div class="order-3 p-2 bd-highlight">Первый flex элемент</div>
+  <div class="order-2 p-2 bd-highlight">Второй flex элемент</div>
+  <div class="order-1 p-2 bd-highlight">Третий flex элемент</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex flex-nowrap bd-highlight&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-3 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Первый flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-2 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Второй flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;order-1 p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Третий flex элемент<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<p>Адаптивные варианты также существуют для <code>order</code>.</p>
+<ul>
+<li><code>.order-0</code></li>
+<li><code>.order-1</code></li>
+<li><code>.order-2</code></li>
+<li><code>.order-3</code></li>
+<li><code>.order-4</code></li>
+<li><code>.order-5</code></li>
+<li><code>.order-6</code></li>
+<li><code>.order-7</code></li>
+<li><code>.order-8</code></li>
+<li><code>.order-9</code></li>
+<li><code>.order-10</code></li>
+<li><code>.order-11</code></li>
+<li><code>.order-12</code></li>
+<li><code>.order-sm-0</code></li>
+<li><code>.order-sm-1</code></li>
+<li><code>.order-sm-2</code></li>
+<li><code>.order-sm-3</code></li>
+<li><code>.order-sm-4</code></li>
+<li><code>.order-sm-5</code></li>
+<li><code>.order-sm-6</code></li>
+<li><code>.order-sm-7</code></li>
+<li><code>.order-sm-8</code></li>
+<li><code>.order-sm-9</code></li>
+<li><code>.order-sm-10</code></li>
+<li><code>.order-sm-11</code></li>
+<li><code>.order-sm-12</code></li>
+<li><code>.order-md-0</code></li>
+<li><code>.order-md-1</code></li>
+<li><code>.order-md-2</code></li>
+<li><code>.order-md-3</code></li>
+<li><code>.order-md-4</code></li>
+<li><code>.order-md-5</code></li>
+<li><code>.order-md-6</code></li>
+<li><code>.order-md-7</code></li>
+<li><code>.order-md-8</code></li>
+<li><code>.order-md-9</code></li>
+<li><code>.order-md-10</code></li>
+<li><code>.order-md-11</code></li>
+<li><code>.order-md-12</code></li>
+<li><code>.order-lg-0</code></li>
+<li><code>.order-lg-1</code></li>
+<li><code>.order-lg-2</code></li>
+<li><code>.order-lg-3</code></li>
+<li><code>.order-lg-4</code></li>
+<li><code>.order-lg-5</code></li>
+<li><code>.order-lg-6</code></li>
+<li><code>.order-lg-7</code></li>
+<li><code>.order-lg-8</code></li>
+<li><code>.order-lg-9</code></li>
+<li><code>.order-lg-10</code></li>
+<li><code>.order-lg-11</code></li>
+<li><code>.order-lg-12</code></li>
+<li><code>.order-xl-0</code></li>
+<li><code>.order-xl-1</code></li>
+<li><code>.order-xl-2</code></li>
+<li><code>.order-xl-3</code></li>
+<li><code>.order-xl-4</code></li>
+<li><code>.order-xl-5</code></li>
+<li><code>.order-xl-6</code></li>
+<li><code>.order-xl-7</code></li>
+<li><code>.order-xl-8</code></li>
+<li><code>.order-xl-9</code></li>
+<li><code>.order-xl-10</code></li>
+<li><code>.order-xl-11</code></li>
+<li><code>.order-xl-12</code></li>
+</ul>
+
+<h2 id="align-content">Align content</h2>
+<p>Используйте утилиты <code>align-content</code> в контейнерах flexbox для выравнивания гибких элементов <em>вместе</em> по поперечной оси. Выберите <code>start</code> (по умолчанию в браузере), <code>end</code>, <code>center</code>, <code>between</code>, <code>around</code> или <code>stretch</code>. Чтобы продемонстрировать эти утилиты, мы ввели в действие <code>flex-wrap: wrap</code> и увеличили количество гибких элементов.</p>
+<p><strong>Внимание!</strong> Это свойство не влияет на отдельные строки гибких элементов.</p>
+<div class="bd-example">
+  <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-start flex-wrap&#34;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-end flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-end flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-center flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-center flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-between flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-between flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-around flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-around flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><div class="bd-example">
+  <div class="d-flex align-content-stretch flex-wrap bd-highlight mb-3" style="height: 200px">
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+    <div class="p-2 bd-highlight">Flex элемент</div>
+  </div>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex align-content-stretch flex-wrap&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div><p>Адаптивные варианты также существуют для <code>align-content</code>.</p>
+<ul>
+<li><code>.align-content-start</code></li>
+<li><code>.align-content-end</code></li>
+<li><code>.align-content-center</code></li>
+<li><code>.align-content-around</code></li>
+<li><code>.align-content-stretch</code></li>
+<li><code>.align-content-sm-start</code></li>
+<li><code>.align-content-sm-end</code></li>
+<li><code>.align-content-sm-center</code></li>
+<li><code>.align-content-sm-around</code></li>
+<li><code>.align-content-sm-stretch</code></li>
+<li><code>.align-content-md-start</code></li>
+<li><code>.align-content-md-end</code></li>
+<li><code>.align-content-md-center</code></li>
+<li><code>.align-content-md-around</code></li>
+<li><code>.align-content-md-stretch</code></li>
+<li><code>.align-content-lg-start</code></li>
+<li><code>.align-content-lg-end</code></li>
+<li><code>.align-content-lg-center</code></li>
+<li><code>.align-content-lg-around</code></li>
+<li><code>.align-content-lg-stretch</code></li>
+<li><code>.align-content-xl-start</code></li>
+<li><code>.align-content-xl-end</code></li>
+<li><code>.align-content-xl-center</code></li>
+<li><code>.align-content-xl-around</code></li>
+<li><code>.align-content-xl-stretch</code></li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<script src="/docs/4.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/4.6/assets/js/docs.min.js"></script>
+
+  </body>
+</html>

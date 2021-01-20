@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Документация и примеры для медиа-объекта Bootstrap для создания часто повторяющихся компонентов, таких как комментарии в блогах, твиты и тому подобное.">
+<meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
+<meta name="generator" content="Hugo 0.80.0">
+
+<meta name="docsearch:language" content="ru">
+<meta name="docsearch:version" content="4.6">
+
+<meta name="yandex-verification" content="268fb73245c0ff4f" />
+
+<title>Медиа объект · Bootstrap v4.6</title>
+
+<link rel="canonical" href="https://v4.getbootstrap.su/docs/4.6/components/media-object/">
+
+
+
+<!-- Bootstrap core CSS -->
+<link href="/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+<!-- Documentation extras -->
+<link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet">
+
+<link href="/scss/docs.scss" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@getbootstrap">
+<meta name="twitter:creator" content="@getbootstrap">
+<meta name="twitter:title" content="Медиа объект">
+<meta name="twitter:description" content="Документация и примеры для медиа-объекта Bootstrap для создания часто повторяющихся компонентов, таких как комментарии в блогах, твиты и тому подобное.">
+<meta name="twitter:image" content="https://v4.getbootstrap.su/docs/4.6/assets/brand/bootstrap-social-logo.png">
+
+<!-- Facebook -->
+<meta property="og:url" content="https://v4.getbootstrap.su/docs/4.6/components/media-object/">
+<meta property="og:title" content="Медиа объект">
+<meta property="og:description" content="Документация и примеры для медиа-объекта Bootstrap для создания часто повторяющихся компонентов, таких как комментарии в блогах, твиты и тому подобное.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://v4.getbootstrap.su/docs/4.6/assets/brand/bootstrap-social.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HY7MKJLPW4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-HY7MKJLPW4');
+</script>
+
+
+<script type="text/javascript">
+  (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+    m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+  })
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(69581065, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true
+  });
+</script>
+<noscript>
+  <div><img src="https://mc.yandex.ru/watch/69581065" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+
+
+
+  </head>
+  <body>
+    <div class="skippy overflow-hidden">
+  <div class="container-xl">
+    <a class="sr-only sr-only-focusable d-inline-flex p-2 m-1" href="#content">Перейти к основному содержанию</a>
+    <a class="sr-only sr-only-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">Перейти к навигации по документации</a>
+  </div>
+</div>
+
+
+    <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="d-block" viewBox="0 0 612 612" role="img" focusable="false"><title>Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"/><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"/></svg>
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Главная</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/docs/4.6/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Документация</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/docs/4.6/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Примеры</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://icons.getbootstrap.su/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">Иконки</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">Темы</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://expo.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');" target="_blank" rel="noopener">Экспо</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://blog.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');" target="_blank" rel="noopener">Блог</a>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav ml-md-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        v4.6
+      </a>
+      <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
+        <a class="dropdown-item active" href="/docs/4.6/">Последняя (4.6.x)</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="https://getbootstrap.su/docs/5.0/">v5.x</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/docs/versions/">Все версии</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2" href="https://t.me/getbootstrap_ru" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg"  class="navbar-nav-svg" viewBox="0 0 24 24" role="img"><title>Telegram</title><path fill="currentColor" fill-rule="evenodd" d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/></svg>
+
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link pl-2 pr-1 mx-1 py-3 my-n2" href="https://github.com/ruBootstrap" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" class="navbar-nav-svg" viewBox="0 0 512 499.36" role="img" focusable="false"><title>GitHub</title><path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"/></svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2" href="https://twitter.com/getbootstrap" target="_blank" rel="noopener" aria-label="Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" class="navbar-nav-svg" viewBox="0 0 512 416.32" role="img" focusable="false"><title>Twitter</title><path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"/></svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2" href="https://bootstrap-slack.herokuapp.com/" target="_blank" rel="noopener" aria-label="Slack">
+        <svg xmlns="http://www.w3.org/2000/svg" class="navbar-nav-svg" viewBox="0 0 512 512" role="img" focusable="false"><title>Slack</title><path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"/><path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"/></svg>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link px-1 mx-1 py-3 my-n2" href="https://opencollective.com/bootstrap/" target="_blank" rel="noopener" aria-label="Open Collective">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" fill-rule="evenodd" class="navbar-nav-svg" viewBox="0 0 40 41" role="img" focusable="false"><title>Open Collective</title><path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"/><path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"/></svg>
+      </a>
+    </li>
+  </ul>
+
+  <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="/docs/4.6/getting-started/download/">Скачать</a>
+</header>
+
+
+    <div class="container-fluid">
+      <div class="row flex-xl-nowrap">
+        <div class="col-md-3 col-xl-2 bd-sidebar">
+          <form role="search" class="bd-search d-flex align-items-center">
+  <input type="search" class="form-control" id="search-input" placeholder="Поиск..." aria-label="Поиск для..." autocomplete="off" data-docs-version="4.6">
+  <button class="btn bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Переключатель навигации по документации">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>
+  </button>
+</form>
+
+<div class="collapse d-md-block row" id="bd-docs-nav">
+  <nav class="bd-links" aria-label="Главная навигация">
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/getting-started/introduction/">
+          Начало работы
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/layout/overview/">
+          Макет
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/content/reboot/">
+          Контент
+        </a>
+      </div>
+
+      <div class="bd-toc-item active">
+        <a class="bd-toc-link" href="/docs/4.6/components/alerts/">
+          Компоненты
+        </a>
+        <ul class="nav bd-sidenav">
+            <li>
+              <a href="/docs/4.6/components/alerts/"  title="Уведомления" >Alerts</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/badge/"  title="Значки" >Badge</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/breadcrumb/"  title="Хлебные крошки" >Breadcrumb</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/buttons/"  title="Кнопки" >Buttons</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/button-group/"  title="Группа кнопок" >Button group</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/card/"  title="Карточки" >Card</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/carousel/"  title="Карусель" >Carousel</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/collapse/"  title="Сворачиваемое содержимое" >Collapse</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/dropdowns/"  title="Выпадающие списки" >Dropdowns</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/forms/"  title="Формы" >Forms</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/input-group/"  title="Группа ввода" >Input group</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/jumbotron/"  title="Jumbotron" >Jumbotron</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/list-group/"  title="Группы списков" >List group</a>
+            </li>
+            <li class="active bd-sidenav-active">
+              <a href="/docs/4.6/components/media-object/"  title="Медиа объект" >Media object</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/modal/"  title="Модальное окно" >Modal</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/navs/"  title="Навигация" >Navs</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/navbar/"  title="Панель навигации" >Navbar</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/pagination/"  title="Пагинация" >Pagination</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/popovers/"  title="Всплывающие окна" >Popovers</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/progress/"  title="Индикатор выполнения" >Progress</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/scrollspy/"  title="Слежение прокрутки" >Scrollspy</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/spinners/"  title="Состояние загрузки" >Spinners</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/toasts/"  title="Всплывающие сообщения" >Toasts</a>
+            </li>
+            <li>
+              <a href="/docs/4.6/components/tooltips/"  title="Всплывающие подсказки" >Tooltips</a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/utilities/borders/">
+          Утилиты
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/extend/approach/">
+          Дополнительно
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/migration/">
+          Миграция
+        </a>
+      </div>
+
+      <div class="bd-toc-item">
+        <a class="bd-toc-link" href="/docs/4.6/about/overview/">
+          Инфо
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+
+        
+          <nav class="d-none d-xl-block col-xl-2 bd-toc" aria-label="Secondary navigation">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#пример">Пример</a></li>
+    <li><a href="#вложенность">Вложенность</a></li>
+    <li><a href="#выравнивание">Выравнивание</a></li>
+    <li><a href="#порядок">Порядок</a></li>
+    <li><a href="#медиа-список">Медиа-список</a></li>
+  </ul>
+</nav>
+          </nav>
+        
+
+        <main class="col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+          <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
+            <a class="btn btn-sm btn-bd-light my-2 my-md-0" href="https://github.com/ruBootstrap/bootstrap/blob/v4-dev-ru/site/content/docs/4.6/components/media-object.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Посмотреть на GitHub</a>
+            <a class="btn btn-sm btn-bd-light ml-auto mr-1 my-md-0" href="https://github.com/twbs/bootstrap/blob/v4-dev/site/content/docs/4.6/components/media-object.md" title="Просмотрите и отредактируйте этот файл на GitHub" target="_blank" rel="noopener">Оригинал</a>
+            <h1 class="bd-title" id="content">Медиа объект</h1>
+          </div>
+          <p class="bd-lead">Документация и примеры для медиа-объекта Bootstrap для создания часто повторяющихся компонентов, таких как комментарии в блогах, твиты и тому подобное.</p>
+          
+          <h2 id="пример">Пример</h2>
+<p><a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Медиа-объект</a> помогает создавать сложные и повторяющиеся компоненты, в которых некоторые медиа позиционируются рядом с контентом, который не охватывает упомянутые медиа. Кроме того, благодаря flexbox он делает это только с двумя обязательными классами.</p>
+<p>Ниже приведен пример одного медиа-объекта. Требуются только два класса - обертка <code>.media</code> и <code>.media-body</code> вокруг Вашего контента. Необязательные отступы и поля можно контролировать с помощью <a href="/docs/4.6/utilities/spacing/">утилит интервалов</a>.</p>
+<div class="bd-example">
+<div class="media">
+  <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+  <div class="media-body">
+    <h5 class="mt-0">Медиа заголовок</h5>
+    <p>Вы сделаете то же самое для меня? Пришло время столкнуться с музыкой. Я больше не твоя муза. Слышал, это прекрасно, будь судьей, и мои девочки проголосуют. Я чувствую внутри себя феникса. Небеса завидуют нашей любви, ангелы плачут свыше. Да, ты ведешь меня в утопию.</p>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа заголовок<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Вы сделаете то же самое для меня? Пришло время столкнуться с музыкой. Я больше не твоя муза. Слышал, это прекрасно, будь судьей, и мои девочки проголосуют. Я чувствую внутри себя феникса. Небеса завидуют нашей любви, ангелы плачут свыше. Да, ты ведешь меня в утопию.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-callout bd-callout-warning">
+<h5 id="flexbug-12-строковые-элементы-не-рассматриваются-как-гибкие">Flexbug #12: Строковые элементы не рассматриваются как гибкие</h5>
+<p>Internet Explorer 10-11 не отображает встроенные элементы, такие как ссылки или изображения (или псевдоэлементы <code>::before</code> и <code>::after</code>) как гибкие элементы. Единственный обходной путь - установить не встроенное значение <code>display</code> (например, <code>block</code>, <code>inline-block</code> или <code>flex</code>). Мы предлагаем использовать <code>.d-flex</code>, одну из наших <a href="/docs/4.6/utilities/display/">утилит отображения</a>, как простое решение.</p>
+<p><strong>Источник:</strong> <a href="https://github.com/philipwalton/flexbugs#flexbug-12">Flexbugs на GitHub</a></p>
+
+</div>
+
+<h2 id="вложенность">Вложенность</h2>
+<p>Медиа-объекты могут быть бесконечно вложенными, хотя мы рекомендуем Вам остановиться на каком-то этапе. Поместите вложенный файл <code>.media</code> в <code>.media-body</code> родительского медиа-объекта.</p>
+<div class="bd-example">
+<div class="media">
+  <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+  <div class="media-body">
+    <h5 class="mt-0">Медиа заголовок</h5>
+    <p>Стоять на передовой, когда начинают падать бомбы. Небеса завидуют нашей любви, ангелы плачут свыше. Не могу заменить тебя миллионом колец. Мальчик, когда ты со мной, я попробую. Нет пути назад. До того, как ты встретил меня, я был в порядке, но все было довольно тяжело. Тяжела голова, носящая корону.</p>
+
+    <div class="media mt-3">
+      <a class="mr-3" href="#">
+        <svg class="bd-placeholder-img" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+      </a>
+      <div class="media-body">
+        <h5 class="mt-0">Медиа заголовок</h5>
+        <p>Приветствую близких, давайте отправимся в путешествие. Да, мы заставляем ангелов плакать, проливая дождь на землю сверху. Подарите вам что-нибудь хорошее на радость. Я прикусывала язык и задерживала дыхание. Я заставляю твое сердце биться быстрее в моих обтягивающих джинсах. Когда я иду один в другом ритме. Летом после школы, когда мы впервые встретились. Ты такой гипнотизирующий, можешь ли ты быть дьяволом? Могли бы вы быть ангелом? Пришло время вывести большие воздушные шары. Думал, что я был исключением. Бикини, цукини, мартини, без сладостей.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа заголовок<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Стоять на передовой, когда начинают падать бомбы. Небеса завидуют нашей любви, ангелы плачут свыше. Не могу заменить тебя миллионом колец. Мальчик, когда ты со мной, я попробую. Нет пути назад. До того, как ты встретил меня, я был в порядке, но все было довольно тяжело. Тяжела голова, носящая корону.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media mt-3&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа заголовок<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Приветствую близких, давайте отправимся в путешествие. Да, мы заставляем ангелов плакать, проливая дождь на землю сверху. Подарите вам что-нибудь хорошее на радость. Я прикусывала язык и задерживала дыхание. Я заставляю твое сердце биться быстрее в моих обтягивающих джинсах. Когда я иду один в другом ритме. Летом после школы, когда мы впервые встретились. Ты такой гипнотизирующий, можешь ли ты быть дьяволом? Могли бы вы быть ангелом? Пришло время вывести большие воздушные шары. Думал, что я был исключением. Бикини, цукини, мартини, без сладостей.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="выравнивание">Выравнивание</h2>
+<p>Мультимедиа в медиа-объекте можно выровнять с помощью утилит flexbox по верхнему (по умолчанию), среднему или концу Вашего содержимого <code>.media-body</code>.</p>
+<div class="bd-example">
+<div class="media">
+  <svg class="bd-placeholder-img align-self-start mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+  <div class="media-body">
+    <h5 class="mt-0">Медиа по верхнему краю</h5>
+    <p>Я собираюсь ввести ее в кому. Вы приводите сотню причин и говорите, что действительно собираетесь попробовать. Так что я тихонько сел, вежливо согласился. Костюм для моей коронной битвы. А на мой 18-й день рождения нам сделали одинаковые татуировки. Так шикарно, да, она классика. Я готов к менее путешествующим дорогам.</p>
+    <p>Я иду по воздуху (сегодня вечером). Но на землю. Ты оригинальный, не подлежит замене. Но в другой жизни я была бы твоей девушкой. Мы поехали в Кали и напились на пляже. Мы можем танцевать, пока не умрем, мы с тобой будем вечно молоды. Видел, как ты в центре города поешь блюз.</p>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-start mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа по верхнему краю<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Я собираюсь ввести ее в кому. Вы приводите сотню причин и говорите, что действительно собираетесь попробовать. Так что я тихонько сел, вежливо согласился. Костюм для моей коронной битвы. А на мой 18-й день рождения нам сделали одинаковые татуировки. Так шикарно, да, она классика. Я готов к менее путешествующим дорогам.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Я иду по воздуху (сегодня вечером). Но на землю. Ты оригинальный, не подлежит замене. Но в другой жизни я была бы твоей девушкой. Мы поехали в Кали и напились на пляже. Мы можем танцевать, пока не умрем, мы с тобой будем вечно молоды. Видел, как ты в центре города поешь блюз.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-example">
+<div class="media">
+  <svg class="bd-placeholder-img align-self-center mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+  <div class="media-body">
+    <h5 class="mt-0">Медиа по центру</h5>
+    <p>Она остынет, как морозильник. В конце концов. Жалящая, как пчела, я заработал свои полосы. Бикини, цукини, мартини, без сладостей. Надеюсь, у тебя здоровый аппетит. Мы можем танцевать, пока не умрем, мы с тобой будем вечно молоды. Мы живем жизнью. Мы делаем это правильно. Слухи на улице, тебе есть что показать мне, мне.</p>
+    <p class="mb-0">Хочу посмотреть шоу в 3D, фильм. Говорят, бойся, ты не такой, как все, футуристический любовник. Откройте свое сердце. Так что я тихонько сел, вежливо согласился. В прошлую пятницу вечером. Да, тебе повезло, если ты летишь на ее самолете. Я буду твоим подарком, подарю тебе что-нибудь хорошее на празднование.</p>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-center mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа по центру<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Она остынет, как морозильник. В конце концов. Жалящая, как пчела, я заработал свои полосы. Бикини, цукини, мартини, без сладостей. Надеюсь, у тебя здоровый аппетит. Мы можем танцевать, пока не умрем, мы с тобой будем вечно молоды. Мы живем жизнью. Мы делаем это правильно. Слухи на улице, тебе есть что показать мне, мне.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;</span>Хочу посмотреть шоу в 3D, фильм. Говорят, бойся, ты не такой, как все, футуристический любовник. Откройте свое сердце. Так что я тихонько сел, вежливо согласился. В прошлую пятницу вечером. Да, тебе повезло, если ты летишь на ее самолете. Я буду твоим подарком, подарю тебе что-нибудь хорошее на празднование.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<div class="bd-example">
+<div class="media">
+  <svg class="bd-placeholder-img align-self-end mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+  <div class="media-body">
+    <h5 class="mt-0">Медиа по нижнему краю</h5>
+    <p>Давай, пусть твои цвета вспыхнут. Я чувствую этот свет внутри меня. Всю ночь они играют, твоя песня. От Токио до Мексики, до Рио. Нет пути назад. Но на землю. Волшебный, красочный, мистер Тайна, ее. Другая ДНК, они вас не понимают.</p>
+    <p class="mb-0">Но на землю. У нее это есть, je ne sais quoi, ты это знаешь. Я вижу надпись на стене. Мальчики ломают себе шею, пытаясь подкрасться немного. Возьми меня, та-та-возьми меня. Откройте свое сердце. Думал, что я был исключением. Бум бум бум. Пляж Венеции и Палм-Спрингс, лето - это все. Верните ритм. (Это то, как мы это делаем)</p>
+  </div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;align-self-end mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0&#34;</span><span class="p">&gt;</span>Медиа по нижнему краю<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Давай, пусть твои цвета вспыхнут. Я чувствую этот свет внутри меня. Всю ночь они играют, твоя песня. От Токио до Мексики, до Рио. Нет пути назад. Но на землю. Волшебный, красочный, мистер Тайна, ее. Другая ДНК, они вас не понимают.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;</span>Но на землю. У нее это есть, je ne sais quoi, ты это знаешь. Я вижу надпись на стене. Мальчики ломают себе шею, пытаясь подкрасться немного. Возьми меня, та-та-возьми меня. Откройте свое сердце. Думал, что я был исключением. Бум бум бум. Пляж Венеции и Палм-Спрингс, лето - это все. Верните ритм. (Это то, как мы это делаем)<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="порядок">Порядок</h2>
+<p>Измените порядок содержимого в медиа-объектах, изменив сам HTML или добавив некоторый настраиваемый CSS Flexbox, чтобы установить свойство <code>order</code> (целое число по Вашему выбору).</p>
+<div class="bd-example">
+<div class="media">
+  <div class="media-body">
+    <h5 class="mt-0 mb-1">Медиа-объект</h5>
+    <p>Я знаю, что будут жертвы, но это цена. Вы достаточно храбры, чтобы позволить мне увидеть вашего павлина? Будь своей подростковой мечтой сегодня вечером. Угу, я тебя вижу. Нет пути назад. Ага, мы максимально использовали кредитные карты и нас выгнали из бара. Так что позволь мне надеть твой костюм на день рождения. Вы можете влюбиться, когда встретите ее. Был мир в твоих руках. Не позволяй величию сбить тебя с толку, о, о да. Теперь мы говорим об астрологии, делаем ногти, все по-японски. Сделай меня своей Афродитой.</p>
+  </div>
+  <svg class="bd-placeholder-img ml-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Медиа-объект<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Я знаю, что будут жертвы, но это цена. Вы достаточно храбры, чтобы позволить мне увидеть вашего павлина? Будь своей подростковой мечтой сегодня вечером. Угу, я тебя вижу. Нет пути назад. Ага, мы максимально использовали кредитные карты и нас выгнали из бара. Так что позволь мне надеть твой костюм на день рождения. Вы можете влюбиться, когда встретите ее. Был мир в твоих руках. Не позволяй величию сбить тебя с толку, о, о да. Теперь мы говорим об астрологии, делаем ногти, все по-японски. Сделай меня своей Афродитой.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ml-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="медиа-список">Медиа-список</h2>
+<p>Поскольку у медиа-объекта очень мало структурных требований, Вы также можете использовать эти классы в элементах HTML списка. На Ваш <code>&lt;ul&gt;</code> или <code>&lt;ol&gt;</code>, добавьте <code>.list-unstyled</code>, чтобы удалить все стили списка браузера по умолчанию, а затем примените <code>.media</code> к Вашим <code>&lt;li&gt;</code>. Как всегда, для точной настройки используйте утилиты интервалов.</p>
+<div class="bd-example">
+<ul class="list-unstyled">
+  <li class="media">
+    <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Медиа-объект на основе списка</h5>
+      <p>Все мои девочки винтажные Chanel baby. Так что можешь съесть свой торт. Сегодня вечером, сегодня вечером, сегодня вечером я выхожу в эфир. Медленно проглатывая свой страх, да, да. Быстро превращаясь в молнию. Так жарко и тяжело, До рассвета. Эта сказка заканчивается рыцарем в сияющих доспехах. Тяжела голова, носящая корону.</p>
+    </div>
+  </li>
+  <li class="media my-4">
+    <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Медиа-объект на основе списка</h5>
+      <p>Может быть причина, по которой все двери закрыты. Потому что однажды ты мой, когда ты мой. Будь своей подростковой мечтой сегодня вечером. Тяжела голова, носящая корону. Это даже не праздник, праздновать нечего. Идеальный шторм, идеальный шторм.</p>
+    </div>
+  </li>
+  <li class="media">
+    <svg class="bd-placeholder-img mr-3" width="64" height="64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 64x64" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#6c757d"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">64x64</text></svg>
+
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Медиа-объект на основе списка</h5>
+      <p>Вы достаточно храбры, чтобы позволить мне увидеть вашего павлина? Нет пути назад. Это последний раз, когда вы говорите после последней разорванной строки. В конце концов.</p>
+    </div>
+  </li>
+</ul>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-unstyled&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Медиа-объект на основе списка<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Все мои девочки винтажные Chanel baby. Так что можешь съесть свой торт. Сегодня вечером, сегодня вечером, сегодня вечером я выхожу в эфир. Медленно проглатывая свой страх, да, да. Быстро превращаясь в молнию. Так жарко и тяжело, До рассвета. Эта сказка заканчивается рыцарем в сияющих доспехах. Тяжела голова, носящая корону.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media my-4&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Медиа-объект на основе списка<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Может быть причина, по которой все двери закрыты. Потому что однажды ты мой, когда ты мой. Будь своей подростковой мечтой сегодня вечером. Тяжела голова, носящая корону. Это даже не праздник, праздновать нечего. Идеальный шторм, идеальный шторм.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mr-3&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;media-body&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mt-0 mb-1&#34;</span><span class="p">&gt;</span>Медиа-объект на основе списка<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Вы достаточно храбры, чтобы позволить мне увидеть вашего павлина? Нет пути назад. Это последний раз, когда вы говорите после последней разорванной строки. В конце концов.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+
+<script src="/docs/4.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+
+<script src="/docs/4.6/assets/js/docs.min.js"></script>
+
+  </body>
+</html>

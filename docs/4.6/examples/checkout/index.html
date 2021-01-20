@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton и участники Bootstrap">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Пример оформления заказа · Bootstrap v4.6</title>
+
+    <link rel="canonical" href="https://v4.getbootstrap.su/docs/4.6/examples/checkout/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.6/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.6/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.6/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.6/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.6/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    
+<div class="container">
+  <div class="py-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/docs/4.6/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h2>Форма оформления заказа</h2>
+    <p class="lead">Ниже приведен пример формы, полностью созданной с использованием элементов управления формы Bootstrap. Каждая требуемая группа форм имеет состояние проверки, которое может быть вызвано попыткой отправить форму, не заполнив ее.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Ваша корзина</span>
+        <span class="badge badge-secondary badge-pill">3</span>
+      </h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Наименование товара</h6>
+            <small class="text-muted">Краткое описание</small>
+          </div>
+          <span class="text-muted">840₽</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Второй продукт</h6>
+            <small class="text-muted">Краткое описание</small>
+          </div>
+          <span class="text-muted">560₽</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Третий пункт</h6>
+            <small class="text-muted">Краткое описание</small>
+          </div>
+          <span class="text-muted">350₽</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success">
+            <h6 class="my-0">Промо код</h6>
+            <small>ПРИМЕРКОДА</small>
+          </div>
+          <span class="text-success">-350₽</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Итого (РУБЛЕЙ)</span>
+          <strong>1400₽</strong>
+        </li>
+      </ul>
+
+      <form class="card p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Промо код">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-secondary">Применить</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Платежный адрес</h4>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Имя</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Иван" value="" required>
+            <div class="invalid-feedback">
+              Требуется действительное имя.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Фамилия</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Иванов" value="" required>
+            <div class="invalid-feedback">
+              Требуется действительная фамилия.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="username">Имя пользователя</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+            </div>
+            <input type="text" class="form-control" id="username" placeholder="Имя пользователя" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Ваше имя пользователя обязательно.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Эл. адрес <span class="text-muted">(Необязательный)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="you@example.ru">
+          <div class="invalid-feedback">
+            Пожалуйста, введите действующий адрес электронной почты для получения обновлений о доставке.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Адрес</label>
+          <input type="text" class="form-control" id="address" placeholder="проспект Ленина" required>
+          <div class="invalid-feedback">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="address2">Адрес 2 <span class="text-muted">(Необязательный)</span></label>
+          <input type="text" class="form-control" id="address2" placeholder="квартира или дом">
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="country">Страна</label>
+            <select class="custom-select d-block w-100" id="country" required>
+              <option value="">Выбрать...</option>
+              <option>Российская Федерация</option>
+            </select>
+            <div class="invalid-feedback">
+              Пожалуйста, выберите действительную страну.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="state">Область</label>
+            <select class="custom-select d-block w-100" id="state" required>
+              <option value="">Выбрать...</option>
+              <option>Брянская область</option>
+            </select>
+            <div class="invalid-feedback">
+              Укажите действительную область.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zip">Индекс</label>
+            <input type="text" class="form-control" id="zip" placeholder="241050" required>
+            <div class="invalid-feedback">
+              Требуется почтовый индекс.
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="same-address">
+          <label class="custom-control-label" for="same-address">Адрес доставки такой же, как мой платежный адрес</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="save-info">
+          <label class="custom-control-label" for="save-info">Сохраните эту информацию для следующего раза</label>
+        </div>
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Оплата</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+            <label class="custom-control-label" for="credit">Кредитная карта</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="debit">Дебитовая карта</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="paypal">PayPal</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="yandex" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="yandex">Яндекс.Деньги</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name">Имя на карте</label>
+            <input type="text" class="form-control" id="cc-name" placeholder="Ivan Ivanov" required>
+            <small class="text-muted">Полное имя, как отображено на карте</small>
+            <div class="invalid-feedback">
+              Имя на карте обязательно
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number">Номер кредитной карты</label>
+            <input type="text" class="form-control" id="cc-number" placeholder="1111 2222 3333 4444" required>
+            <div class="invalid-feedback">
+              Номер кредитной карты обязателен
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration">Срок действия</label>
+            <input type="text" class="form-control" id="cc-expiration" placeholder="12/20" required>
+            <div class="invalid-feedback">
+              Срок действия обязателен
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cc-cvv">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" placeholder="XXX" required>
+            <div class="invalid-feedback">
+              Защитный код обязателен
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Продолжить оформление заказа</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017-2021 Название компании</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Конфиденциальность</a></li>
+      <li class="list-inline-item"><a href="#">Условия</a></li>
+      <li class="list-inline-item"><a href="#">Поддержка</a></li>
+    </ul>
+  </footer>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.6/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+      
+        <script src="form-validation.js"></script>
+  </body>
+</html>
